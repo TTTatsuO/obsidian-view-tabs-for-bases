@@ -26,11 +26,15 @@ import { text } from './i18n';
 /** Drag data type. With text/plain, dropping a tab on a note would insert its name as text. */
 const DRAG_TYPE = 'application/x-view-tabs-for-bases';
 
+/** Marks a toolbar that holds tabs, so the CSS can adjust it without :has (slow to invalidate). */
+const HOST_CLASS = 'view-tabs-for-bases-host';
+
 /** The tab strip of one open base. */
 export class ViewTabs {
 	private readonly containerEl: HTMLElement;
 	private readonly viewChangedRef: EventRef;
 	private readonly resizeObserver: ResizeObserver;
+	private toolbarEl: HTMLElement | null = null;
 	private draggingName: string | null = null;
 
 	constructor(readonly controller: BasesController) {
@@ -60,6 +64,11 @@ export class ViewTabs {
 		if (!anchor) return;
 		if (anchor.afterEl) anchor.afterEl.after(this.containerEl);
 		else anchor.toolbarEl.prepend(this.containerEl);
+		if (this.toolbarEl !== anchor.toolbarEl) {
+			this.toolbarEl?.removeClass(HOST_CLASS);
+			this.toolbarEl = anchor.toolbarEl;
+		}
+		this.toolbarEl.addClass(HOST_CLASS);
 
 		const scrollLeft = this.containerEl.scrollLeft;
 		this.containerEl.empty();
@@ -117,6 +126,7 @@ export class ViewTabs {
 		this.controller.events.offref(this.viewChangedRef);
 		this.resizeObserver.disconnect();
 		this.containerEl.remove();
+		this.toolbarEl?.removeClass(HOST_CLASS);
 	}
 
 	/** Fade the edge on each side that has hidden tabs. */

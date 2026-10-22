@@ -1,6 +1,6 @@
 {
 	"name": "view-tabs-for-bases",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Show a base's views as tabs next to the result count. Drag to reorder, and set each tab's color, size and visibility.",
 	"main": "main.js",
 	"type": "module",

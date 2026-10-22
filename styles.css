@@ -1,11 +1,13 @@
+/* .view-tabs-for-bases-host is set from code on a toolbar that holds tabs, instead of a parent selector (slow to invalidate). */
+
 /* Bases gives the result count margin-inline-end: auto, which pushes everything after it to
    the right. Move that space behind the tabs so they sit right next to the count. */
-.bases-toolbar .bases-toolbar-result-count:has(+ .view-tabs-for-bases) {
+.bases-toolbar.view-tabs-for-bases-host .bases-toolbar-result-count {
 	margin-inline-end: 0;
 }
 
 /* When space is tight, only the tab strip shrinks; the built-in buttons and the count keep their size */
-.bases-toolbar:has(> .view-tabs-for-bases) > .bases-toolbar-item {
+.bases-toolbar.view-tabs-for-bases-host > .bases-toolbar-item {
 	flex-shrink: 0;
 }
 
