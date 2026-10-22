@@ -1,0 +1,132 @@
+/* Bases gives the result count margin-inline-end: auto, which pushes everything after it to
+   the right. Move that space behind the tabs so they sit right next to the count. */
+.bases-toolbar .bases-toolbar-result-count:has(+ .view-tabs-for-bases) {
+	margin-inline-end: 0;
+}
+
+/* When space is tight, only the tab strip shrinks; the built-in buttons and the count keep their size */
+.bases-toolbar:has(> .view-tabs-for-bases) > .bases-toolbar-item {
+	flex-shrink: 0;
+}
+
+.view-tabs-for-bases {
+	--view-tabs-for-bases-fade: 24px;
+	position: relative;
+	display: flex;
+	flex: 0 1 auto;
+	align-items: center;
+	gap: var(--size-4-1);
+	min-width: 0;
+	overflow-x: auto;
+	margin-inline-start: var(--size-4-1);
+	margin-inline-end: auto;
+	scrollbar-width: none;
+}
+
+.view-tabs-for-bases::-webkit-scrollbar {
+	display: none;
+}
+
+/* Fade the edge on each side that has hidden tabs */
+.view-tabs-for-bases.has-more-end {
+	mask-image: linear-gradient(to right, black calc(100% - var(--view-tabs-for-bases-fade)), transparent);
+}
+
+.view-tabs-for-bases.has-more-start {
+	mask-image: linear-gradient(to right, transparent, black var(--view-tabs-for-bases-fade));
+}
+
+.view-tabs-for-bases.has-more-start.has-more-end {
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		black var(--view-tabs-for-bases-fade),
+		black calc(100% - var(--view-tabs-for-bases-fade)),
+		transparent
+	);
+}
+
+.view-tabs-for-bases .view-tabs-for-bases-tab {
+	--view-tabs-for-bases-color: var(--interactive-accent);
+	flex: 0 0 auto;
+	justify-content: center;
+	height: auto;
+	padding: var(--size-2-1) var(--size-4-2);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+	background-color: transparent;
+	box-shadow: none;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	white-space: nowrap;
+	cursor: var(--cursor);
+}
+
+/* Size = minimum width; longer names make the tab wider */
+.view-tabs-for-bases .view-tabs-for-bases-tab.mod-small {
+	min-width: 4em;
+}
+
+.view-tabs-for-bases .view-tabs-for-bases-tab.mod-medium {
+	min-width: 7em;
+}
+
+.view-tabs-for-bases .view-tabs-for-bases-tab.mod-large {
+	min-width: 10em;
+}
+
+/* Color = outline color, taken from the theme */
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color] {
+	border-color: var(--view-tabs-for-bases-color);
+}
+
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color="red"] { --view-tabs-for-bases-color: var(--color-red); }
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color="orange"] { --view-tabs-for-bases-color: var(--color-orange); }
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color="yellow"] { --view-tabs-for-bases-color: var(--color-yellow); }
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color="green"] { --view-tabs-for-bases-color: var(--color-green); }
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color="cyan"] { --view-tabs-for-bases-color: var(--color-cyan); }
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color="blue"] { --view-tabs-for-bases-color: var(--color-blue); }
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color="purple"] { --view-tabs-for-bases-color: var(--color-purple); }
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color="pink"] { --view-tabs-for-bases-color: var(--color-pink); }
+
+.view-tabs-for-bases .view-tabs-for-bases-tab:hover {
+	background-color: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.view-tabs-for-bases .view-tabs-for-bases-tab.is-active {
+	border-color: var(--view-tabs-for-bases-color);
+	color: var(--text-normal);
+	font-weight: var(--font-semibold);
+}
+
+/* A colored tab gets a light tint of its color while selected */
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color].is-active {
+	background-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 18%, transparent);
+}
+
+.view-tabs-for-bases .view-tabs-for-bases-tab.is-dragging {
+	opacity: 0.5;
+}
+
+.view-tabs-for-bases .view-tabs-for-bases-tab.is-drop-target {
+	border-color: var(--interactive-accent);
+	border-style: dashed;
+}
+
+/* Tab settings in Configure view: keep the toggle on the label's line, at the right */
+.view-tabs-for-bases-config-section .input-row.mod-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.view-tabs-for-bases-config-section .input-row.mod-toggle .input-row-label {
+	flex: 1 1 auto;
+	white-space: nowrap;
+}
+
+.view-tabs-for-bases-config-section .input-row.mod-toggle .input-row-content {
+	flex: 0 0 auto;
+	width: auto;
+}
