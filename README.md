@@ -1,5 +1,7 @@
 # View Tabs for Bases
 
+**English** | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+
 See every view of an Obsidian [base](https://help.obsidian.md/bases) at a glance. This plugin lists a base's views as tabs right next to the result count, so you can switch views with one click instead of opening the view menu.
 
 ![A Projects base with the views All projects, Active, Due soon, By owner and Board shown as tabs next to "3 results"](assets/tabs.png)
