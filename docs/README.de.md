@@ -1,10 +1,10 @@
 # View Tabs for Bases
 
-[English](README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | **Deutsch** | [Français](README.fr.md) | [Español](README.es.md)
+[English](../README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | **Deutsch** | [Français](README.fr.md) | [Español](README.es.md)
 
 Alle Ansichten einer Obsidian-[Base](https://help.obsidian.md/bases) auf einen Blick. Dieses Plugin zeigt die Ansichten einer Base als Tabs direkt neben der Ergebnisanzahl, sodass du mit einem Klick zwischen Ansichten wechseln kannst, ohne das Ansichtsmenü zu öffnen.
 
-![Eine Base „Projects“ mit den Ansichten All projects, Active, Due soon, By owner und Board als Tabs neben „3 results“](assets/tabs.png)
+![Eine Base „Projects“ mit den Ansichten All projects, Active, Due soon, By owner und Board als Tabs neben „3 results“](../assets/tabs.png)
 
 ## Funktionen
 
@@ -28,11 +28,11 @@ Erfordert Obsidian 1.14.0 oder neuer. Nur für Desktop.
 
 Um einen Tab zu ändern, klicke ihn mit der rechten Maustaste an und wähle eine Farbe, eine Größe oder **Aus Tabs entfernen**.
 
-![Das Kontextmenü eines Tabs mit Farbe, Größe und Aus Tabs entfernen](assets/context-menu.png)
+![Das Kontextmenü eines Tabs mit Farbe, Größe und Aus Tabs entfernen](../assets/context-menu.png)
 
 Du kannst auch über das Ansichtsmenü **Configure view** (die Ansichtseinstellungen) öffnen und den Abschnitt **Tab-Einstellungen** ganz unten verwenden: **In Tabs anzeigen**, **Farbe** und **Größe**.
 
-![Der Abschnitt Tab-Einstellungen ganz unten in Configure view](assets/configure-view.png)
+![Der Abschnitt Tab-Einstellungen ganz unten in Configure view](../assets/configure-view.png)
 
 Um einen entfernten Tab zurückzuholen, öffne über das Ansichtsmenü **Configure view** dieser Ansicht und schalte **In Tabs anzeigen** wieder ein.
 
@@ -61,7 +61,7 @@ Die Einstellungen bleiben daher erhalten, wenn du die Base umbenennst, kopierst 
 
 Das Plugin folgt der Sprache von Obsidian. Es ist verfügbar auf English, العربية, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Español, فارسی, Suomi, Français, עברית, Magyar, Bahasa Indonesia, Italiano, 日本語, ខ្មែរ, 한국어, Nederlands, Norsk, Polski, Português, Português do Brasil, Română, Русский, Slovenčina, Svenska, ไทย, Türkçe, Українська, Tiếng Việt, 简体中文 und 繁體中文. Andere Sprachen fallen auf Englisch zurück.
 
-Außer Englisch und Japanisch wurden die Übersetzungen noch nicht von Muttersprachlern geprüft. Wenn etwas in deiner Sprache seltsam klingt, eröffne bitte ein Issue oder einen Pull Request, der [`src/i18n.ts`](src/i18n.ts) bearbeitet.
+Außer Englisch und Japanisch wurden die Übersetzungen noch nicht von Muttersprachlern geprüft. Wenn etwas in deiner Sprache seltsam klingt, eröffne bitte ein Issue oder einen Pull Request, der [`src/i18n.ts`](../src/i18n.ts) bearbeitet.
 
 ## Einschränkungen
 
@@ -72,4 +72,4 @@ Außer Englisch und Japanisch wurden die Übersetzungen noch nicht von Mutterspr
 
 ## Lizenz
 
-[MIT](LICENSE)
+[MIT](../LICENSE)

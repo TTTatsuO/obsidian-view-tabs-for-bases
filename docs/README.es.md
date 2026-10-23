@@ -1,10 +1,10 @@
 # View Tabs for Bases
 
-[English](README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | **Español**
+[English](../README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | **Español**
 
 Ve de un vistazo todas las vistas de una [base](https://help.obsidian.md/bases) de Obsidian. Este plugin muestra las vistas de una base como pestañas justo al lado del número de resultados, para que cambies de vista con un clic sin abrir el menú de vistas.
 
-![Una base Projects con las vistas All projects, Active, Due soon, By owner y Board como pestañas junto a «3 results»](assets/tabs.png)
+![Una base Projects con las vistas All projects, Active, Due soon, By owner y Board como pestañas junto a «3 results»](../assets/tabs.png)
 
 ## Funciones
 
@@ -28,11 +28,11 @@ Abre un archivo `.base`. Sus vistas aparecen como pestañas junto al número de 
 
 Para cambiar una pestaña, haz clic derecho en ella y elige un color, un tamaño o **Quitar de las pestañas**.
 
-![El menú contextual de una pestaña, con Color, Tamaño y Quitar de las pestañas](assets/context-menu.png)
+![El menú contextual de una pestaña, con Color, Tamaño y Quitar de las pestañas](../assets/context-menu.png)
 
 También puedes abrir **Configure view** (los ajustes de la vista) desde el menú de vistas y usar la sección **Ajustes de pestaña** al final: **Mostrar en pestañas**, **Color** y **Tamaño**.
 
-![La sección Ajustes de pestaña al final de Configure view](assets/configure-view.png)
+![La sección Ajustes de pestaña al final de Configure view](../assets/configure-view.png)
 
 Para recuperar una pestaña quitada, abre **Configure view** de esa vista desde el menú de vistas y vuelve a activar **Mostrar en pestañas**.
 
@@ -61,7 +61,7 @@ Así, los ajustes acompañan a la base cuando la renombras, la copias o la sincr
 
 El plugin sigue el idioma de Obsidian. Está disponible en English, العربية, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Español, فارسی, Suomi, Français, עברית, Magyar, Bahasa Indonesia, Italiano, 日本語, ខ្មែរ, 한국어, Nederlands, Norsk, Polski, Português, Português do Brasil, Română, Русский, Slovenčina, Svenska, ไทย, Türkçe, Українська, Tiếng Việt, 简体中文 y 繁體中文. Los demás idiomas usan el inglés.
 
-Salvo el inglés y el japonés, las traducciones aún no han sido revisadas por hablantes nativos. Si algo suena raro en tu idioma, abre una issue o una pull request que edite [`src/i18n.ts`](src/i18n.ts).
+Salvo el inglés y el japonés, las traducciones aún no han sido revisadas por hablantes nativos. Si algo suena raro en tu idioma, abre una issue o una pull request que edite [`src/i18n.ts`](../src/i18n.ts).
 
 ## Limitaciones
 
@@ -72,4 +72,4 @@ Salvo el inglés y el japonés, las traducciones aún no han sido revisadas por 
 
 ## Licencia
 
-[MIT](LICENSE)
+[MIT](../LICENSE)

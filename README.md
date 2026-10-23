@@ -1,6 +1,6 @@
 # View Tabs for Bases
 
-**English** | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+**English** | [日本語](docs/README.ja.md) | [简体中文](docs/README.zh.md) | [繁體中文](docs/README.zh-TW.md) | [한국어](docs/README.ko.md) | [Deutsch](docs/README.de.md) | [Français](docs/README.fr.md) | [Español](docs/README.es.md)
 
 See every view of an Obsidian [base](https://help.obsidian.md/bases) at a glance. This plugin lists a base's views as tabs right next to the result count, so you can switch views with one click instead of opening the view menu.
 

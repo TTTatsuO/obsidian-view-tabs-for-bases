@@ -1,10 +1,10 @@
 # View Tabs for Bases
 
-[English](README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | **繁體中文** | [한국어](README.ko.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+[English](../README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | **繁體中文** | [한국어](README.ko.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
 一眼看清 Obsidian [資料庫（Bases）](https://help.obsidian.md/bases)的所有檢視。本外掛把資料庫的檢視以分頁的形式排列在結果數量旁邊，不必打開檢視選單，點一下就能切換檢視。
 
-![名為 Projects 的資料庫中，All projects、Active、Due soon、By owner 和 Board 檢視以分頁形式顯示在「3 results」旁邊](assets/tabs.png)
+![名為 Projects 的資料庫中，All projects、Active、Due soon、By owner 和 Board 檢視以分頁形式顯示在「3 results」旁邊](../assets/tabs.png)
 
 ## 功能
 
@@ -28,11 +28,11 @@
 
 要變更分頁，請在分頁上按右鍵，選擇顏色、大小或 **從分頁中移除**。
 
-![分頁的右鍵選單，包含顏色、大小和從分頁中移除](assets/context-menu.png)
+![分頁的右鍵選單，包含顏色、大小和從分頁中移除](../assets/context-menu.png)
 
 也可以從檢視選單開啟 **Configure view**（檢視設定），在最下方的 **分頁設定** 區塊（**在分頁中顯示**、**顏色**、**大小**）進行變更。
 
-![Configure view 最下方的分頁設定區塊](assets/configure-view.png)
+![Configure view 最下方的分頁設定區塊](../assets/configure-view.png)
 
 要恢復已移除的分頁，請從檢視選單開啟該檢視的 **Configure view**，重新開啟 **在分頁中顯示**。
 
@@ -61,7 +61,7 @@ views:
 
 外掛會跟隨 Obsidian 的語言設定。支援的語言有：English、العربية、বাংলা、Català、Čeština、Dansk、Deutsch、Ελληνικά、Español、فارسی、Suomi、Français、עברית、Magyar、Bahasa Indonesia、Italiano、日本語、ខ្មែរ、한국어、Nederlands、Norsk、Polski、Português、Português do Brasil、Română、Русский、Slovenčina、Svenska、ไทย、Türkçe、Українська、Tiếng Việt、简体中文 和 繁體中文。其他語言會以英文顯示。
 
-除英文和日文外，其他翻譯尚未經過母語人士審閱。如果你的語言中有不自然的表達，歡迎提出 issue，或送出修改 [`src/i18n.ts`](src/i18n.ts) 的 pull request。
+除英文和日文外，其他翻譯尚未經過母語人士審閱。如果你的語言中有不自然的表達，歡迎提出 issue，或送出修改 [`src/i18n.ts`](../src/i18n.ts) 的 pull request。
 
 ## 限制
 
@@ -72,4 +72,4 @@ views:
 
 ## 授權
 
-[MIT](LICENSE)
+[MIT](../LICENSE)

@@ -1,10 +1,10 @@
 # View Tabs for Bases
 
-[English](README.md) | [日本語](README.ja.md) | **简体中文** | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+[English](../README.md) | [日本語](README.ja.md) | **简体中文** | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
 一眼看清 Obsidian [数据库(Bases)](https://help.obsidian.md/bases)的所有视图。本插件把数据库的视图以标签的形式排列在结果数量旁边，无需打开视图菜单，点击一下即可切换视图。
 
-![名为 Projects 的数据库中，All projects、Active、Due soon、By owner 和 Board 视图以标签形式显示在“3 results”旁边](assets/tabs.png)
+![名为 Projects 的数据库中，All projects、Active、Due soon、By owner 和 Board 视图以标签形式显示在“3 results”旁边](../assets/tabs.png)
 
 ## 功能
 
@@ -28,11 +28,11 @@
 
 要更改标签，请右键点击它，然后选择颜色、大小或 **从标签中移除**。
 
-![标签的右键菜单，包含颜色、大小和从标签中移除](assets/context-menu.png)
+![标签的右键菜单，包含颜色、大小和从标签中移除](../assets/context-menu.png)
 
 也可以从视图菜单中打开 **Configure view**（视图设置），在底部的 **标签设置** 部分（**在标签中显示**、**颜色**、**大小**）进行更改。
 
-![Configure view 底部的标签设置部分](assets/configure-view.png)
+![Configure view 底部的标签设置部分](../assets/configure-view.png)
 
 要恢复已移除的标签，请从视图菜单中打开该视图的 **Configure view**，重新打开 **在标签中显示**。
 
@@ -61,7 +61,7 @@ views:
 
 插件跟随 Obsidian 的语言设置。支持的语言有：English、العربية、বাংলা、Català、Čeština、Dansk、Deutsch、Ελληνικά、Español、فارسی、Suomi、Français、עברית、Magyar、Bahasa Indonesia、Italiano、日本語、ខ្មែរ、한국어、Nederlands、Norsk、Polski、Português、Português do Brasil、Română、Русский、Slovenčina、Svenska、ไทย、Türkçe、Українська、Tiếng Việt、简体中文 和 繁體中文。其他语言会显示为英语。
 
-除英语和日语外，其他翻译尚未经过母语人士审阅。如果你的语言中有表达不自然的地方，欢迎提交 issue，或提交修改 [`src/i18n.ts`](src/i18n.ts) 的 pull request。
+除英语和日语外，其他翻译尚未经过母语人士审阅。如果你的语言中有表达不自然的地方，欢迎提交 issue，或提交修改 [`src/i18n.ts`](../src/i18n.ts) 的 pull request。
 
 ## 限制
 
@@ -72,4 +72,4 @@ views:
 
 ## 许可证
 
-[MIT](LICENSE)
+[MIT](../LICENSE)

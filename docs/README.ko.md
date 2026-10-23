@@ -1,10 +1,10 @@
 # View Tabs for Bases
 
-[English](README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | **한국어** | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+[English](../README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | **한국어** | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
 Obsidian [베이스(Bases)](https://help.obsidian.md/bases)의 모든 보기를 한눈에 볼 수 있게 해 주는 플러그인입니다. 베이스의 보기를 결과 수 바로 옆에 탭으로 나열하므로, 보기 메뉴를 열지 않고 한 번의 클릭으로 보기를 전환할 수 있습니다.
 
-![Projects 베이스에서 All projects, Active, Due soon, By owner, Board 보기가 "3 results" 옆에 탭으로 표시된 모습](assets/tabs.png)
+![Projects 베이스에서 All projects, Active, Due soon, By owner, Board 보기가 "3 results" 옆에 탭으로 표시된 모습](../assets/tabs.png)
 
 ## 기능
 
@@ -28,11 +28,11 @@ Obsidian 1.14.0 이상이 필요합니다. 데스크톱 전용입니다.
 
 탭을 바꾸려면 탭을 마우스 오른쪽 버튼으로 클릭하고 색상, 크기 또는 **탭에서 제거**를 선택합니다.
 
-![탭의 컨텍스트 메뉴. 색상, 크기, 탭에서 제거 항목이 있음](assets/context-menu.png)
+![탭의 컨텍스트 메뉴. 색상, 크기, 탭에서 제거 항목이 있음](../assets/context-menu.png)
 
 보기 메뉴에서 **Configure view**(보기 설정)를 열고, 맨 아래의 **탭 설정** 섹션(**탭에 표시**, **색상**, **크기**)에서 바꿀 수도 있습니다.
 
-![Configure view 맨 아래의 탭 설정 섹션](assets/configure-view.png)
+![Configure view 맨 아래의 탭 설정 섹션](../assets/configure-view.png)
 
 제거한 탭을 되돌리려면 보기 메뉴에서 해당 보기의 **Configure view**를 열고 **탭에 표시**를 다시 켭니다.
 
@@ -61,7 +61,7 @@ views:
 
 플러그인은 Obsidian의 언어 설정을 따릅니다. 지원 언어는 English, العربية, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Español, فارسی, Suomi, Français, עברית, Magyar, Bahasa Indonesia, Italiano, 日本語, ខ្មែរ, 한국어, Nederlands, Norsk, Polski, Português, Português do Brasil, Română, Русский, Slovenčina, Svenska, ไทย, Türkçe, Українська, Tiếng Việt, 简体中文, 繁體中文입니다. 그 밖의 언어에서는 영어로 표시됩니다.
 
-영어와 일본어를 제외한 번역은 아직 원어민의 검토를 받지 않았습니다. 어색한 표현이 있다면 issue를 열거나 [`src/i18n.ts`](src/i18n.ts)를 수정하는 pull request를 보내 주세요.
+영어와 일본어를 제외한 번역은 아직 원어민의 검토를 받지 않았습니다. 어색한 표현이 있다면 issue를 열거나 [`src/i18n.ts`](../src/i18n.ts)를 수정하는 pull request를 보내 주세요.
 
 ## 제한 사항
 
@@ -72,4 +72,4 @@ views:
 
 ## 라이선스
 
-[MIT](LICENSE)
+[MIT](../LICENSE)

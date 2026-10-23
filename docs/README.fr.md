@@ -1,10 +1,10 @@
 # View Tabs for Bases
 
-[English](README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [Deutsch](README.de.md) | **Français** | [Español](README.es.md)
+[English](../README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [Deutsch](README.de.md) | **Français** | [Español](README.es.md)
 
 Voyez d’un coup d’œil toutes les vues d’une [base](https://help.obsidian.md/bases) Obsidian. Ce plugin affiche les vues d’une base sous forme d’onglets, juste à côté du nombre de résultats : vous changez de vue en un clic, sans ouvrir le menu des vues.
 
-![Une base Projects dont les vues All projects, Active, Due soon, By owner et Board apparaissent sous forme d’onglets à côté de « 3 results »](assets/tabs.png)
+![Une base Projects dont les vues All projects, Active, Due soon, By owner et Board apparaissent sous forme d’onglets à côté de « 3 results »](../assets/tabs.png)
 
 ## Fonctionnalités
 
@@ -28,11 +28,11 @@ Ouvrez un fichier `.base`. Ses vues apparaissent sous forme d’onglets à côt�
 
 Pour modifier un onglet, faites un clic droit dessus et choisissez une couleur, une taille ou **Retirer des onglets**.
 
-![Le menu contextuel d’un onglet, avec Couleur, Taille et Retirer des onglets](assets/context-menu.png)
+![Le menu contextuel d’un onglet, avec Couleur, Taille et Retirer des onglets](../assets/context-menu.png)
 
 Vous pouvez aussi ouvrir **Configure view** (les réglages de la vue) depuis le menu des vues et utiliser la section **Paramètres de l’onglet** tout en bas : **Afficher dans les onglets**, **Couleur** et **Taille**.
 
-![La section Paramètres de l’onglet en bas de Configure view](assets/configure-view.png)
+![La section Paramètres de l’onglet en bas de Configure view](../assets/configure-view.png)
 
 Pour faire revenir un onglet retiré, ouvrez **Configure view** de cette vue depuis le menu des vues et réactivez **Afficher dans les onglets**.
 
@@ -61,7 +61,7 @@ Les réglages suivent donc la base quand vous la renommez, la copiez ou la synch
 
 Le plugin suit la langue d’Obsidian. Il est disponible en English, العربية, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Español, فارسی, Suomi, Français, עברית, Magyar, Bahasa Indonesia, Italiano, 日本語, ខ្មែរ, 한국어, Nederlands, Norsk, Polski, Português, Português do Brasil, Română, Русский, Slovenčina, Svenska, ไทย, Türkçe, Українська, Tiếng Việt, 简体中文 et 繁體中文. Les autres langues s’affichent en anglais.
 
-À part l’anglais et le japonais, les traductions n’ont pas encore été relues par des locuteurs natifs. Si quelque chose sonne étrangement dans votre langue, ouvrez une issue ou une pull request qui modifie [`src/i18n.ts`](src/i18n.ts).
+À part l’anglais et le japonais, les traductions n’ont pas encore été relues par des locuteurs natifs. Si quelque chose sonne étrangement dans votre langue, ouvrez une issue ou une pull request qui modifie [`src/i18n.ts`](../src/i18n.ts).
 
 ## Limites
 
@@ -72,4 +72,4 @@ Le plugin suit la langue d’Obsidian. Il est disponible en English, العرب�
 
 ## Licence
 
-[MIT](LICENSE)
+[MIT](../LICENSE)
