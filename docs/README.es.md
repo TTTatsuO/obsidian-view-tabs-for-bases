@@ -4,7 +4,7 @@
 
 Ve de un vistazo todas las vistas de una [base](https://help.obsidian.md/bases) de Obsidian. Este plugin muestra las vistas de una base como pestañas justo al lado del número de resultados, para que cambies de vista con un clic sin abrir el menú de vistas.
 
-![Una base Projects con las vistas All projects, Active, Due soon, By owner y Board como pestañas junto a «3 results»](../assets/tabs.png)
+![Una base Projects con las vistas All projects, Active, Due soon, By owner y Board como pestañas junto a «8 results»](../assets/tabs.png)
 
 ## Funciones
 

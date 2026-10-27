@@ -4,7 +4,7 @@
 
 一眼看清 Obsidian [数据库(Bases)](https://help.obsidian.md/bases)的所有视图。本插件把数据库的视图以标签的形式排列在结果数量旁边，无需打开视图菜单，点击一下即可切换视图。
 
-![名为 Projects 的数据库中，All projects、Active、Due soon、By owner 和 Board 视图以标签形式显示在“3 results”旁边](../assets/tabs.png)
+![名为 Projects 的数据库中，All projects、Active、Due soon、By owner 和 Board 视图以标签形式显示在“8 results”旁边](../assets/tabs.png)
 
 ## 功能
 

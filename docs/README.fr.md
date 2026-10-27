@@ -4,7 +4,7 @@
 
 Voyez d’un coup d’œil toutes les vues d’une [base](https://help.obsidian.md/bases) Obsidian. Ce plugin affiche les vues d’une base sous forme d’onglets, juste à côté du nombre de résultats : vous changez de vue en un clic, sans ouvrir le menu des vues.
 
-![Une base Projects dont les vues All projects, Active, Due soon, By owner et Board apparaissent sous forme d’onglets à côté de « 3 results »](../assets/tabs.png)
+![Une base Projects dont les vues All projects, Active, Due soon, By owner et Board apparaissent sous forme d’onglets à côté de « 8 results »](../assets/tabs.png)
 
 ## Fonctionnalités
 

@@ -4,7 +4,7 @@
 
 一眼看清 Obsidian [資料庫（Bases）](https://help.obsidian.md/bases)的所有檢視。本外掛把資料庫的檢視以分頁的形式排列在結果數量旁邊，不必打開檢視選單，點一下就能切換檢視。
 
-![名為 Projects 的資料庫中，All projects、Active、Due soon、By owner 和 Board 檢視以分頁形式顯示在「3 results」旁邊](../assets/tabs.png)
+![名為 Projects 的資料庫中，All projects、Active、Due soon、By owner 和 Board 檢視以分頁形式顯示在「8 results」旁邊](../assets/tabs.png)
 
 ## 功能
 

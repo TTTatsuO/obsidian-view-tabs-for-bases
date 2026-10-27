@@ -4,7 +4,7 @@
 
 Obsidian の [Base](https://help.obsidian.md/bases) のビューを、ひと目で見渡せるようにするプラグインです。Base のビューを結果件数のすぐ横にタブで並べるので、ビューのメニューを開かずに、ワンクリックで切り替えられます。
 
-![Projects という Base で、All projects・Active・Due soon・By owner・Board のビューが「3 results」の横にタブで並んでいる](../assets/tabs.png)
+![Projects という Base で、All projects・Active・Due soon・By owner・Board のビューが「8 results」の横にタブで並んでいる](../assets/tabs.png)
 
 ## 機能
 

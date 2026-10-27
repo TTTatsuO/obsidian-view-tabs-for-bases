@@ -4,7 +4,7 @@
 
 Obsidian [베이스(Bases)](https://help.obsidian.md/bases)의 모든 보기를 한눈에 볼 수 있게 해 주는 플러그인입니다. 베이스의 보기를 결과 수 바로 옆에 탭으로 나열하므로, 보기 메뉴를 열지 않고 한 번의 클릭으로 보기를 전환할 수 있습니다.
 
-![Projects 베이스에서 All projects, Active, Due soon, By owner, Board 보기가 "3 results" 옆에 탭으로 표시된 모습](../assets/tabs.png)
+![Projects 베이스에서 All projects, Active, Due soon, By owner, Board 보기가 "8 results" 옆에 탭으로 표시된 모습](../assets/tabs.png)
 
 ## 기능
 

@@ -4,7 +4,7 @@
 
 Alle Ansichten einer Obsidian-[Base](https://help.obsidian.md/bases) auf einen Blick. Dieses Plugin zeigt die Ansichten einer Base als Tabs direkt neben der Ergebnisanzahl, sodass du mit einem Klick zwischen Ansichten wechseln kannst, ohne das Ansichtsmenü zu öffnen.
 
-![Eine Base „Projects“ mit den Ansichten All projects, Active, Due soon, By owner und Board als Tabs neben „3 results“](../assets/tabs.png)
+![Eine Base „Projects“ mit den Ansichten All projects, Active, Due soon, By owner und Board als Tabs neben „8 results“](../assets/tabs.png)
 
 ## Funktionen
 
