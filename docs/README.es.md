@@ -4,21 +4,22 @@
 
 Ve de un vistazo todas las vistas de una [base](https://help.obsidian.md/bases) de Obsidian. Este plugin muestra las vistas de una base como pestañas justo al lado del número de resultados, para que cambies de vista con un clic sin abrir el menú de vistas.
 
-![Una base Projects con las vistas All projects, Active, Due soon, By owner y Board como pestañas junto a «8 results»](../assets/tabs.png)
+![Una base Projects con las vistas All projects, Active, Due soon, By owner y Board como pestañas junto a «3 results»](../assets/tabs.png)
 
 ## Funciones
 
-- **Pestañas en la barra de herramientas**: cada vista tiene una pestaña junto al número de resultados, y la vista actual aparece resaltada.
+- **Pestañas en la barra de herramientas**: cada vista tiene una pestaña junto al número de resultados, con el icono de su tipo de vista, y la vista actual aparece resaltada.
 - **Cambio con un clic**: haz clic en una pestaña para abrir su vista.
 - **Reordenar arrastrando**: suelta una pestaña sobre otra para moverla. Esto cambia el orden de las propias vistas, así que el menú de vistas integrado muestra el mismo orden.
-- **Ajustes de pestaña por vista**: elige si cada vista tiene pestaña y define el color (contorno) y el tamaño (ancho) de la pestaña.
+- **Ajustes de pestaña por vista**: elige si cada vista tiene pestaña y define el color (icono y contorno; la pestaña seleccionada se rellena con él) y el tamaño (ancho) de la pestaña.
 - **Menú contextual**: haz clic derecho en una pestaña para cambiar su color o tamaño, o para quitarla de las pestañas.
 - **Se desplaza cuando no cabe**: si las pestañas no caben, se desplazan en horizontal (también con la rueda del ratón) y se desvanecen en los bordes. Los botones integrados de la barra de herramientas mantienen su tamaño.
+- **Pestañas bajo la barra de herramientas**: si quieres, las pestañas pueden ir en una fila propia bajo la barra de herramientas, donde pueden pasar a varias líneas.
 - **Cambio con el teclado**: comandos para cambiar a la pestaña siguiente o anterior, que puedes asignar a cualquier atajo.
 
 ## Instalación
 
-- **Plugins de la comunidad** (una vez publicado): abre **Settings → Community plugins → Browse**, busca «View Tabs for Bases», elige **Install** y luego **Enable**.
+- **Plugins de la comunidad**: abre **Settings → Community plugins → Browse**, busca «View Tabs for Bases», elige **Install** y luego **Enable**.
 - **Manual**: descarga `main.js`, `manifest.json` y `styles.css` de la [última versión](https://github.com/TTTatsuO/obsidian-view-tabs-for-bases/releases/latest) en `<Vault>/.obsidian/plugins/view-tabs-for-bases/` y activa el plugin en **Settings → Community plugins**.
 
 Requiere Obsidian 1.14.0 o posterior. Solo para escritorio.
@@ -39,7 +40,13 @@ Para recuperar una pestaña quitada, abre **Configure view** de esa vista desde 
 
 Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista siguiente** y **Cambiar a la vista anterior** en **Settings → Hotkeys**. Recorren las pestañas en orden, vuelven al otro extremo al llegar al final y omiten las vistas quitadas de las pestañas. No hay atajos asignados por defecto.
 
-Para desactivar las pestañas en todas partes, desactiva **Mostrar pestañas de vistas** en los ajustes del plugin.
+### Ajustes del plugin
+
+- **Mostrar pestañas de vistas**: desactiva las pestañas en todas partes.
+- **Mostrar iconos del tipo de vista**: muestra en cada pestaña el icono del tipo de vista (tabla, tarjetas, etc.). Activado por defecto.
+- **Posición de las pestañas**: **Junto al número de resultados** (por defecto) o **Bajo la barra de herramientas**.
+- **Ajustar pestañas**: bajo la barra de herramientas, las pestañas que no caben pasan a más líneas en lugar de desplazarse en horizontal. Solo disponible cuando **Posición de las pestañas** es **Bajo la barra de herramientas**.
+- **Mantener la celda seleccionada al cambiar de vista**: ver abajo.
 
 ### Mantener la celda seleccionada
 

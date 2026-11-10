@@ -4,21 +4,22 @@
 
 See every view of an Obsidian [base](https://help.obsidian.md/bases) at a glance. This plugin lists a base's views as tabs right next to the result count, so you can switch views with one click instead of opening the view menu.
 
-![A Projects base with the views All projects, Active, Due soon, By owner and Board shown as tabs next to "8 results"](assets/tabs.png)
+![A Projects base with the views All projects, Active, Due soon, By owner and Board shown as tabs next to "3 results"](assets/tabs.png)
 
 ## Features
 
-- **Tabs in the toolbar**: each view gets a tab beside the result count, and the current view is highlighted.
+- **Tabs in the toolbar**: each view gets a tab beside the result count, with its view type's icon. The current view is highlighted.
 - **One-click switching**: click a tab to open its view.
 - **Drag to reorder**: drop a tab onto another to move it. This reorders the views themselves, so the built-in view menu shows the same order.
-- **Per-view tab settings**: choose whether each view has a tab, and set the tab's color (outline) and size (width).
+- **Per-view tab settings**: choose whether each view has a tab, and set the tab's color (icon and outline; the selected tab is filled with it) and size (width).
 - **Context menu**: right-click a tab to change its color or size, or to remove it from the tabs.
 - **Scrolls when crowded**: when the tabs don't fit, they scroll sideways (the mouse wheel works too) and fade at the edges. The built-in toolbar buttons keep their size.
+- **Tabs below the toolbar**: optionally put the tabs on a row of their own under the toolbar, where they can wrap onto more lines.
 - **Keyboard switching**: commands to switch to the next or previous tab, which you can bind to any hotkeys.
 
 ## Installation
 
-- **Community plugins** (once listed): open **Settings → Community plugins → Browse**, search for "View Tabs for Bases", select **Install**, then **Enable**.
+- **Community plugins**: open **Settings → Community plugins → Browse**, search for "View Tabs for Bases", select **Install**, then **Enable**.
 - **Manual**: download `main.js`, `manifest.json` and `styles.css` from the [latest release](https://github.com/TTTatsuO/obsidian-view-tabs-for-bases/releases/latest) into `<Vault>/.obsidian/plugins/view-tabs-for-bases/`, then enable the plugin in **Settings → Community plugins**.
 
 Requires Obsidian 1.14.0 or later. Desktop only.
@@ -39,7 +40,13 @@ To bring back a removed tab, open that view's **Configure view** from the view m
 
 To switch views from the keyboard, assign hotkeys to **Switch to next view** and **Switch to previous view** in **Settings → Hotkeys**. They move through the tabs in order, wrap around at the ends, and skip views removed from the tabs. No hotkeys are set by default.
 
-To turn the tabs off everywhere, switch off **Show view tabs** in the plugin's settings.
+### Plugin settings
+
+- **Show view tabs**: turn the tabs off everywhere.
+- **Show view type icons**: show each view's type icon (table, cards and so on) on its tab. On by default.
+- **Tab position**: **Next to the result count** (the default) or **Below the toolbar**.
+- **Wrap tabs**: below the toolbar, wrap tabs that don't fit onto more lines instead of scrolling sideways. Available only when **Tab position** is **Below the toolbar**.
+- **Keep the selected cell when switching views**: see below.
 
 ### Keeping the selected cell
 

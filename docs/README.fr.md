@@ -4,21 +4,22 @@
 
 Voyez d’un coup d’œil toutes les vues d’une [base](https://help.obsidian.md/bases) Obsidian. Ce plugin affiche les vues d’une base sous forme d’onglets, juste à côté du nombre de résultats : vous changez de vue en un clic, sans ouvrir le menu des vues.
 
-![Une base Projects dont les vues All projects, Active, Due soon, By owner et Board apparaissent sous forme d’onglets à côté de « 8 results »](../assets/tabs.png)
+![Une base Projects dont les vues All projects, Active, Due soon, By owner et Board apparaissent sous forme d’onglets à côté de « 3 results »](../assets/tabs.png)
 
 ## Fonctionnalités
 
-- **Des onglets dans la barre d’outils** : chaque vue a un onglet à côté du nombre de résultats, et la vue courante est mise en évidence.
+- **Des onglets dans la barre d’outils** : chaque vue a un onglet à côté du nombre de résultats, avec l’icône de son type de vue, et la vue courante est mise en évidence.
 - **Changement en un clic** : cliquez sur un onglet pour ouvrir sa vue.
 - **Réorganisation par glisser-déposer** : déposez un onglet sur un autre pour le déplacer. L’ordre des vues elles-mêmes change, donc le menu des vues intégré affiche le même ordre.
-- **Réglages d’onglet par vue** : choisissez si chaque vue a un onglet, et définissez la couleur (contour) et la taille (largeur) de l’onglet.
+- **Réglages d’onglet par vue** : choisissez si chaque vue a un onglet, et définissez la couleur (icône et contour ; l’onglet sélectionné en est rempli) et la taille (largeur) de l’onglet.
 - **Menu contextuel** : faites un clic droit sur un onglet pour changer sa couleur ou sa taille, ou pour le retirer des onglets.
 - **Défilement quand la place manque** : quand les onglets ne tiennent pas, ils défilent horizontalement (la molette de la souris fonctionne aussi) et s’estompent sur les bords. Les boutons intégrés de la barre d’outils gardent leur taille.
+- **Onglets sous la barre d’outils** : les onglets peuvent aussi occuper leur propre ligne sous la barre d’outils, où ils peuvent passer sur plusieurs lignes.
 - **Changement au clavier** : des commandes pour passer à l’onglet suivant ou précédent, à associer aux raccourcis de votre choix.
 
 ## Installation
 
-- **Plugins communautaires** (une fois référencé) : ouvrez **Settings → Community plugins → Browse**, recherchez « View Tabs for Bases », choisissez **Install**, puis **Enable**.
+- **Plugins communautaires** : ouvrez **Settings → Community plugins → Browse**, recherchez « View Tabs for Bases », choisissez **Install**, puis **Enable**.
 - **Manuelle** : téléchargez `main.js`, `manifest.json` et `styles.css` depuis la [dernière version](https://github.com/TTTatsuO/obsidian-view-tabs-for-bases/releases/latest) dans `<Vault>/.obsidian/plugins/view-tabs-for-bases/`, puis activez le plugin dans **Settings → Community plugins**.
 
 Nécessite Obsidian 1.14.0 ou ultérieur. Ordinateur uniquement.
@@ -39,7 +40,13 @@ Pour faire revenir un onglet retiré, ouvrez **Configure view** de cette vue dep
 
 Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue suivante** et **Passer à la vue précédente** dans **Settings → Hotkeys**. Elles parcourent les onglets dans l’ordre, reviennent au début une fois à la fin et ignorent les vues retirées des onglets. Aucun raccourci n’est défini par défaut.
 
-Pour désactiver les onglets partout, désactivez **Afficher les onglets de vues** dans les réglages du plugin.
+### Réglages du plugin
+
+- **Afficher les onglets de vues** : désactive les onglets partout.
+- **Afficher les icônes du type de vue** : affiche sur chaque onglet l’icône du type de vue (tableau, cartes, etc.). Activé par défaut.
+- **Position des onglets** : **À côté du nombre de résultats** (par défaut) ou **Sous la barre d’outils**.
+- **Renvoyer les onglets à la ligne** : sous la barre d’outils, les onglets qui ne tiennent pas passent sur plusieurs lignes au lieu de défiler horizontalement. Disponible uniquement quand **Position des onglets** vaut **Sous la barre d’outils**.
+- **Garder la cellule sélectionnée en changeant de vue** : voir ci-dessous.
 
 ### Garder la cellule sélectionnée
 
