@@ -4,11 +4,13 @@ import type ViewTabsForBasesPlugin from './main';
 
 export interface ViewTabsForBasesSettings {
 	showTabs: boolean;
+	showIcons: boolean;
 	restoreViewState: boolean;
 }
 
 export const DEFAULT_SETTINGS: ViewTabsForBasesSettings = {
 	showTabs: true,
+	showIcons: true,
 	restoreViewState: true,
 };
 
@@ -30,6 +32,11 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 				control: { type: 'toggle', key: 'showTabs', defaultValue: DEFAULT_SETTINGS.showTabs },
 			},
 			{
+				name: t.showIcons,
+				desc: t.showIconsDesc,
+				control: { type: 'toggle', key: 'showIcons', defaultValue: DEFAULT_SETTINGS.showIcons },
+			},
+			{
 				name: t.restoreViewState,
 				desc: t.restoreViewStateDesc,
 				control: { type: 'toggle', key: 'restoreViewState', defaultValue: DEFAULT_SETTINGS.restoreViewState },
@@ -38,7 +45,7 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 	}
 
 	async setControlValue(key: string, value: unknown): Promise<void> {
-		if (key !== 'showTabs' && key !== 'restoreViewState') return;
+		if (key !== 'showTabs' && key !== 'showIcons' && key !== 'restoreViewState') return;
 		this.plugin.settings[key] = value === true;
 		await this.plugin.saveSettings();
 	}

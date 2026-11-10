@@ -8,6 +8,8 @@ import type { EventRef, View } from 'obsidian';
 /** One view's config. get/set are also public API (BasesViewConfig); keys are saved in that view in the .base file. */
 export interface BasesViewConfig {
 	name: string;
+	/** The view type ("table", "cards", ... or a plugin's own). Not public API. */
+	type?: unknown;
 	get(key: string): unknown;
 	set(key: string, value: unknown): void;
 }
@@ -19,6 +21,10 @@ export interface BasesController {
 		views: BasesViewConfig[];
 		save(): void;
 	} | null;
+	/** The Bases core plugin, which knows each view type's icon. */
+	plugin?: {
+		getRegistration?(type: string): { icon?: unknown } | null;
+	};
 	getQueryViewNames(): string[];
 	selectView(name: string): void;
 	events: {
@@ -82,6 +88,17 @@ export function getViewConfigs(controller: BasesController): BasesViewConfig[] |
 		return null;
 	}
 	return views;
+}
+
+/** The icon of a view's type, as shown in the view menu, or null. */
+export function getViewIcon(controller: BasesController, config: BasesViewConfig): string | null {
+	try {
+		if (typeof config.type !== 'string') return null;
+		const icon = controller.plugin?.getRegistration?.(config.type)?.icon;
+		return typeof icon === 'string' && icon !== '' ? icon : null;
+	} catch {
+		return null;
+	}
 }
 
 /** Read a value from a view config, or undefined. */

@@ -6,6 +6,8 @@ import { getLanguage } from 'obsidian';
 const EN = {
 	showTabs: 'Show view tabs',
 	showTabsDesc: 'Show a base\'s views as tabs next to the result count.',
+	showIcons: 'Show view type icons',
+	showIconsDesc: 'Show each view\'s type icon, such as table or cards, on its tab.',
 	configSection: 'Tab settings',
 	showInTabsRow: 'Show in tabs',
 	colorRow: 'Color',
@@ -26,6 +28,8 @@ const STRINGS: Record<string, Strings> = {
 	ar: {
 		showTabs: 'إظهار علامات تبويب العروض',
 		showTabsDesc: 'اعرض عروض القاعدة كعلامات تبويب بجوار عدد النتائج.',
+		showIcons: 'إظهار أيقونات أنواع العروض',
+		showIconsDesc: 'اعرض أيقونة نوع كل عرض، مثل الجدول أو البطاقات، على علامة التبويب الخاصة به.',
 		configSection: 'إعدادات علامة التبويب',
 		showInTabsRow: 'إظهار في علامات التبويب',
 		colorRow: 'اللون',
@@ -41,6 +45,8 @@ const STRINGS: Record<string, Strings> = {
 	bn: {
 		showTabs: 'ভিউ ট্যাব দেখান',
 		showTabsDesc: 'বেসের ভিউগুলো ফলাফলের সংখ্যার পাশে ট্যাব হিসেবে দেখান।',
+		showIcons: 'ভিউয়ের ধরনের আইকন দেখান',
+		showIconsDesc: 'প্রতিটি ভিউয়ের ট্যাবে তার ধরনের আইকন দেখান, যেমন টেবিল বা কার্ড।',
 		configSection: 'ট্যাব সেটিংস',
 		showInTabsRow: 'ট্যাবে দেখান',
 		colorRow: 'রং',
@@ -56,6 +62,8 @@ const STRINGS: Record<string, Strings> = {
 	ca: {
 		showTabs: 'Mostra les pestanyes de vistes',
 		showTabsDesc: 'Mostra les vistes d’una base com a pestanyes al costat del recompte de resultats.',
+		showIcons: 'Mostra les icones del tipus de vista',
+		showIconsDesc: 'Mostra a cada pestanya la icona del tipus de vista, com ara taula o targetes.',
 		configSection: 'Configuració de la pestanya',
 		showInTabsRow: 'Mostra a les pestanyes',
 		colorRow: 'Color',
@@ -71,6 +79,8 @@ const STRINGS: Record<string, Strings> = {
 	cs: {
 		showTabs: 'Zobrazit karty zobrazení',
 		showTabsDesc: 'Zobrazí zobrazení báze jako karty vedle počtu výsledků.',
+		showIcons: 'Zobrazit ikony typu zobrazení',
+		showIconsDesc: 'Na každé kartě zobrazí ikonu typu zobrazení, například tabulky nebo karet.',
 		configSection: 'Nastavení karty',
 		showInTabsRow: 'Zobrazit v kartách',
 		colorRow: 'Barva',
@@ -86,6 +96,8 @@ const STRINGS: Record<string, Strings> = {
 	da: {
 		showTabs: 'Vis visningsfaner',
 		showTabsDesc: 'Viser visningerne i en base som faner ved siden af antallet af resultater.',
+		showIcons: 'Vis ikoner for visningstype',
+		showIconsDesc: 'Vis ikonet for hver visnings type, f.eks. tabel eller kort, på dens fane.',
 		configSection: 'Faneindstillinger',
 		showInTabsRow: 'Vis i faner',
 		colorRow: 'Farve',
@@ -101,6 +113,8 @@ const STRINGS: Record<string, Strings> = {
 	de: {
 		showTabs: 'Ansichts-Tabs anzeigen',
 		showTabsDesc: 'Zeigt die Ansichten einer Base als Tabs neben der Ergebnisanzahl.',
+		showIcons: 'Symbole für Ansichtstyp anzeigen',
+		showIconsDesc: 'Zeigt auf jedem Tab das Symbol des Ansichtstyps, etwa Tabelle oder Karten.',
 		configSection: 'Tab-Einstellungen',
 		showInTabsRow: 'In Tabs anzeigen',
 		colorRow: 'Farbe',
@@ -116,6 +130,8 @@ const STRINGS: Record<string, Strings> = {
 	el: {
 		showTabs: 'Εμφάνιση καρτελών προβολών',
 		showTabsDesc: 'Εμφανίζει τις προβολές μιας βάσης ως καρτέλες δίπλα στον αριθμό αποτελεσμάτων.',
+		showIcons: 'Εμφάνιση εικονιδίων τύπου προβολής',
+		showIconsDesc: 'Εμφανίζει στην καρτέλα κάθε προβολής το εικονίδιο του τύπου της, όπως πίνακας ή κάρτες.',
 		configSection: 'Ρυθμίσεις καρτέλας',
 		showInTabsRow: 'Εμφάνιση στις καρτέλες',
 		colorRow: 'Χρώμα',
@@ -131,6 +147,8 @@ const STRINGS: Record<string, Strings> = {
 	es: {
 		showTabs: 'Mostrar pestañas de vistas',
 		showTabsDesc: 'Muestra las vistas de una base como pestañas junto al número de resultados.',
+		showIcons: 'Mostrar iconos del tipo de vista',
+		showIconsDesc: 'Muestra en cada pestaña el icono del tipo de vista, como tabla o tarjetas.',
 		configSection: 'Ajustes de pestaña',
 		showInTabsRow: 'Mostrar en pestañas',
 		colorRow: 'Color',
@@ -146,6 +164,8 @@ const STRINGS: Record<string, Strings> = {
 	fa: {
 		showTabs: 'نمایش زبانه‌های نما',
 		showTabsDesc: 'نماهای یک پایگاه را به‌صورت زبانه کنار تعداد نتایج نمایش می‌دهد.',
+		showIcons: 'نمایش نماد نوع نما',
+		showIconsDesc: 'نماد نوع هر نما، مانند جدول یا کارت‌ها، را روی زبانه‌اش نشان می‌دهد.',
 		configSection: 'تنظیمات زبانه',
 		showInTabsRow: 'نمایش در زبانه‌ها',
 		colorRow: 'رنگ',
@@ -161,6 +181,8 @@ const STRINGS: Record<string, Strings> = {
 	fi: {
 		showTabs: 'Näytä näkymävälilehdet',
 		showTabsDesc: 'Näyttää kannan näkymät välilehtinä tulosten määrän vieressä.',
+		showIcons: 'Näytä näkymätyypin kuvakkeet',
+		showIconsDesc: 'Näyttää jokaisen näkymän välilehdellä sen tyypin kuvakkeen, kuten taulukon tai korttien.',
 		configSection: 'Välilehden asetukset',
 		showInTabsRow: 'Näytä välilehdissä',
 		colorRow: 'Väri',
@@ -176,6 +198,8 @@ const STRINGS: Record<string, Strings> = {
 	fr: {
 		showTabs: 'Afficher les onglets de vues',
 		showTabsDesc: 'Affiche les vues d’une base sous forme d’onglets à côté du nombre de résultats.',
+		showIcons: 'Afficher les icônes du type de vue',
+		showIconsDesc: 'Affiche sur chaque onglet l\'icône du type de vue, comme tableau ou cartes.',
 		configSection: 'Paramètres de l’onglet',
 		showInTabsRow: 'Afficher dans les onglets',
 		colorRow: 'Couleur',
@@ -191,6 +215,8 @@ const STRINGS: Record<string, Strings> = {
 	he: {
 		showTabs: 'הצגת לשוניות תצוגה',
 		showTabsDesc: 'מציג את התצוגות של בסיס כלשוניות ליד מספר התוצאות.',
+		showIcons: 'הצגת סמלי סוג התצוגה',
+		showIconsDesc: 'מציג בכל לשונית את סמל סוג התצוגה, כמו טבלה או כרטיסים.',
 		configSection: 'הגדרות לשונית',
 		showInTabsRow: 'הצגה בלשוניות',
 		colorRow: 'צבע',
@@ -206,6 +232,8 @@ const STRINGS: Record<string, Strings> = {
 	hu: {
 		showTabs: 'Nézetfülek megjelenítése',
 		showTabsDesc: 'Egy bázis nézeteit fülekként jeleníti meg a találatok száma mellett.',
+		showIcons: 'Nézettípus ikonjainak megjelenítése',
+		showIconsDesc: 'Minden lapon megjeleníti a nézet típusának ikonját, például táblázat vagy kártyák.',
 		configSection: 'Fül beállításai',
 		showInTabsRow: 'Megjelenítés a fülek között',
 		colorRow: 'Szín',
@@ -221,6 +249,8 @@ const STRINGS: Record<string, Strings> = {
 	id: {
 		showTabs: 'Tampilkan tab tampilan',
 		showTabsDesc: 'Menampilkan tampilan base sebagai tab di samping jumlah hasil.',
+		showIcons: 'Tampilkan ikon jenis tampilan',
+		showIconsDesc: 'Tampilkan ikon jenis setiap tampilan, seperti tabel atau kartu, pada tabnya.',
 		configSection: 'Pengaturan tab',
 		showInTabsRow: 'Tampilkan di tab',
 		colorRow: 'Warna',
@@ -236,6 +266,8 @@ const STRINGS: Record<string, Strings> = {
 	it: {
 		showTabs: 'Mostra le schede delle viste',
 		showTabsDesc: 'Mostra le viste di una base come schede accanto al numero di risultati.',
+		showIcons: 'Mostra le icone del tipo di vista',
+		showIconsDesc: 'Mostra su ogni scheda l\'icona del tipo di vista, come tabella o schede.',
 		configSection: 'Impostazioni scheda',
 		showInTabsRow: 'Mostra nelle schede',
 		colorRow: 'Colore',
@@ -251,6 +283,8 @@ const STRINGS: Record<string, Strings> = {
 	ja: {
 		showTabs: 'ビューのタブを表示',
 		showTabsDesc: 'Base のビューを、結果件数の右にタブで並べます。',
+		showIcons: 'ビューの種類のアイコンを表示',
+		showIconsDesc: '各タブに、表やカードなど、そのビューの種類のアイコンを表示します。',
 		configSection: 'タブ設定',
 		showInTabsRow: 'タブに表示',
 		colorRow: '色',
@@ -266,6 +300,8 @@ const STRINGS: Record<string, Strings> = {
 	km: {
 		showTabs: 'បង្ហាញផ្ទាំងទិដ្ឋភាព',
 		showTabsDesc: 'បង្ហាញទិដ្ឋភាពនៃមូលដ្ឋានជាផ្ទាំង នៅជាប់ចំនួនលទ្ធផល។',
+		showIcons: 'បង្ហាញរូបតំណាងប្រភេទទិដ្ឋភាព',
+		showIconsDesc: 'បង្ហាញរូបតំណាងប្រភេទនៃទិដ្ឋភាពនីមួយៗ ដូចជាតារាង ឬកាត នៅលើផ្ទាំងរបស់វា។',
 		configSection: 'ការកំណត់ផ្ទាំង',
 		showInTabsRow: 'បង្ហាញក្នុងផ្ទាំង',
 		colorRow: 'ពណ៌',
@@ -281,6 +317,8 @@ const STRINGS: Record<string, Strings> = {
 	ko: {
 		showTabs: '보기 탭 표시',
 		showTabsDesc: '베이스의 보기를 결과 수 옆에 탭으로 표시합니다.',
+		showIcons: '보기 유형 아이콘 표시',
+		showIconsDesc: '각 탭에 표나 카드 같은 보기 유형의 아이콘을 표시합니다.',
 		configSection: '탭 설정',
 		showInTabsRow: '탭에 표시',
 		colorRow: '색상',
@@ -296,6 +334,8 @@ const STRINGS: Record<string, Strings> = {
 	nl: {
 		showTabs: 'Weergavetabbladen tonen',
 		showTabsDesc: 'Toont de weergaven van een base als tabbladen naast het aantal resultaten.',
+		showIcons: 'Pictogrammen voor weergavetype tonen',
+		showIconsDesc: 'Toont op elk tabblad het pictogram van het weergavetype, zoals tabel of kaarten.',
 		configSection: 'Tabbladinstellingen',
 		showInTabsRow: 'Tonen in tabbladen',
 		colorRow: 'Kleur',
@@ -311,6 +351,8 @@ const STRINGS: Record<string, Strings> = {
 	no: {
 		showTabs: 'Vis visningsfaner',
 		showTabsDesc: 'Viser visningene i en base som faner ved siden av antall resultater.',
+		showIcons: 'Vis ikoner for visningstype',
+		showIconsDesc: 'Vis ikonet for hver visnings type, for eksempel tabell eller kort, på fanen.',
 		configSection: 'Faneinnstillinger',
 		showInTabsRow: 'Vis i faner',
 		colorRow: 'Farge',
@@ -326,6 +368,8 @@ const STRINGS: Record<string, Strings> = {
 	pl: {
 		showTabs: 'Pokaż karty widoków',
 		showTabsDesc: 'Pokazuje widoki bazy jako karty obok liczby wyników.',
+		showIcons: 'Pokaż ikony typu widoku',
+		showIconsDesc: 'Pokazuje na każdej karcie ikonę typu widoku, np. tabeli lub kart.',
 		configSection: 'Ustawienia karty',
 		showInTabsRow: 'Pokaż w kartach',
 		colorRow: 'Kolor',
@@ -341,6 +385,8 @@ const STRINGS: Record<string, Strings> = {
 	pt: {
 		showTabs: 'Mostrar separadores de vistas',
 		showTabsDesc: 'Mostra as vistas de uma base como separadores ao lado do número de resultados.',
+		showIcons: 'Mostrar ícones do tipo de vista',
+		showIconsDesc: 'Mostra em cada separador o ícone do tipo de vista, como tabela ou cartões.',
 		configSection: 'Definições do separador',
 		showInTabsRow: 'Mostrar nos separadores',
 		colorRow: 'Cor',
@@ -356,6 +402,8 @@ const STRINGS: Record<string, Strings> = {
 	"pt-BR": {
 		showTabs: 'Mostrar abas de visualizações',
 		showTabsDesc: 'Mostra as visualizações de uma base como abas ao lado do número de resultados.',
+		showIcons: 'Mostrar ícones do tipo de visualização',
+		showIconsDesc: 'Mostra em cada aba o ícone do tipo de visualização, como tabela ou cartões.',
 		configSection: 'Configurações da aba',
 		showInTabsRow: 'Mostrar nas abas',
 		colorRow: 'Cor',
@@ -371,6 +419,8 @@ const STRINGS: Record<string, Strings> = {
 	ro: {
 		showTabs: 'Afișează filele vizualizărilor',
 		showTabsDesc: 'Afișează vizualizările unei baze ca file lângă numărul de rezultate.',
+		showIcons: 'Afișează pictogramele tipului de vizualizare',
+		showIconsDesc: 'Afișează pe fiecare filă pictograma tipului de vizualizare, de exemplu tabel sau carduri.',
 		configSection: 'Setările filei',
 		showInTabsRow: 'Afișează în file',
 		colorRow: 'Culoare',
@@ -386,6 +436,8 @@ const STRINGS: Record<string, Strings> = {
 	ru: {
 		showTabs: 'Показывать вкладки представлений',
 		showTabsDesc: 'Показывает представления базы в виде вкладок рядом с числом результатов.',
+		showIcons: 'Показывать значки типа представления',
+		showIconsDesc: 'Показывает на каждой вкладке значок типа представления, например таблицы или карточек.',
 		configSection: 'Настройки вкладки',
 		showInTabsRow: 'Показывать во вкладках',
 		colorRow: 'Цвет',
@@ -401,6 +453,8 @@ const STRINGS: Record<string, Strings> = {
 	sk: {
 		showTabs: 'Zobraziť karty zobrazení',
 		showTabsDesc: 'Zobrazí zobrazenia bázy ako karty vedľa počtu výsledkov.',
+		showIcons: 'Zobraziť ikony typu zobrazenia',
+		showIconsDesc: 'Na každej karte zobrazí ikonu typu zobrazenia, napríklad tabuľky alebo kariet.',
 		configSection: 'Nastavenia karty',
 		showInTabsRow: 'Zobraziť v kartách',
 		colorRow: 'Farba',
@@ -416,6 +470,8 @@ const STRINGS: Record<string, Strings> = {
 	sv: {
 		showTabs: 'Visa vyflikar',
 		showTabsDesc: 'Visar vyerna i en bas som flikar bredvid antalet resultat.',
+		showIcons: 'Visa ikoner för vytyp',
+		showIconsDesc: 'Visar ikonen för varje vys typ, till exempel tabell eller kort, på dess flik.',
 		configSection: 'Flikinställningar',
 		showInTabsRow: 'Visa i flikar',
 		colorRow: 'Färg',
@@ -431,6 +487,8 @@ const STRINGS: Record<string, Strings> = {
 	th: {
 		showTabs: 'แสดงแท็บมุมมอง',
 		showTabsDesc: 'แสดงมุมมองของเบสเป็นแท็บข้างจำนวนผลลัพธ์',
+		showIcons: 'แสดงไอคอนประเภทมุมมอง',
+		showIconsDesc: 'แสดงไอคอนประเภทของแต่ละมุมมอง เช่น ตารางหรือการ์ด บนแท็บของมุมมองนั้น',
 		configSection: 'การตั้งค่าแท็บ',
 		showInTabsRow: 'แสดงในแท็บ',
 		colorRow: 'สี',
@@ -446,6 +504,8 @@ const STRINGS: Record<string, Strings> = {
 	tr: {
 		showTabs: 'Görünüm sekmelerini göster',
 		showTabsDesc: 'Bir tabanın görünümlerini sonuç sayısının yanında sekmeler olarak gösterir.',
+		showIcons: 'Görünüm türü simgelerini göster',
+		showIconsDesc: 'Her sekmede, tablo veya kartlar gibi görünüm türünün simgesini gösterir.',
 		configSection: 'Sekme ayarları',
 		showInTabsRow: 'Sekmelerde göster',
 		colorRow: 'Renk',
@@ -461,6 +521,8 @@ const STRINGS: Record<string, Strings> = {
 	uk: {
 		showTabs: 'Показувати вкладки представлень',
 		showTabsDesc: 'Показує представлення бази як вкладки поруч із кількістю результатів.',
+		showIcons: 'Показувати значки типу подання',
+		showIconsDesc: 'Показує на кожній вкладці значок типу подання, наприклад таблиці чи карток.',
 		configSection: 'Налаштування вкладки',
 		showInTabsRow: 'Показувати у вкладках',
 		colorRow: 'Колір',
@@ -476,6 +538,8 @@ const STRINGS: Record<string, Strings> = {
 	vi: {
 		showTabs: 'Hiện tab chế độ xem',
 		showTabsDesc: 'Hiển thị các chế độ xem của base dưới dạng tab bên cạnh số kết quả.',
+		showIcons: 'Hiện biểu tượng loại chế độ xem',
+		showIconsDesc: 'Hiện biểu tượng loại của từng chế độ xem, như bảng hoặc thẻ, trên tab của nó.',
 		configSection: 'Cài đặt tab',
 		showInTabsRow: 'Hiện trong tab',
 		colorRow: 'Màu',
@@ -491,6 +555,8 @@ const STRINGS: Record<string, Strings> = {
 	zh: {
 		showTabs: '显示视图标签',
 		showTabsDesc: '在结果数量旁以标签形式显示数据库的视图。',
+		showIcons: '显示视图类型图标',
+		showIconsDesc: '在每个标签上显示视图类型的图标，例如表格或卡片。',
 		configSection: '标签设置',
 		showInTabsRow: '在标签中显示',
 		colorRow: '颜色',
@@ -506,6 +572,8 @@ const STRINGS: Record<string, Strings> = {
 	"zh-TW": {
 		showTabs: '顯示檢視分頁',
 		showTabsDesc: '在結果數量旁以分頁顯示資料庫的檢視。',
+		showIcons: '顯示檢視類型圖示',
+		showIconsDesc: '在每個分頁上顯示檢視類型的圖示，例如表格或卡片。',
 		configSection: '分頁設定',
 		showInTabsRow: '在分頁中顯示',
 		colorRow: '顏色',

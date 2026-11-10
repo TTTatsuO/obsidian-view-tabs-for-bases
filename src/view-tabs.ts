@@ -1,4 +1,4 @@
-import { EventRef, Menu } from 'obsidian';
+import { EventRef, Menu, setIcon } from 'obsidian';
 import {
 	cycleName,
 	DEFAULT_TAB_SETTINGS,
@@ -16,6 +16,7 @@ import {
 	findTabsAnchor,
 	getCurrentViewName,
 	getViewConfigs,
+	getViewIcon,
 	getViewNames,
 	readViewConfig,
 	saveViewOrder,
@@ -77,7 +78,10 @@ export class ViewTabs {
 	private toolbarEl: HTMLElement | null = null;
 	private draggingName: string | null = null;
 
-	constructor(readonly controller: BasesController) {
+	constructor(
+		readonly controller: BasesController,
+		private readonly showIcons: boolean,
+	) {
 		this.containerEl = createDiv({ cls: 'view-tabs-for-bases' });
 		this.viewChangedRef = controller.events.on('view-changed', () => this.render());
 
@@ -120,9 +124,11 @@ export class ViewTabs {
 			if (!settings.show) continue;
 			const tabEl = this.containerEl.createEl('button', {
 				cls: `view-tabs-for-bases-tab mod-${settings.size}`,
-				text: name,
 				attr: { type: 'button' },
 			});
+			const icon = this.showIcons && config ? getViewIcon(this.controller, config) : null;
+			if (icon) setIcon(tabEl.createSpan({ cls: 'view-tabs-for-bases-tab-icon' }), icon);
+			tabEl.createSpan({ cls: 'view-tabs-for-bases-tab-name', text: name });
 			if (settings.color) tabEl.dataset.color = settings.color;
 			if (name === current) {
 				tabEl.addClass('is-active');

@@ -50,6 +50,7 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		// Read known keys only, so settings removed in a later version don't linger in data.json
 		this.settings = {
 			showTabs: data?.showTabs ?? DEFAULT_SETTINGS.showTabs,
+			showIcons: data?.showIcons ?? DEFAULT_SETTINGS.showIcons,
 			restoreViewState: data?.restoreViewState ?? DEFAULT_SETTINGS.restoreViewState,
 		};
 	}
@@ -100,7 +101,7 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 				() => this.requestRender(),
 			);
 			for (const [view, controller] of open) {
-				if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller));
+				if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller, this.settings.showIcons));
 			}
 		}
 		if (this.settings.restoreViewState) {
