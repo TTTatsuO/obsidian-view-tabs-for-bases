@@ -1,5 +1,6 @@
 import { EventRef, Menu } from 'obsidian';
 import {
+	cycleName,
 	DEFAULT_TAB_SETTINGS,
 	moveItem,
 	parseTabSettings,
@@ -111,6 +112,19 @@ export class ViewTabs {
 		this.containerEl.scrollLeft = scrollLeft;
 		if (activeEl) this.revealTab(activeEl);
 		this.updateOverflowHint();
+	}
+
+	/** Switch to the next (1) or previous (-1) tab, wrapping around. Hidden tabs are skipped. */
+	cycle(step: 1 | -1): void {
+		const configs = getViewConfigs(this.controller);
+		const order = configs ? configs.map((c) => c.name) : getViewNames(this.controller);
+		const visible = new Set(
+			configs
+				? configs.filter((c) => parseTabSettings(readViewConfig(c, TAB_SETTINGS_KEY)).show).map((c) => c.name)
+				: order,
+		);
+		const next = cycleName(order, visible, getCurrentViewName(this.controller), step);
+		if (next !== null) selectView(this.controller, next);
 	}
 
 	/** Scroll only the tab strip so the tab is visible (unlike scrollIntoView, outer panes don't move). */

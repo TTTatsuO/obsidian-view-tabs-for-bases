@@ -3,6 +3,7 @@ import { BasesController, getBasesController, isViewMenuOpen } from './internals
 import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS } from './settings';
 import { ViewConfigSection } from './view-config-section';
 import { ViewTabs } from './view-tabs';
+import { text } from './i18n';
 
 export default class ViewTabsForBasesPlugin extends Plugin {
 	settings: ViewTabsForBasesSettings = DEFAULT_SETTINGS;
@@ -13,6 +14,19 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 	async onload(): Promise<void> {
 		await this.loadSettings();
 		this.addSettingTab(new ViewTabsForBasesSettingTab(this.app, this));
+
+		// No default hotkeys, so they don't clash with anyone's own; assign them in Settings → Hotkeys
+		const t = text();
+		this.addCommand({
+			id: 'next-view',
+			name: t.nextView,
+			checkCallback: (checking) => this.cycleActive(1, checking),
+		});
+		this.addCommand({
+			id: 'previous-view',
+			name: t.previousView,
+			checkCallback: (checking) => this.cycleActive(-1, checking),
+		});
 
 		this.app.workspace.onLayoutReady(() => this.sync());
 		this.registerEvent(this.app.workspace.on('layout-change', () => this.requestSync()));
@@ -39,6 +53,15 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		await this.saveData(this.settings);
 		this.clear();
 		this.sync();
+	}
+
+	/** Switch the active base's view. Available only while a base with tabs is the active view. */
+	private cycleActive(step: 1 | -1, checking: boolean): boolean {
+		const view = this.app.workspace.getActiveViewOfType(View);
+		const tabs = view ? this.tabs.get(view) : undefined;
+		if (!tabs) return false;
+		if (!checking) tabs.cycle(step);
+		return true;
 	}
 
 	/** Attach tabs to every open base and detach them from bases that were closed. */
