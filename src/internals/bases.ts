@@ -159,3 +159,80 @@ export function getViewConfigFormName(formEl: HTMLElement): string | null {
 	const inputEl = formEl.querySelector<HTMLInputElement>('.input-row input');
 	return inputEl ? inputEl.value : null;
 }
+
+/** The parts of a view that saving and restoring its state touch (table, cards and list all have them). */
+interface StatefulView {
+	setEphemeralState(state: unknown): void;
+	onDataUpdated: (this: StatefulView) => void;
+	updateVirtualDisplay?(): void;
+}
+
+interface SwitchingController {
+	selectView: (this: SwitchingController, name: string) => void;
+	view?: unknown;
+	viewName?: unknown;
+	viewEstates?: Record<string, unknown>;
+}
+
+function isStatefulView(view: unknown): view is StatefulView {
+	const v = view as Partial<StatefulView> | null | undefined;
+	return typeof v?.setEphemeralState === 'function' && typeof v.onDataUpdated === 'function';
+}
+
+/**
+ * Works around Obsidian (checked on 1.15) sometimes losing the selected cell and scroll position
+ * when you switch between two views of the same type and back. Obsidian reuses the view object
+ * and applies the saved state while it still holds the previous view's rows, so a cell beyond
+ * those rows is dropped, and the scroll position is then replaced by the previous view's.
+ * Applying the saved state once more after the new rows arrive puts both back.
+ * Returns a function that removes the workaround, or null when it can't be installed.
+ */
+export function restoreViewStateOnSwitch(controller: BasesController): (() => void) | null {
+	const target = controller as unknown as SwitchingController;
+	const original = target.selectView;
+	if (typeof original !== 'function') return null;
+	const hadOwn = Object.prototype.hasOwnProperty.call(target, 'selectView');
+
+	const patched = function (this: SwitchingController, name: string): void {
+		const before = this.view;
+		original.call(this, name);
+		try {
+			reapplyAfterNextData(this, before);
+		} catch {
+			// Leave Obsidian's own behaviour as it is
+		}
+	};
+	target.selectView = patched;
+
+	return () => {
+		if (target.selectView !== patched) return;
+		if (hadOwn) target.selectView = original;
+		else delete (target as Partial<SwitchingController>).selectView;
+	};
+}
+
+/** After a switch that reused the view object, apply the saved state again once the new rows arrive. */
+function reapplyAfterNextData(controller: SwitchingController, before: unknown): void {
+	const { view, viewName } = controller;
+	// A new view object starts without rows, so Obsidian's own restore works there
+	if (view !== before || !isStatefulView(view) || typeof viewName !== 'string') return;
+	const state = controller.viewEstates?.[viewName];
+	if (!state || typeof state !== 'object') return;
+
+	const hadOwn = Object.prototype.hasOwnProperty.call(view, 'onDataUpdated');
+	const original = view.onDataUpdated;
+	view.onDataUpdated = function (this: StatefulView): void {
+		// Runs once: take this wrapper off before anything else
+		if (hadOwn) view.onDataUpdated = original;
+		else delete (view as Partial<StatefulView>).onDataUpdated;
+		original.call(this);
+		// Skip if another view was chosen while the rows were loading
+		if (controller.view !== view || controller.viewName !== viewName) return;
+		try {
+			view.setEphemeralState(state);
+			view.updateVirtualDisplay?.();
+		} catch {
+			// Leave Obsidian's own behaviour as it is
+		}
+	};
+}

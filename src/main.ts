@@ -1,5 +1,5 @@
 import { debounce, Plugin, TFile, View } from 'obsidian';
-import { BasesController, getBasesController, isViewMenuOpen } from './internals/bases';
+import { BasesController, getBasesController, isViewMenuOpen, restoreViewStateOnSwitch } from './internals/bases';
 import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS } from './settings';
 import { ViewConfigSection } from './view-config-section';
 import { cycleView, ViewTabs } from './view-tabs';
@@ -8,6 +8,8 @@ import { text } from './i18n';
 export default class ViewTabsForBasesPlugin extends Plugin {
 	settings: ViewTabsForBasesSettings = DEFAULT_SETTINGS;
 	private readonly tabs = new Map<View, ViewTabs>();
+	/** Undo functions of the view-state workaround, per open base. */
+	private readonly restorers = new Map<View, () => void>();
 	private configSection: ViewConfigSection | null = null;
 	private readonly requestSync = debounce(() => this.sync(), 50, true);
 
@@ -46,7 +48,10 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 	async loadSettings(): Promise<void> {
 		const data = (await this.loadData()) as Partial<ViewTabsForBasesSettings> | null;
 		// Read known keys only, so settings removed in a later version don't linger in data.json
-		this.settings = { showTabs: data?.showTabs ?? DEFAULT_SETTINGS.showTabs };
+		this.settings = {
+			showTabs: data?.showTabs ?? DEFAULT_SETTINGS.showTabs,
+			restoreViewState: data?.restoreViewState ?? DEFAULT_SETTINGS.restoreViewState,
+		};
 	}
 
 	async saveSettings(): Promise<void> {
@@ -66,29 +71,43 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		return true;
 	}
 
-	/** Attach tabs to every open base and detach them from bases that were closed. */
+	/**
+	 * Attach tabs and the view-state workaround to every open base, as the settings ask,
+	 * and detach them from bases that were closed.
+	 */
 	private sync(): void {
-		if (!this.settings.showTabs) {
-			this.clear();
-			return;
-		}
-		this.configSection ??= new ViewConfigSection(
-			() => this.findMenuOwner(),
-			() => this.requestRender(),
-		);
-
-		const open = new Set<View>();
+		const open = new Map<View, BasesController>();
 		for (const leaf of this.app.workspace.getLeavesOfType('bases')) {
-			const view = leaf.view;
-			const controller = getBasesController(view);
-			if (!controller) continue;
-			open.add(view);
-			if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller));
+			const controller = getBasesController(leaf.view);
+			if (controller) open.set(leaf.view, controller);
+		}
+
+		if (this.settings.showTabs) {
+			this.configSection ??= new ViewConfigSection(
+				() => this.findMenuOwner(),
+				() => this.requestRender(),
+			);
+			for (const [view, controller] of open) {
+				if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller));
+			}
 		}
 		for (const [view, tabs] of this.tabs) {
 			if (open.has(view)) continue;
 			tabs.destroy();
 			this.tabs.delete(view);
+		}
+
+		if (this.settings.restoreViewState) {
+			for (const [view, controller] of open) {
+				if (this.restorers.has(view)) continue;
+				const undo = restoreViewStateOnSwitch(controller);
+				if (undo) this.restorers.set(view, undo);
+			}
+		}
+		for (const [view, undo] of this.restorers) {
+			if (open.has(view)) continue;
+			undo();
+			this.restorers.delete(view);
 		}
 	}
 
@@ -116,5 +135,7 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		this.tabs.clear();
 		this.configSection?.destroy();
 		this.configSection = null;
+		for (const undo of this.restorers.values()) undo();
+		this.restorers.clear();
 	}
 }

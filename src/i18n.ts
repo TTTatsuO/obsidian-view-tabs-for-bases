@@ -15,6 +15,8 @@ const EN = {
 	removeFromTabs: 'Remove from tabs',
 	nextView: 'Switch to next view',
 	previousView: 'Switch to previous view',
+	restoreViewState: 'Keep the selected cell when switching views',
+	restoreViewStateDesc: 'Obsidian sometimes forgets the selected cell and scroll position when you switch between two views of the same type and come back. This puts them back. It relies on Obsidian\'s internals, so turn it off if switching views behaves oddly.',
 };
 
 export type Strings = typeof EN;
@@ -33,6 +35,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'إزالة من علامات التبويب',
 		nextView: 'التبديل إلى العرض التالي',
 		previousView: 'التبديل إلى العرض السابق',
+		restoreViewState: 'الاحتفاظ بالخلية المحددة عند تبديل العروض',
+		restoreViewStateDesc: 'ينسى Obsidian أحيانًا الخلية المحددة وموضع التمرير عند التبديل بين عرضين من النوع نفسه ثم العودة. هذا الخيار يعيدهما. يعتمد على أجزاء داخلية من Obsidian، لذا أوقفه إذا تصرّف تبديل العروض بشكل غريب.',
 	},
 	bn: {
 		showTabs: 'ভিউ ট্যাব দেখান',
@@ -46,6 +50,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'ট্যাব থেকে সরান',
 		nextView: 'পরের ভিউতে যান',
 		previousView: 'আগের ভিউতে যান',
+		restoreViewState: 'ভিউ বদলালেও নির্বাচিত সেল রাখুন',
+		restoreViewStateDesc: 'একই ধরনের দুটি ভিউয়ের মধ্যে বদলে ফিরে এলে Obsidian কখনো কখনো নির্বাচিত সেল ও স্ক্রল অবস্থান ভুলে যায়। এটি সেগুলো ফিরিয়ে আনে। এটি Obsidian-এর ভেতরের অংশের ওপর নির্ভর করে, তাই ভিউ বদলানো অদ্ভুত আচরণ করলে এটি বন্ধ করুন।',
 	},
 	ca: {
 		showTabs: 'Mostra les pestanyes de vistes',
@@ -59,6 +65,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Treu de les pestanyes',
 		nextView: 'Canvia a la vista següent',
 		previousView: 'Canvia a la vista anterior',
+		restoreViewState: 'Conserva la cel·la seleccionada en canviar de vista',
+		restoreViewStateDesc: 'De vegades Obsidian oblida la cel·la seleccionada i la posició de desplaçament quan canvies entre dues vistes del mateix tipus i tornes. Això les recupera. Depèn de parts internes d’Obsidian, així que desactiva-ho si el canvi de vista es comporta de manera estranya.',
 	},
 	cs: {
 		showTabs: 'Zobrazit karty zobrazení',
@@ -72,6 +80,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Odebrat z karet',
 		nextView: 'Přepnout na další zobrazení',
 		previousView: 'Přepnout na předchozí zobrazení',
+		restoreViewState: 'Zachovat vybranou buňku při přepínání zobrazení',
+		restoreViewStateDesc: 'Obsidian někdy zapomene vybranou buňku a pozici posunu, když přepnete mezi dvěma zobrazeními stejného typu a vrátíte se. Tato volba je obnoví. Spoléhá na vnitřní části Obsidianu, proto ji vypněte, pokud se přepínání zobrazení chová podivně.',
 	},
 	da: {
 		showTabs: 'Vis visningsfaner',
@@ -85,6 +95,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Fjern fra faner',
 		nextView: 'Skift til næste visning',
 		previousView: 'Skift til forrige visning',
+		restoreViewState: 'Behold den valgte celle ved skift af visning',
+		restoreViewStateDesc: 'Obsidian glemmer nogle gange den valgte celle og rulleplaceringen, når du skifter mellem to visninger af samme type og vender tilbage. Dette sætter dem tilbage. Det bygger på Obsidians interne dele, så slå det fra, hvis skift af visning opfører sig mærkeligt.',
 	},
 	de: {
 		showTabs: 'Ansichts-Tabs anzeigen',
@@ -98,6 +110,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Aus Tabs entfernen',
 		nextView: 'Zur nächsten Ansicht wechseln',
 		previousView: 'Zur vorherigen Ansicht wechseln',
+		restoreViewState: 'Ausgewählte Zelle beim Ansichtswechsel behalten',
+		restoreViewStateDesc: 'Obsidian vergisst manchmal die ausgewählte Zelle und die Scrollposition, wenn du zwischen zwei Ansichten desselben Typs wechselst und zurückkehrst. Diese Option stellt sie wieder her. Sie nutzt interne Teile von Obsidian; schalte sie aus, wenn sich der Ansichtswechsel seltsam verhält.',
 	},
 	el: {
 		showTabs: 'Εμφάνιση καρτελών προβολών',
@@ -111,6 +125,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Αφαίρεση από τις καρτέλες',
 		nextView: 'Μετάβαση στην επόμενη προβολή',
 		previousView: 'Μετάβαση στην προηγούμενη προβολή',
+		restoreViewState: 'Διατήρηση του επιλεγμένου κελιού κατά την αλλαγή προβολής',
+		restoreViewStateDesc: 'Το Obsidian μερικές φορές ξεχνά το επιλεγμένο κελί και τη θέση κύλισης όταν αλλάζετε ανάμεσα σε δύο προβολές του ίδιου τύπου και επιστρέφετε. Αυτή η επιλογή τα επαναφέρει. Βασίζεται σε εσωτερικά μέρη του Obsidian, οπότε απενεργοποιήστε την αν η αλλαγή προβολής συμπεριφέρεται παράξενα.',
 	},
 	es: {
 		showTabs: 'Mostrar pestañas de vistas',
@@ -124,6 +140,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Quitar de las pestañas',
 		nextView: 'Cambiar a la vista siguiente',
 		previousView: 'Cambiar a la vista anterior',
+		restoreViewState: 'Mantener la celda seleccionada al cambiar de vista',
+		restoreViewStateDesc: 'A veces Obsidian olvida la celda seleccionada y la posición de desplazamiento cuando cambias entre dos vistas del mismo tipo y vuelves. Esto las restaura. Depende de partes internas de Obsidian, así que desactívalo si el cambio de vista se comporta de forma extraña.',
 	},
 	fa: {
 		showTabs: 'نمایش زبانه‌های نما',
@@ -137,6 +155,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'حذف از زبانه‌ها',
 		nextView: 'رفتن به نمای بعدی',
 		previousView: 'رفتن به نمای قبلی',
+		restoreViewState: 'حفظ سلول انتخاب‌شده هنگام تغییر نما',
+		restoreViewStateDesc: 'Obsidian گاهی سلول انتخاب‌شده و موقعیت پیمایش را وقتی بین دو نمای هم‌نوع جابه‌جا می‌شوید و برمی‌گردید فراموش می‌کند. این گزینه آن‌ها را برمی‌گرداند. به بخش‌های داخلی Obsidian وابسته است، پس اگر تغییر نما رفتار عجیبی داشت آن را خاموش کنید.',
 	},
 	fi: {
 		showTabs: 'Näytä näkymävälilehdet',
@@ -150,6 +170,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Poista välilehdistä',
 		nextView: 'Vaihda seuraavaan näkymään',
 		previousView: 'Vaihda edelliseen näkymään',
+		restoreViewState: 'Säilytä valittu solu näkymää vaihdettaessa',
+		restoreViewStateDesc: 'Obsidian unohtaa joskus valitun solun ja vierityskohdan, kun vaihdat kahden samantyyppisen näkymän välillä ja palaat takaisin. Tämä palauttaa ne. Se perustuu Obsidianin sisäisiin osiin, joten poista se käytöstä, jos näkymän vaihtaminen toimii oudosti.',
 	},
 	fr: {
 		showTabs: 'Afficher les onglets de vues',
@@ -163,6 +185,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Retirer des onglets',
 		nextView: 'Passer à la vue suivante',
 		previousView: 'Passer à la vue précédente',
+		restoreViewState: 'Garder la cellule sélectionnée en changeant de vue',
+		restoreViewStateDesc: 'Obsidian oublie parfois la cellule sélectionnée et la position de défilement quand vous passez d’une vue à une autre du même type puis revenez. Cette option les rétablit. Elle s’appuie sur des éléments internes d’Obsidian ; désactivez-la si le changement de vue se comporte bizarrement.',
 	},
 	he: {
 		showTabs: 'הצגת לשוניות תצוגה',
@@ -176,6 +200,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'הסרה מהלשוניות',
 		nextView: 'מעבר לתצוגה הבאה',
 		previousView: 'מעבר לתצוגה הקודמת',
+		restoreViewState: 'שמירת התא שנבחר בעת החלפת תצוגה',
+		restoreViewStateDesc: 'Obsidian שוכח לפעמים את התא שנבחר ואת מיקום הגלילה כשעוברים בין שתי תצוגות מאותו סוג וחוזרים. אפשרות זו מחזירה אותם. היא נשענת על חלקים פנימיים של Obsidian, לכן כבו אותה אם החלפת התצוגה מתנהגת באופן מוזר.',
 	},
 	hu: {
 		showTabs: 'Nézetfülek megjelenítése',
@@ -189,6 +215,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Eltávolítás a fülek közül',
 		nextView: 'Váltás a következő nézetre',
 		previousView: 'Váltás az előző nézetre',
+		restoreViewState: 'A kijelölt cella megtartása nézetváltáskor',
+		restoreViewStateDesc: 'Az Obsidian néha elfelejti a kijelölt cellát és a görgetési helyzetet, ha két azonos típusú nézet között váltasz, majd visszatérsz. Ez visszaállítja őket. Az Obsidian belső részeire támaszkodik, ezért kapcsold ki, ha a nézetváltás furcsán viselkedik.',
 	},
 	id: {
 		showTabs: 'Tampilkan tab tampilan',
@@ -202,6 +230,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Hapus dari tab',
 		nextView: 'Beralih ke tampilan berikutnya',
 		previousView: 'Beralih ke tampilan sebelumnya',
+		restoreViewState: 'Pertahankan sel terpilih saat berganti tampilan',
+		restoreViewStateDesc: 'Obsidian terkadang melupakan sel terpilih dan posisi gulir saat Anda berpindah antara dua tampilan bertipe sama lalu kembali. Opsi ini mengembalikannya. Opsi ini bergantung pada bagian internal Obsidian, jadi matikan jika pergantian tampilan berperilaku aneh.',
 	},
 	it: {
 		showTabs: 'Mostra le schede delle viste',
@@ -215,6 +245,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Rimuovi dalle schede',
 		nextView: 'Passa alla vista successiva',
 		previousView: 'Passa alla vista precedente',
+		restoreViewState: 'Mantieni la cella selezionata al cambio di vista',
+		restoreViewStateDesc: 'A volte Obsidian dimentica la cella selezionata e la posizione di scorrimento quando passi tra due viste dello stesso tipo e torni indietro. Questa opzione le ripristina. Si basa su parti interne di Obsidian, quindi disattivala se il cambio di vista si comporta in modo strano.',
 	},
 	ja: {
 		showTabs: 'ビューのタブを表示',
@@ -228,6 +260,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'タブから外す',
 		nextView: '次のビューに切り替え',
 		previousView: '前のビューに切り替え',
+		restoreViewState: 'ビューを切り替えても選択中のセルを保つ',
+		restoreViewStateDesc: '同じ種類のビューを行き来すると、Obsidian が選択中のセルとスクロール位置を忘れることがあります。これを元に戻します。Obsidian の内部の仕組みを使うため、ビューの切り替えがおかしいときはオフにしてください。',
 	},
 	km: {
 		showTabs: 'បង្ហាញផ្ទាំងទិដ្ឋភាព',
@@ -241,6 +275,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'ដកចេញពីផ្ទាំង',
 		nextView: 'ប្ដូរទៅទិដ្ឋភាពបន្ទាប់',
 		previousView: 'ប្ដូរទៅទិដ្ឋភាពមុន',
+		restoreViewState: 'រក្សាក្រឡាដែលបានជ្រើសនៅពេលប្ដូរទិដ្ឋភាព',
+		restoreViewStateDesc: 'ពេលខ្លះ Obsidian ភ្លេចក្រឡាដែលបានជ្រើស និងទីតាំងរំកិល នៅពេលអ្នកប្ដូររវាងទិដ្ឋភាពពីរប្រភេទដូចគ្នា ហើយត្រឡប់មកវិញ។ ជម្រើសនេះដាក់វាត្រឡប់មកវិញ។ វាពឹងលើផ្នែកខាងក្នុងរបស់ Obsidian ដូច្នេះសូមបិទវា ប្រសិនបើការប្ដូរទិដ្ឋភាពដំណើរការចម្លែក។',
 	},
 	ko: {
 		showTabs: '보기 탭 표시',
@@ -254,6 +290,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: '탭에서 제거',
 		nextView: '다음 보기로 전환',
 		previousView: '이전 보기로 전환',
+		restoreViewState: '보기를 전환해도 선택한 셀 유지',
+		restoreViewStateDesc: '같은 유형의 두 보기 사이를 오가면 Obsidian이 선택한 셀과 스크롤 위치를 잊어버릴 때가 있습니다. 이 옵션은 그것을 되돌립니다. Obsidian의 내부 구조에 의존하므로, 보기 전환이 이상하게 동작하면 끄세요.',
 	},
 	nl: {
 		showTabs: 'Weergavetabbladen tonen',
@@ -267,6 +305,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Verwijderen uit tabbladen',
 		nextView: 'Naar volgende weergave',
 		previousView: 'Naar vorige weergave',
+		restoreViewState: 'Geselecteerde cel behouden bij wisselen van weergave',
+		restoreViewStateDesc: 'Obsidian vergeet soms de geselecteerde cel en de scrollpositie wanneer je tussen twee weergaven van hetzelfde type wisselt en terugkeert. Dit zet ze terug. Het steunt op interne onderdelen van Obsidian, dus zet het uit als het wisselen van weergave vreemd werkt.',
 	},
 	no: {
 		showTabs: 'Vis visningsfaner',
@@ -280,6 +320,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Fjern fra faner',
 		nextView: 'Bytt til neste visning',
 		previousView: 'Bytt til forrige visning',
+		restoreViewState: 'Behold den valgte cellen ved bytte av visning',
+		restoreViewStateDesc: 'Obsidian glemmer noen ganger den valgte cellen og rulleposisjonen når du bytter mellom to visninger av samme type og går tilbake. Dette setter dem tilbake. Det bygger på Obsidians interne deler, så slå det av hvis bytte av visning oppfører seg rart.',
 	},
 	pl: {
 		showTabs: 'Pokaż karty widoków',
@@ -293,6 +335,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Usuń z kart',
 		nextView: 'Przełącz na następny widok',
 		previousView: 'Przełącz na poprzedni widok',
+		restoreViewState: 'Zachowaj zaznaczoną komórkę przy zmianie widoku',
+		restoreViewStateDesc: 'Obsidian czasem zapomina zaznaczoną komórkę i pozycję przewinięcia, gdy przełączasz się między dwoma widokami tego samego typu i wracasz. Ta opcja je przywraca. Opiera się na wewnętrznych elementach Obsidiana, więc wyłącz ją, jeśli przełączanie widoków działa dziwnie.',
 	},
 	pt: {
 		showTabs: 'Mostrar separadores de vistas',
@@ -306,6 +350,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Remover dos separadores',
 		nextView: 'Mudar para a vista seguinte',
 		previousView: 'Mudar para a vista anterior',
+		restoreViewState: 'Manter a célula selecionada ao mudar de vista',
+		restoreViewStateDesc: 'Por vezes o Obsidian esquece a célula selecionada e a posição de deslocamento quando muda entre duas vistas do mesmo tipo e regressa. Esta opção repõe-nas. Depende de partes internas do Obsidian, por isso desative-a se a mudança de vista se comportar de forma estranha.',
 	},
 	"pt-BR": {
 		showTabs: 'Mostrar abas de visualizações',
@@ -319,6 +365,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Remover das abas',
 		nextView: 'Alternar para a próxima visualização',
 		previousView: 'Alternar para a visualização anterior',
+		restoreViewState: 'Manter a célula selecionada ao trocar de visualização',
+		restoreViewStateDesc: 'Às vezes o Obsidian esquece a célula selecionada e a posição de rolagem quando você alterna entre duas visualizações do mesmo tipo e volta. Esta opção as restaura. Ela depende de partes internas do Obsidian, então desative-a se a troca de visualização se comportar de forma estranha.',
 	},
 	ro: {
 		showTabs: 'Afișează filele vizualizărilor',
@@ -332,6 +380,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Elimină din file',
 		nextView: 'Comută la vizualizarea următoare',
 		previousView: 'Comută la vizualizarea anterioară',
+		restoreViewState: 'Păstrează celula selectată la schimbarea vizualizării',
+		restoreViewStateDesc: 'Uneori Obsidian uită celula selectată și poziția de derulare când comuți între două vizualizări de același tip și revii. Această opțiune le readuce. Se bazează pe părți interne ale Obsidian, așa că dezactiveaz-o dacă schimbarea vizualizării se comportă ciudat.',
 	},
 	ru: {
 		showTabs: 'Показывать вкладки представлений',
@@ -345,6 +395,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Убрать из вкладок',
 		nextView: 'Перейти к следующему представлению',
 		previousView: 'Перейти к предыдущему представлению',
+		restoreViewState: 'Сохранять выбранную ячейку при смене представления',
+		restoreViewStateDesc: 'Obsidian иногда забывает выбранную ячейку и позицию прокрутки, когда вы переключаетесь между двумя представлениями одного типа и возвращаетесь. Этот параметр восстанавливает их. Он опирается на внутренние механизмы Obsidian, поэтому выключите его, если переключение представлений работает странно.',
 	},
 	sk: {
 		showTabs: 'Zobraziť karty zobrazení',
@@ -358,6 +410,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Odstrániť z kariet',
 		nextView: 'Prepnúť na ďalšie zobrazenie',
 		previousView: 'Prepnúť na predchádzajúce zobrazenie',
+		restoreViewState: 'Zachovať vybranú bunku pri prepínaní zobrazení',
+		restoreViewStateDesc: 'Obsidian niekedy zabudne vybranú bunku a pozíciu posunu, keď prepnete medzi dvoma zobrazeniami rovnakého typu a vrátite sa. Táto voľba ich obnoví. Spolieha sa na vnútorné časti Obsidianu, preto ju vypnite, ak sa prepínanie zobrazení správa zvláštne.',
 	},
 	sv: {
 		showTabs: 'Visa vyflikar',
@@ -371,6 +425,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Ta bort från flikar',
 		nextView: 'Byt till nästa vy',
 		previousView: 'Byt till föregående vy',
+		restoreViewState: 'Behåll den markerade cellen vid byte av vy',
+		restoreViewStateDesc: 'Obsidian glömmer ibland den markerade cellen och rullningspositionen när du byter mellan två vyer av samma typ och går tillbaka. Det här återställer dem. Det bygger på Obsidians interna delar, så stäng av det om vybyten beter sig konstigt.',
 	},
 	th: {
 		showTabs: 'แสดงแท็บมุมมอง',
@@ -384,6 +440,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'นำออกจากแท็บ',
 		nextView: 'สลับไปมุมมองถัดไป',
 		previousView: 'สลับไปมุมมองก่อนหน้า',
+		restoreViewState: 'คงเซลล์ที่เลือกไว้เมื่อสลับมุมมอง',
+		restoreViewStateDesc: 'บางครั้ง Obsidian ลืมเซลล์ที่เลือกและตำแหน่งการเลื่อนเมื่อคุณสลับไปมาระหว่างมุมมองประเภทเดียวกันแล้วกลับมา ตัวเลือกนี้จะคืนค่าให้ ตัวเลือกนี้อาศัยส่วนภายในของ Obsidian จึงควรปิดหากการสลับมุมมองทำงานผิดปกติ',
 	},
 	tr: {
 		showTabs: 'Görünüm sekmelerini göster',
@@ -397,6 +455,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Sekmelerden kaldır',
 		nextView: 'Sonraki görünüme geç',
 		previousView: 'Önceki görünüme geç',
+		restoreViewState: 'Görünüm değiştirirken seçili hücreyi koru',
+		restoreViewStateDesc: 'Obsidian, aynı türdeki iki görünüm arasında geçip geri döndüğünüzde bazen seçili hücreyi ve kaydırma konumunu unutur. Bu seçenek onları geri getirir. Obsidian\'ın iç yapısına dayandığı için görünüm değiştirme tuhaf davranırsa kapatın.',
 	},
 	uk: {
 		showTabs: 'Показувати вкладки представлень',
@@ -410,6 +470,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Прибрати з вкладок',
 		nextView: 'Перейти до наступного представлення',
 		previousView: 'Перейти до попереднього представлення',
+		restoreViewState: 'Зберігати вибрану клітинку під час зміни представлення',
+		restoreViewStateDesc: 'Obsidian іноді забуває вибрану клітинку та позицію прокручування, коли ви перемикаєтеся між двома представленнями одного типу й повертаєтеся. Цей параметр відновлює їх. Він спирається на внутрішні механізми Obsidian, тож вимкніть його, якщо перемикання представлень працює дивно.',
 	},
 	vi: {
 		showTabs: 'Hiện tab chế độ xem',
@@ -423,6 +485,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: 'Gỡ khỏi tab',
 		nextView: 'Chuyển sang chế độ xem tiếp theo',
 		previousView: 'Chuyển sang chế độ xem trước',
+		restoreViewState: 'Giữ ô đang chọn khi chuyển chế độ xem',
+		restoreViewStateDesc: 'Obsidian đôi khi quên ô đang chọn và vị trí cuộn khi bạn chuyển qua lại giữa hai chế độ xem cùng loại. Tùy chọn này khôi phục chúng. Nó dựa vào phần bên trong của Obsidian, nên hãy tắt nếu việc chuyển chế độ xem hoạt động bất thường.',
 	},
 	zh: {
 		showTabs: '显示视图标签',
@@ -436,6 +500,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: '从标签中移除',
 		nextView: '切换到下一个视图',
 		previousView: '切换到上一个视图',
+		restoreViewState: '切换视图时保留选中的单元格',
+		restoreViewStateDesc: '在同类型的两个视图之间切换再返回时，Obsidian 有时会忘记选中的单元格和滚动位置。此选项会将其恢复。它依赖 Obsidian 的内部机制，如果切换视图表现异常，请将其关闭。',
 	},
 	"zh-TW": {
 		showTabs: '顯示檢視分頁',
@@ -449,6 +515,8 @@ const STRINGS: Record<string, Strings> = {
 		removeFromTabs: '從分頁中移除',
 		nextView: '切換到下一個檢視',
 		previousView: '切換到上一個檢視',
+		restoreViewState: '切換檢視時保留選取的儲存格',
+		restoreViewStateDesc: '在同類型的兩個檢視之間切換再返回時，Obsidian 有時會忘記選取的儲存格和捲動位置。此選項會將其恢復。它依賴 Obsidian 的內部機制，如果切換檢視表現異常，請將其關閉。',
 	},
 };
 
