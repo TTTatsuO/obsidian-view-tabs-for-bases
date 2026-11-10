@@ -24,6 +24,7 @@ import {
 	writeViewConfig,
 } from './internals/bases';
 import { text } from './i18n';
+import type { TabPosition } from './settings';
 
 /** Drag data type. With text/plain, dropping a tab on a note would insert its name as text. */
 const DRAG_TYPE = 'application/x-view-tabs-for-bases';
@@ -39,8 +40,6 @@ export interface TabStripOptions {
 	/** Below the toolbar only: wrap onto more lines instead of scrolling sideways. */
 	wrap: boolean;
 }
-
-export type TabPosition = 'inline' | 'below';
 
 interface TabItem {
 	name: string;
@@ -94,8 +93,8 @@ export class ViewTabs {
 		private readonly options: TabStripOptions,
 	) {
 		this.containerEl = createDiv({ cls: 'view-tabs-for-bases' });
-		this.containerEl.toggleClass('mod-below', options.position === 'below');
-		this.containerEl.toggleClass('mod-wrap', options.position === 'below' && options.wrap);
+		// Wrapping only applies below the toolbar; the CSS checks mod-below too
+		this.containerEl.toggleClass('mod-wrap', options.wrap);
 		this.viewChangedRef = controller.events.on('view-changed', () => this.render());
 
 		// Scroll sideways when the tabs don't fit; turn vertical wheel movement into horizontal scrolling
@@ -119,7 +118,10 @@ export class ViewTabs {
 	render(): void {
 		const anchor = findTabsAnchor(this.controller);
 		if (!anchor) return;
-		if (this.options.position === 'below' && anchor.headerEl) {
+		// Below the toolbar when asked and possible; otherwise next to the result count
+		const below = this.options.position === 'below' && anchor.headerEl !== null;
+		this.containerEl.toggleClass('mod-below', below);
+		if (below && anchor.headerEl) {
 			anchor.headerEl.after(this.containerEl);
 			this.toolbarEl?.removeClass(HOST_CLASS);
 			this.toolbarEl = null;
@@ -146,7 +148,7 @@ export class ViewTabs {
 				attr: { type: 'button' },
 			});
 			const icon = this.options.showIcons && config ? getViewIcon(this.controller, config) : null;
-			if (icon) setIcon(tabEl.createSpan({ cls: 'view-tabs-for-bases-tab-icon' }), icon);
+			if (icon) setIcon(tabEl.createSpan({ cls: 'view-tabs-for-bases-tab-icon', attr: { 'aria-hidden': 'true' } }), icon);
 			tabEl.createSpan({ cls: 'view-tabs-for-bases-tab-name', text: name });
 			if (settings.color) tabEl.dataset.color = settings.color;
 			if (name === current) {

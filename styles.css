@@ -29,12 +29,12 @@
 	display: none;
 }
 
-/* Below the toolbar: a row of its own, as wide as the base */
+/* Below the toolbar: a row of its own, as wide as the base. Side spacing is a margin, not
+   padding, so the edge fade lines up with where the tabs are cut off. */
 .view-tabs-for-bases.mod-below {
 	flex: 0 0 auto;
-	margin: 0;
-	padding: var(--size-4-1) var(--size-4-2);
-	border-bottom: var(--border-width) solid var(--background-modifier-border);
+	margin: 0 var(--size-4-2);
+	padding: var(--size-4-1) 0;
 }
 
 /* Wrap onto more lines instead of scrolling sideways */
@@ -121,6 +121,11 @@
 .view-tabs-for-bases .view-tabs-for-bases-tab:hover {
 	background-color: var(--background-modifier-hover);
 	color: var(--text-normal);
+}
+
+/* An uncolored icon brightens with its label; colored and selected ones keep their color */
+.view-tabs-for-bases .view-tabs-for-bases-tab:not([data-color], .is-active):hover .view-tabs-for-bases-tab-icon {
+	color: var(--icon-color-hover);
 }
 
 /* The selected tab is filled with a light tint of its color instead of an outline */

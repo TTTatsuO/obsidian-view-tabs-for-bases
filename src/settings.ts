@@ -1,7 +1,14 @@
 import { App, PluginSettingTab, SettingDefinitionItem } from 'obsidian';
 import { text } from './i18n';
 import type ViewTabsForBasesPlugin from './main';
-import type { TabPosition } from './view-tabs';
+
+/** Where the tabs go: next to the result count, or on a row of their own below the toolbar. */
+export type TabPosition = 'inline' | 'below';
+
+/** A stored or chosen position; anything unknown is the default. */
+export function parseTabPosition(value: unknown): TabPosition {
+	return value === 'below' ? 'below' : 'inline';
+}
 
 export interface ViewTabsForBasesSettings {
 	showTabs: boolean;
@@ -70,7 +77,7 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 
 	async setControlValue(key: string, value: unknown): Promise<void> {
 		if (key === 'tabPosition') {
-			this.plugin.settings.tabPosition = value === 'below' ? 'below' : 'inline';
+			this.plugin.settings.tabPosition = parseTabPosition(value);
 		} else if (key === 'showTabs' || key === 'showIcons' || key === 'wrapTabs' || key === 'restoreViewState') {
 			this.plugin.settings[key] = value === true;
 		} else {

@@ -90,12 +90,16 @@ export function getViewConfigs(controller: BasesController): BasesViewConfig[] |
 	return views;
 }
 
-/** The icon of a view's type, as shown in the view menu, or null. */
+/**
+ * The icon of a view's type, as shown in the view menu, or null. Like the view menu, a type
+ * that isn't registered (its plugin is off, say) gets the table icon.
+ */
 export function getViewIcon(controller: BasesController, config: BasesViewConfig): string | null {
 	try {
-		if (typeof config.type !== 'string') return null;
-		const icon = controller.plugin?.getRegistration?.(config.type)?.icon;
-		return typeof icon === 'string' && icon !== '' ? icon : null;
+		const plugin = controller.plugin;
+		if (typeof config.type !== 'string' || typeof plugin?.getRegistration !== 'function') return null;
+		const icon = plugin.getRegistration(config.type)?.icon;
+		return typeof icon === 'string' && icon !== '' ? icon : 'lucide-table';
 	} catch {
 		return null;
 	}

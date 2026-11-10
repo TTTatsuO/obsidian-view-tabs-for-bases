@@ -1,6 +1,6 @@
 import { debounce, Plugin, TFile, View } from 'obsidian';
 import { BasesController, getBasesController, isViewMenuOpen, restoreViewStateOnSwitch } from './internals/bases';
-import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS } from './settings';
+import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS, parseTabPosition } from './settings';
 import { ViewConfigSection } from './view-config-section';
 import { cycleView, ViewTabs } from './view-tabs';
 import { text } from './i18n';
@@ -51,7 +51,7 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		this.settings = {
 			showTabs: data?.showTabs ?? DEFAULT_SETTINGS.showTabs,
 			showIcons: data?.showIcons ?? DEFAULT_SETTINGS.showIcons,
-			tabPosition: data?.tabPosition === 'below' ? 'below' : 'inline',
+			tabPosition: parseTabPosition(data?.tabPosition),
 			wrapTabs: data?.wrapTabs ?? DEFAULT_SETTINGS.wrapTabs,
 			restoreViewState: data?.restoreViewState ?? DEFAULT_SETTINGS.restoreViewState,
 		};
