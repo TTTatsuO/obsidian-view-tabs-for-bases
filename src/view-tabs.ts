@@ -38,22 +38,27 @@ interface TabItem {
 
 /**
  * Every view in order with its tab settings, hidden ones included (settings.show tells them
- * apart). The tab strip and the next/previous commands both read this, so they always agree.
- * If the view configs can't be read, every view is listed by name only, with default settings.
+ * apart), plus the view configs they came from. The tab strip and the next/previous commands
+ * both read this, so they always agree. If the view configs can't be read, `configs` is null
+ * and every view is listed by name only, with default settings.
  */
-function getTabItems(controller: BasesController): TabItem[] {
+function getTabItems(controller: BasesController): { items: TabItem[]; configs: BasesViewConfig[] | null } {
 	const configs = getViewConfigs(controller);
-	if (!configs) return getViewNames(controller).map((name) => ({ name, config: null, settings: DEFAULT_TAB_SETTINGS }));
-	return configs.map((config) => ({
+	if (!configs) {
+		const items = getViewNames(controller).map((name) => ({ name, config: null, settings: DEFAULT_TAB_SETTINGS }));
+		return { items, configs };
+	}
+	const items = configs.map((config) => ({
 		name: config.name,
 		config,
 		settings: parseTabSettings(readViewConfig(config, TAB_SETTINGS_KEY)),
 	}));
+	return { items, configs };
 }
 
 /** Switch to the next (1) or previous (-1) tab, wrapping around. Hidden tabs are skipped. */
 export function cycleView(controller: BasesController, step: 1 | -1): void {
-	const items = getTabItems(controller);
+	const { items } = getTabItems(controller);
 	const visible = new Set(items.filter((item) => item.settings.show).map((item) => item.name));
 	const next = cycleName(
 		items.map((item) => item.name),
@@ -108,10 +113,10 @@ export class ViewTabs {
 		const scrollLeft = this.containerEl.scrollLeft;
 		this.containerEl.empty();
 		const current = getCurrentViewName(this.controller);
-		const configs = getViewConfigs(this.controller);
+		const { items, configs } = getTabItems(this.controller);
 
 		let activeEl: HTMLElement | null = null;
-		for (const { name, config, settings } of getTabItems(this.controller)) {
+		for (const { name, config, settings } of items) {
 			if (!settings.show) continue;
 			const tabEl = this.containerEl.createEl('button', {
 				cls: `view-tabs-for-bases-tab mod-${settings.size}`,
@@ -139,7 +144,6 @@ export class ViewTabs {
 		this.updateOverflowHint();
 	}
 
-	/** Switch to the next (1) or previous (-1) tab, wrapping around. Hidden tabs are skipped. */
 	/** Scroll only the tab strip so the tab is visible (unlike scrollIntoView, outer panes don't move). */
 	private revealTab(tabEl: HTMLElement): void {
 		const el = this.containerEl;
