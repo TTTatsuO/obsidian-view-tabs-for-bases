@@ -4,7 +4,7 @@
 
 Ve de un vistazo todas las vistas de una [base](https://help.obsidian.md/bases) de Obsidian. Este plugin muestra las vistas de una base como pestañas justo al lado del número de resultados, para que cambies de vista con un clic sin abrir el menú de vistas.
 
-![Una base Projects con las vistas All projects, Active, Due soon, By owner y Board como pestañas junto a «3 results»](../assets/tabs.png)
+![Cambio entre las vistas de una base Projects haciendo clic en sus pestañas: All projects (tabla), Board (kanban), Due soon (lista), Gallery (tarjetas) y By owner (tabla)](../assets/demo.gif)
 
 ## Funciones
 
@@ -28,6 +28,8 @@ Requiere Obsidian 1.14.0 o posterior. Solo para escritorio.
 
 Abre un archivo `.base`. Sus vistas aparecen como pestañas junto al número de resultados.
 
+![Una base Projects con sus vistas como pestañas junto a «12 results», cada una con el icono de su tipo de vista. Board está seleccionada y muestra un tablero kanban](../assets/tabs.png)
+
 Para cambiar una pestaña, haz clic derecho en ella y elige un color, un tamaño o **Quitar de las pestañas**.
 
 ![El menú contextual de una pestaña, con Color, Tamaño y Quitar de las pestañas](../assets/context-menu.png)
@@ -47,6 +49,8 @@ Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista sigui
 - **Posición de las pestañas**: **Junto al número de resultados** (por defecto) o **Bajo la barra de herramientas**.
 - **Ajustar pestañas**: bajo la barra de herramientas, las pestañas que no caben pasan a más líneas en lugar de desplazarse en horizontal. Solo disponible cuando **Posición de las pestañas** es **Bajo la barra de herramientas**.
 - **Mantener la celda seleccionada al cambiar de vista**: ver abajo.
+
+![Las pestañas en una fila propia bajo la barra de herramientas, con Gallery seleccionada](../assets/tabs-below.png)
 
 ### Mantener la celda seleccionada
 

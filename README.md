@@ -4,7 +4,7 @@
 
 See every view of an Obsidian [base](https://help.obsidian.md/bases) at a glance. This plugin lists a base's views as tabs right next to the result count, so you can switch views with one click instead of opening the view menu.
 
-![A Projects base with the views All projects, Active, Due soon, By owner and Board shown as tabs next to "3 results"](assets/tabs.png)
+![Switching between the views of a Projects base by clicking its tabs: All projects (table), Board (kanban), Due soon (list), Gallery (cards) and By owner (table)](assets/demo.gif)
 
 ## Features
 
@@ -28,6 +28,8 @@ Requires Obsidian 1.14.0 or later. Desktop only.
 
 Open a `.base` file. Its views appear as tabs next to the result count.
 
+![A Projects base with its views shown as tabs next to "12 results": All projects, Board, Due soon, Gallery and By owner, each with its view type's icon. Board is selected and shows a kanban board](assets/tabs.png)
+
 To change a tab, right-click it and pick a color, a size, or **Remove from tabs**.
 
 ![The context menu of a tab, with Color, Size and Remove from tabs](assets/context-menu.png)
@@ -47,6 +49,8 @@ To switch views from the keyboard, assign hotkeys to **Switch to next view** and
 - **Tab position**: **Next to the result count** (the default) or **Below the toolbar**.
 - **Wrap tabs**: below the toolbar, wrap tabs that don't fit onto more lines instead of scrolling sideways. Available only when **Tab position** is **Below the toolbar**.
 - **Keep the selected cell when switching views**: see below.
+
+![The tabs on a row of their own below the toolbar, with Gallery selected](assets/tabs-below.png)
 
 ### Keeping the selected cell
 

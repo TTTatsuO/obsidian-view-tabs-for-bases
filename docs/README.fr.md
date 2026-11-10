@@ -4,7 +4,7 @@
 
 Voyez d’un coup d’œil toutes les vues d’une [base](https://help.obsidian.md/bases) Obsidian. Ce plugin affiche les vues d’une base sous forme d’onglets, juste à côté du nombre de résultats : vous changez de vue en un clic, sans ouvrir le menu des vues.
 
-![Une base Projects dont les vues All projects, Active, Due soon, By owner et Board apparaissent sous forme d’onglets à côté de « 3 results »](../assets/tabs.png)
+![Passage d’une vue à l’autre d’une base Projects en cliquant sur ses onglets : All projects (tableau), Board (kanban), Due soon (liste), Gallery (cartes) et By owner (tableau)](../assets/demo.gif)
 
 ## Fonctionnalités
 
@@ -28,6 +28,8 @@ Nécessite Obsidian 1.14.0 ou ultérieur. Ordinateur uniquement.
 
 Ouvrez un fichier `.base`. Ses vues apparaissent sous forme d’onglets à côté du nombre de résultats.
 
+![Une base Projects dont les vues apparaissent en onglets à côté de « 12 results », chacun avec l’icône de son type de vue. Board est sélectionné et affiche un tableau kanban](../assets/tabs.png)
+
 Pour modifier un onglet, faites un clic droit dessus et choisissez une couleur, une taille ou **Retirer des onglets**.
 
 ![Le menu contextuel d’un onglet, avec Couleur, Taille et Retirer des onglets](../assets/context-menu.png)
@@ -47,6 +49,8 @@ Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue s
 - **Position des onglets** : **À côté du nombre de résultats** (par défaut) ou **Sous la barre d’outils**.
 - **Renvoyer les onglets à la ligne** : sous la barre d’outils, les onglets qui ne tiennent pas passent sur plusieurs lignes au lieu de défiler horizontalement. Disponible uniquement quand **Position des onglets** vaut **Sous la barre d’outils**.
 - **Garder la cellule sélectionnée en changeant de vue** : voir ci-dessous.
+
+![Les onglets sur une ligne à part sous la barre d’outils, avec Gallery sélectionné](../assets/tabs-below.png)
 
 ### Garder la cellule sélectionnée
 

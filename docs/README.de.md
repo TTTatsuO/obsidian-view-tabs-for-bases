@@ -4,7 +4,7 @@
 
 Alle Ansichten einer Obsidian-[Base](https://help.obsidian.md/bases) auf einen Blick. Dieses Plugin zeigt die Ansichten einer Base als Tabs direkt neben der Ergebnisanzahl, sodass du mit einem Klick zwischen Ansichten wechseln kannst, ohne das Ansichtsmenü zu öffnen.
 
-![Eine Base „Projects“ mit den Ansichten All projects, Active, Due soon, By owner und Board als Tabs neben „3 results“](../assets/tabs.png)
+![Wechsel zwischen den Ansichten einer Base „Projects“ per Klick auf die Tabs: All projects (Tabelle), Board (Kanban), Due soon (Liste), Gallery (Karten) und By owner (Tabelle)](../assets/demo.gif)
 
 ## Funktionen
 
@@ -28,6 +28,8 @@ Erfordert Obsidian 1.14.0 oder neuer. Nur für Desktop.
 
 Öffne eine `.base`-Datei. Ihre Ansichten erscheinen als Tabs neben der Ergebnisanzahl.
 
+![Eine Base „Projects“, deren Ansichten als Tabs neben „12 results“ stehen, jeweils mit dem Symbol des Ansichtstyps. Board ist ausgewählt und zeigt ein Kanban-Board](../assets/tabs.png)
+
 Um einen Tab zu ändern, klicke ihn mit der rechten Maustaste an und wähle eine Farbe, eine Größe oder **Aus Tabs entfernen**.
 
 ![Das Kontextmenü eines Tabs mit Farbe, Größe und Aus Tabs entfernen](../assets/context-menu.png)
@@ -47,6 +49,8 @@ Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den 
 - **Position der Tabs**: **Neben der Ergebnisanzahl** (Standard) oder **Unter der Werkzeugleiste**.
 - **Tabs umbrechen**: Unter der Werkzeugleiste werden Tabs, die nicht passen, auf weitere Zeilen umbrochen, statt seitlich zu scrollen. Nur verfügbar, wenn **Position der Tabs** auf **Unter der Werkzeugleiste** steht.
 - **Ausgewählte Zelle beim Ansichtswechsel behalten**: siehe unten.
+
+![Die Tabs in einer eigenen Zeile unter der Werkzeugleiste, Gallery ist ausgewählt](../assets/tabs-below.png)
 
 ### Ausgewählte Zelle behalten
 

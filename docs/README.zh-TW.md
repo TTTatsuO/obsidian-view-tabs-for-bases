@@ -4,7 +4,7 @@
 
 一眼看清 Obsidian [資料庫（Bases）](https://help.obsidian.md/bases)的所有檢視。本外掛把資料庫的檢視以分頁的形式排列在結果數量旁邊，不必打開檢視選單，點一下就能切換檢視。
 
-![名為 Projects 的資料庫中，All projects、Active、Due soon、By owner 和 Board 檢視以分頁形式顯示在「3 results」旁邊](../assets/tabs.png)
+![在名為 Projects 的資料庫中點擊分頁切換檢視：All projects（表格）、Board（看板）、Due soon（清單）、Gallery（卡片）和 By owner（表格）](../assets/demo.gif)
 
 ## 功能
 
@@ -28,6 +28,8 @@
 
 開啟 `.base` 檔案後，它的檢視會以分頁形式顯示在結果數量旁邊。
 
+![名為 Projects 的資料庫中，檢視以分頁形式顯示在「12 results」旁邊，每個分頁帶有檢視類型圖示。Board 被選取，顯示看板](../assets/tabs.png)
+
 要變更分頁，請在分頁上按右鍵，選擇顏色、大小或 **從分頁中移除**。
 
 ![分頁的右鍵選單，包含顏色、大小和從分頁中移除](../assets/context-menu.png)
@@ -47,6 +49,8 @@
 - **分頁位置**：**結果數量旁**（預設）或 **工具列下方**。
 - **分頁換行**：在工具列下方放不下的分頁會換到下一行，而不是橫向捲動。僅在 **分頁位置** 為 **工具列下方** 時可用。
 - **切換檢視時保留選取的儲存格**：見下文。
+
+![分頁在工具列下方單獨的一列，Gallery 被選取](../assets/tabs-below.png)
 
 ### 保留選取的儲存格
 

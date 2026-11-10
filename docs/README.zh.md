@@ -4,7 +4,7 @@
 
 一眼看清 Obsidian [数据库(Bases)](https://help.obsidian.md/bases)的所有视图。本插件把数据库的视图以标签的形式排列在结果数量旁边，无需打开视图菜单，点击一下即可切换视图。
 
-![名为 Projects 的数据库中，All projects、Active、Due soon、By owner 和 Board 视图以标签形式显示在“3 results”旁边](../assets/tabs.png)
+![在名为 Projects 的数据库中点击标签切换视图：All projects（表格）、Board（看板）、Due soon（列表）、Gallery（卡片）和 By owner（表格）](../assets/demo.gif)
 
 ## 功能
 
@@ -28,6 +28,8 @@
 
 打开一个 `.base` 文件，它的视图会以标签形式显示在结果数量旁边。
 
+![名为 Projects 的数据库中，视图以标签形式显示在“12 results”旁边，每个标签带有视图类型图标。Board 被选中，显示看板](../assets/tabs.png)
+
 要更改标签，请右键点击它，然后选择颜色、大小或 **从标签中移除**。
 
 ![标签的右键菜单，包含颜色、大小和从标签中移除](../assets/context-menu.png)
@@ -47,6 +49,8 @@
 - **标签位置**：**结果数量旁**（默认）或 **工具栏下方**。
 - **标签换行**：在工具栏下方放不下的标签会换到下一行，而不是横向滚动。仅在 **标签位置** 为 **工具栏下方** 时可用。
 - **切换视图时保留选中的单元格**：见下文。
+
+![标签在工具栏下方单独的一行，Gallery 被选中](../assets/tabs-below.png)
 
 ### 保留选中的单元格
 
