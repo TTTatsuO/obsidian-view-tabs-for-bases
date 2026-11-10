@@ -41,6 +41,12 @@ To switch views from the keyboard, assign hotkeys to **Switch to next view** and
 
 To turn the tabs off everywhere, switch off **Show view tabs** in the plugin's settings.
 
+### Keeping the selected cell
+
+Obsidian remembers the selected cell and scroll position of each view while you switch views. But when you switch between two views of the same type (for example, two tables) and come back, it sometimes loses them. Obsidian reuses the table for the new view and restores the position before the new rows have loaded, so a cell beyond the previous view's rows is dropped.
+
+**Keep the selected cell when switching views** (on by default) works around this: once the new rows have loaded, it puts the selected cell and scroll position back. It relies on Obsidian's internals, so if switching views ever behaves oddly, turn it off in the plugin's settings. Obsidian then works as it does without the plugin.
+
 ### Where settings are stored
 
 Tab settings are saved in the `.base` file, inside each view, under a single key. Only values that differ from the defaults are written:

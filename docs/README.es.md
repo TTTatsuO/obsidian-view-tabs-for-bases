@@ -41,6 +41,12 @@ Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista sigui
 
 Para desactivar las pestañas en todas partes, desactiva **Mostrar pestañas de vistas** en los ajustes del plugin.
 
+### Mantener la celda seleccionada
+
+Obsidian recuerda la celda seleccionada y la posición de desplazamiento de cada vista al cambiar de vista. Pero cuando cambias entre dos vistas del mismo tipo (por ejemplo, dos tablas) y vuelves, a veces las pierde. Obsidian reutiliza la tabla para la nueva vista y restaura la posición antes de que se carguen las filas nuevas, así que se descarta una celda que quede más allá de las filas de la vista anterior.
+
+**Mantener la celda seleccionada al cambiar de vista** (activado por defecto) lo soluciona: cuando las filas nuevas se han cargado, vuelve a restaurar la celda seleccionada y la posición de desplazamiento. Depende de partes internas de Obsidian, así que si el cambio de vista se comporta de forma extraña, desactívalo en los ajustes del plugin. Obsidian funcionará entonces como sin el plugin.
+
 ### Dónde se guardan los ajustes
 
 Los ajustes de pestaña se guardan en el archivo `.base`, dentro de cada vista, bajo una sola clave. Solo se escriben los valores distintos de los predeterminados:

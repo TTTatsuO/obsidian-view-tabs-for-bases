@@ -159,3 +159,109 @@ export function getViewConfigFormName(formEl: HTMLElement): string | null {
 	const inputEl = formEl.querySelector<HTMLInputElement>('.input-row input');
 	return inputEl ? inputEl.value : null;
 }
+
+/** The parts of a view that saving and restoring its state touch (table, cards and list all have them). */
+interface StatefulView {
+	setEphemeralState(state: unknown): void;
+	onDataUpdated: (this: StatefulView) => void;
+	updateVirtualDisplay?(): void;
+	/** Table and cards: the scroll position that onDataUpdated draws with. */
+	lastScroll?: unknown;
+}
+
+interface SwitchingController {
+	selectView: (this: SwitchingController, name: string) => void;
+	view?: unknown;
+	viewName?: unknown;
+	viewEstates?: Record<string, unknown>;
+	viewHeaderEl?: HTMLElement;
+}
+
+function isStatefulView(view: unknown): view is StatefulView {
+	const v = view as Partial<StatefulView> | null | undefined;
+	return typeof v?.setEphemeralState === 'function' && typeof v.onDataUpdated === 'function';
+}
+
+/**
+ * Works around Obsidian (checked on 1.15) sometimes losing the selected cell and scroll position
+ * when you switch between two views of the same type and back. Obsidian reuses the view object
+ * and applies the saved state while it still holds the previous view's rows, so a cell beyond
+ * those rows is dropped, and the scroll position is then replaced by the previous view's.
+ * Applying the saved state once more after the new rows arrive puts both back.
+ * Returns a function that removes the workaround, or null when it can't be installed. After
+ * removal nothing of it runs, even if another plugin wrapped selectView later and it can't be unwound.
+ */
+export function restoreViewStateOnSwitch(controller: BasesController): (() => void) | null {
+	const target = controller as unknown as SwitchingController;
+	const original = target.selectView;
+	if (typeof original !== 'function') return null;
+	const hadOwn = Object.prototype.hasOwnProperty.call(target, 'selectView');
+	const active = { value: true };
+
+	const patched = function (this: SwitchingController, name: string): void {
+		const before = this.view;
+		const beforeName = this.viewName;
+		original.call(this, name);
+		// Choosing the view already shown does nothing in Obsidian; its saved state is from an
+		// earlier visit, so don't wait to apply it on some later, unrelated update
+		if (!active.value || this.viewName === beforeName) return;
+		try {
+			reapplyAfterNextData(this, before, active);
+		} catch {
+			// Leave Obsidian's own behaviour as it is
+		}
+	};
+	target.selectView = patched;
+
+	return () => {
+		active.value = false;
+		if (target.selectView !== patched) return;
+		if (hadOwn) target.selectView = original;
+		else delete (target as Partial<SwitchingController>).selectView;
+	};
+}
+
+/** After a switch that reused the view object, apply the saved state again once the new rows arrive. */
+function reapplyAfterNextData(controller: SwitchingController, before: unknown, active: { value: boolean }): void {
+	const { view, viewName } = controller;
+	// A new view object starts without rows, so Obsidian's own restore works there
+	if (view !== before || !isStatefulView(view) || typeof viewName !== 'string') return;
+	const state = controller.viewEstates?.[viewName];
+	if (!state || typeof state !== 'object') return;
+	const { scroll } = state as { scroll?: unknown };
+
+	const hadOwn = Object.prototype.hasOwnProperty.call(view, 'onDataUpdated');
+	const original = view.onDataUpdated;
+	view.onDataUpdated = function (this: StatefulView): void {
+		// Runs once: take this wrapper off before anything else
+		if (hadOwn) view.onDataUpdated = original;
+		else delete (view as Partial<StatefulView>).onDataUpdated;
+		// Skip if the workaround was removed or another view was chosen while the rows were loading
+		const current = active.value && controller.view === view && controller.viewName === viewName;
+		// Draw the new rows at the saved scroll position straight away, instead of at the
+		// previous view's and then jumping
+		if (current && scroll && typeof scroll === 'object' && 'lastScroll' in view) view.lastScroll = scroll;
+		original.call(this);
+		// The table takes focus when its cell is restored; don't pull it away from where the user went meanwhile
+		if (!current || !focusStayedInBase(controller)) return;
+		try {
+			view.setEphemeralState(state);
+			view.updateVirtualDisplay?.();
+		} catch {
+			// Leave Obsidian's own behaviour as it is
+		}
+	};
+}
+
+/**
+ * Whether focus is still somewhere it was when the view was switched: nowhere in particular, or
+ * in this base on something that isn't a text field (a tab, a toolbar button, the table itself).
+ */
+function focusStayedInBase(controller: SwitchingController): boolean {
+	const rootEl = controller.viewHeaderEl?.parentElement;
+	if (!rootEl) return false;
+	const activeEl = rootEl.doc.activeElement;
+	if (!activeEl || activeEl === rootEl.doc.body) return true;
+	if (!rootEl.contains(activeEl)) return false;
+	return !activeEl.matches('input, textarea, select, [contenteditable]:not([contenteditable="false"])');
+}
