@@ -102,7 +102,7 @@
 
 /* Color, taken from the theme: the icon and a soft outline, plus a tint while selected */
 .view-tabs-for-bases .view-tabs-for-bases-tab[data-color] {
-	border-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 55%, transparent);
+	border-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 40%, transparent);
 }
 
 .view-tabs-for-bases .view-tabs-for-bases-tab[data-color] .view-tabs-for-bases-tab-icon {
@@ -130,8 +130,8 @@
 
 /* The selected tab is filled with a light tint of its color instead of an outline */
 .view-tabs-for-bases .view-tabs-for-bases-tab.is-active {
-	border-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 40%, transparent);
-	background-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 16%, transparent);
+	border-color: var(--view-tabs-for-bases-color);
+	background-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 28%, transparent);
 	color: var(--text-normal);
 	font-weight: var(--font-semibold);
 }
