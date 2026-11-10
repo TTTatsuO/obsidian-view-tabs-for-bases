@@ -30,6 +30,9 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 	 */
 	getSettingDefinitions(): SettingDefinitionItem[] {
 		const t = text();
+		// Settings that only matter in some cases stay visible but turn off, so people see they exist
+		const tabsOff = () => !this.plugin.settings.showTabs;
+		const notBelow = () => tabsOff() || this.plugin.settings.tabPosition !== 'below';
 		return [
 			{
 				name: t.showTabs,
@@ -39,7 +42,7 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 			{
 				name: t.showIcons,
 				desc: t.showIconsDesc,
-				control: { type: 'toggle', key: 'showIcons', defaultValue: DEFAULT_SETTINGS.showIcons },
+				control: { type: 'toggle', key: 'showIcons', defaultValue: DEFAULT_SETTINGS.showIcons, disabled: tabsOff },
 			},
 			{
 				name: t.tabPosition,
@@ -49,12 +52,13 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 					key: 'tabPosition',
 					defaultValue: DEFAULT_SETTINGS.tabPosition,
 					options: { inline: t.positionInline, below: t.positionBelow },
+					disabled: tabsOff,
 				},
 			},
 			{
 				name: t.wrapTabs,
 				desc: t.wrapTabsDesc,
-				control: { type: 'toggle', key: 'wrapTabs', defaultValue: DEFAULT_SETTINGS.wrapTabs },
+				control: { type: 'toggle', key: 'wrapTabs', defaultValue: DEFAULT_SETTINGS.wrapTabs, disabled: notBelow },
 			},
 			{
 				name: t.restoreViewState,
@@ -73,5 +77,7 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 			return;
 		}
 		await this.plugin.saveSettings();
+		// Re-evaluate which settings are turned off
+		if (key === 'showTabs' || key === 'tabPosition') this.update();
 	}
 }
