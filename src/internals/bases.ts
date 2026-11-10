@@ -200,8 +200,11 @@ export function restoreViewStateOnSwitch(controller: BasesController): (() => vo
 
 	const patched = function (this: SwitchingController, name: string): void {
 		const before = this.view;
+		const beforeName = this.viewName;
 		original.call(this, name);
-		if (!active.value) return;
+		// Choosing the view already shown does nothing in Obsidian; its saved state is from an
+		// earlier visit, so don't wait to apply it on some later, unrelated update
+		if (!active.value || this.viewName === beforeName) return;
 		try {
 			reapplyAfterNextData(this, before, active);
 		} catch {
