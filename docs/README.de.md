@@ -41,6 +41,12 @@ Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den 
 
 Um die Tabs überall auszuschalten, deaktiviere **Ansichts-Tabs anzeigen** in den Einstellungen des Plugins.
 
+### Ausgewählte Zelle behalten
+
+Obsidian merkt sich beim Ansichtswechsel für jede Ansicht die ausgewählte Zelle und die Scrollposition. Wechselst du aber zwischen zwei Ansichten desselben Typs (zum Beispiel zwei Tabellen) und kehrst zurück, gehen sie manchmal verloren. Obsidian verwendet die Tabelle für die neue Ansicht weiter und stellt die Position wieder her, bevor die neuen Zeilen geladen sind. Eine Zelle jenseits der Zeilen der vorherigen Ansicht wird dabei verworfen.
+
+**Ausgewählte Zelle beim Ansichtswechsel behalten** (standardmäßig an) umgeht das: Sobald die neuen Zeilen geladen sind, werden ausgewählte Zelle und Scrollposition erneut wiederhergestellt. Die Option nutzt interne Teile von Obsidian. Verhält sich der Ansichtswechsel seltsam, schalte sie in den Plugin-Einstellungen aus. Obsidian verhält sich dann wie ohne das Plugin.
+
 ### Wo die Einstellungen gespeichert werden
 
 Die Tab-Einstellungen werden in der `.base`-Datei innerhalb jeder Ansicht unter einem einzigen Schlüssel gespeichert. Es werden nur Werte geschrieben, die vom Standard abweichen:

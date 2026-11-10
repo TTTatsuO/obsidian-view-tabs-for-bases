@@ -41,6 +41,12 @@ Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue s
 
 Pour désactiver les onglets partout, désactivez **Afficher les onglets de vues** dans les réglages du plugin.
 
+### Garder la cellule sélectionnée
+
+Obsidian mémorise la cellule sélectionnée et la position de défilement de chaque vue quand vous changez de vue. Mais quand vous passez d’une vue à une autre du même type (par exemple deux tableaux) puis revenez, il les perd parfois. Obsidian réutilise le tableau pour la nouvelle vue et rétablit la position avant que les nouvelles lignes soient chargées : une cellule au-delà des lignes de la vue précédente est alors abandonnée.
+
+**Garder la cellule sélectionnée en changeant de vue** (activé par défaut) contourne ce problème : une fois les nouvelles lignes chargées, la cellule sélectionnée et la position de défilement sont rétablies. L’option s’appuie sur des éléments internes d’Obsidian ; si le changement de vue se comporte bizarrement, désactivez-la dans les réglages du plugin. Obsidian se comporte alors comme sans le plugin.
+
 ### Où les réglages sont enregistrés
 
 Les réglages d’onglet sont enregistrés dans le fichier `.base`, à l’intérieur de chaque vue, sous une seule clé. Seules les valeurs différentes des valeurs par défaut sont écrites :
