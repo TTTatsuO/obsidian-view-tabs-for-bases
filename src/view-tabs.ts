@@ -140,10 +140,6 @@ export class ViewTabs {
 	}
 
 	/** Switch to the next (1) or previous (-1) tab, wrapping around. Hidden tabs are skipped. */
-	cycle(step: 1 | -1): void {
-		cycleView(this.controller, step);
-	}
-
 	/** Scroll only the tab strip so the tab is visible (unlike scrollIntoView, outer panes don't move). */
 	private revealTab(tabEl: HTMLElement): void {
 		const el = this.containerEl;

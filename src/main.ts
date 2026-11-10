@@ -2,7 +2,7 @@ import { debounce, Plugin, TFile, View } from 'obsidian';
 import { BasesController, getBasesController, isViewMenuOpen } from './internals/bases';
 import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS } from './settings';
 import { ViewConfigSection } from './view-config-section';
-import { ViewTabs } from './view-tabs';
+import { cycleView, ViewTabs } from './view-tabs';
 import { text } from './i18n';
 
 export default class ViewTabsForBasesPlugin extends Plugin {
@@ -55,12 +55,14 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		this.sync();
 	}
 
-	/** Switch the active base's view. Available only while a base with tabs is the active view. */
+	/**
+	 * Switch the active base's view. Available whenever a base is the active view, even with
+	 * the tabs turned off, so the hotkeys keep working for people who hide the tab strip.
+	 */
 	private cycleActive(step: 1 | -1, checking: boolean): boolean {
-		const view = this.app.workspace.getActiveViewOfType(View);
-		const tabs = view ? this.tabs.get(view) : undefined;
-		if (!tabs) return false;
-		if (!checking) tabs.cycle(step);
+		const controller = getBasesController(this.app.workspace.getActiveViewOfType(View));
+		if (!controller) return false;
+		if (!checking) cycleView(controller, step);
 		return true;
 	}
 
