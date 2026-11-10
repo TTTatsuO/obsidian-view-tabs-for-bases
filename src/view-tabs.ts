@@ -30,6 +30,40 @@ const DRAG_TYPE = 'application/x-view-tabs-for-bases';
 /** Marks a toolbar that holds tabs, so the CSS can adjust it without :has (slow to invalidate). */
 const HOST_CLASS = 'view-tabs-for-bases-host';
 
+interface TabItem {
+	name: string;
+	config: BasesViewConfig | null;
+	settings: TabSettings;
+}
+
+/**
+ * Every view in order with its tab settings, hidden ones included (settings.show tells them
+ * apart). The tab strip and the next/previous commands both read this, so they always agree.
+ * If the view configs can't be read, every view is listed by name only, with default settings.
+ */
+function getTabItems(controller: BasesController): TabItem[] {
+	const configs = getViewConfigs(controller);
+	if (!configs) return getViewNames(controller).map((name) => ({ name, config: null, settings: DEFAULT_TAB_SETTINGS }));
+	return configs.map((config) => ({
+		name: config.name,
+		config,
+		settings: parseTabSettings(readViewConfig(config, TAB_SETTINGS_KEY)),
+	}));
+}
+
+/** Switch to the next (1) or previous (-1) tab, wrapping around. Hidden tabs are skipped. */
+export function cycleView(controller: BasesController, step: 1 | -1): void {
+	const items = getTabItems(controller);
+	const visible = new Set(items.filter((item) => item.settings.show).map((item) => item.name));
+	const next = cycleName(
+		items.map((item) => item.name),
+		visible,
+		getCurrentViewName(controller),
+		step,
+	);
+	if (next !== null) selectView(controller, next);
+}
+
 /** The tab strip of one open base. */
 export class ViewTabs {
 	private readonly containerEl: HTMLElement;
@@ -75,19 +109,10 @@ export class ViewTabs {
 		this.containerEl.empty();
 		const current = getCurrentViewName(this.controller);
 		const configs = getViewConfigs(this.controller);
-		// If the view configs can't be read, show every view by name only (no hiding, color, size or reordering)
-		const items: { name: string; config: BasesViewConfig | null; settings: TabSettings }[] = configs
-			? configs
-					.map((config) => ({
-						name: config.name,
-						config,
-						settings: parseTabSettings(readViewConfig(config, TAB_SETTINGS_KEY)),
-					}))
-					.filter((item) => item.settings.show)
-			: getViewNames(this.controller).map((name) => ({ name, config: null, settings: DEFAULT_TAB_SETTINGS }));
 
 		let activeEl: HTMLElement | null = null;
-		for (const { name, config, settings } of items) {
+		for (const { name, config, settings } of getTabItems(this.controller)) {
+			if (!settings.show) continue;
 			const tabEl = this.containerEl.createEl('button', {
 				cls: `view-tabs-for-bases-tab mod-${settings.size}`,
 				text: name,
@@ -116,15 +141,7 @@ export class ViewTabs {
 
 	/** Switch to the next (1) or previous (-1) tab, wrapping around. Hidden tabs are skipped. */
 	cycle(step: 1 | -1): void {
-		const configs = getViewConfigs(this.controller);
-		const order = configs ? configs.map((c) => c.name) : getViewNames(this.controller);
-		const visible = new Set(
-			configs
-				? configs.filter((c) => parseTabSettings(readViewConfig(c, TAB_SETTINGS_KEY)).show).map((c) => c.name)
-				: order,
-		);
-		const next = cycleName(order, visible, getCurrentViewName(this.controller), step);
-		if (next !== null) selectView(this.controller, next);
+		cycleView(this.controller, step);
 	}
 
 	/** Scroll only the tab strip so the tab is visible (unlike scrollIntoView, outer panes don't move). */
