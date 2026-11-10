@@ -13,6 +13,8 @@ const EN = {
 	colors: { default: 'Default', red: 'Red', orange: 'Orange', yellow: 'Yellow', green: 'Green', cyan: 'Cyan', blue: 'Blue', purple: 'Purple', pink: 'Pink' },
 	sizes: { small: 'Small', medium: 'Medium', large: 'Large' },
 	removeFromTabs: 'Remove from tabs',
+	nextView: 'Switch to next view',
+	previousView: 'Switch to previous view',
 };
 
 export type Strings = typeof EN;
@@ -29,6 +31,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'افتراضي', red: 'أحمر', orange: 'برتقالي', yellow: 'أصفر', green: 'أخضر', cyan: 'سماوي', blue: 'أزرق', purple: 'بنفسجي', pink: 'وردي' },
 		sizes: { small: 'صغير', medium: 'متوسط', large: 'كبير' },
 		removeFromTabs: 'إزالة من علامات التبويب',
+		nextView: 'التبديل إلى العرض التالي',
+		previousView: 'التبديل إلى العرض السابق',
 	},
 	bn: {
 		showTabs: 'ভিউ ট্যাব দেখান',
@@ -40,6 +44,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'ডিফল্ট', red: 'লাল', orange: 'কমলা', yellow: 'হলুদ', green: 'সবুজ', cyan: 'সায়ান', blue: 'নীল', purple: 'বেগুনি', pink: 'গোলাপি' },
 		sizes: { small: 'ছোট', medium: 'মাঝারি', large: 'বড়' },
 		removeFromTabs: 'ট্যাব থেকে সরান',
+		nextView: 'পরের ভিউতে যান',
+		previousView: 'আগের ভিউতে যান',
 	},
 	ca: {
 		showTabs: 'Mostra les pestanyes de vistes',
@@ -51,6 +57,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Per defecte', red: 'Vermell', orange: 'Taronja', yellow: 'Groc', green: 'Verd', cyan: 'Cian', blue: 'Blau', purple: 'Lila', pink: 'Rosa' },
 		sizes: { small: 'Petita', medium: 'Mitjana', large: 'Gran' },
 		removeFromTabs: 'Treu de les pestanyes',
+		nextView: 'Canvia a la vista següent',
+		previousView: 'Canvia a la vista anterior',
 	},
 	cs: {
 		showTabs: 'Zobrazit karty zobrazení',
@@ -62,6 +70,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Výchozí', red: 'Červená', orange: 'Oranžová', yellow: 'Žlutá', green: 'Zelená', cyan: 'Azurová', blue: 'Modrá', purple: 'Fialová', pink: 'Růžová' },
 		sizes: { small: 'Malá', medium: 'Střední', large: 'Velká' },
 		removeFromTabs: 'Odebrat z karet',
+		nextView: 'Přepnout na další zobrazení',
+		previousView: 'Přepnout na předchozí zobrazení',
 	},
 	da: {
 		showTabs: 'Vis visningsfaner',
@@ -73,6 +83,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Standard', red: 'Rød', orange: 'Orange', yellow: 'Gul', green: 'Grøn', cyan: 'Cyan', blue: 'Blå', purple: 'Lilla', pink: 'Pink' },
 		sizes: { small: 'Lille', medium: 'Mellem', large: 'Stor' },
 		removeFromTabs: 'Fjern fra faner',
+		nextView: 'Skift til næste visning',
+		previousView: 'Skift til forrige visning',
 	},
 	de: {
 		showTabs: 'Ansichts-Tabs anzeigen',
@@ -84,6 +96,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Standard', red: 'Rot', orange: 'Orange', yellow: 'Gelb', green: 'Grün', cyan: 'Cyan', blue: 'Blau', purple: 'Lila', pink: 'Pink' },
 		sizes: { small: 'Klein', medium: 'Mittel', large: 'Groß' },
 		removeFromTabs: 'Aus Tabs entfernen',
+		nextView: 'Zur nächsten Ansicht wechseln',
+		previousView: 'Zur vorherigen Ansicht wechseln',
 	},
 	el: {
 		showTabs: 'Εμφάνιση καρτελών προβολών',
@@ -95,6 +109,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Προεπιλογή', red: 'Κόκκινο', orange: 'Πορτοκαλί', yellow: 'Κίτρινο', green: 'Πράσινο', cyan: 'Κυανό', blue: 'Μπλε', purple: 'Μωβ', pink: 'Ροζ' },
 		sizes: { small: 'Μικρό', medium: 'Μεσαίο', large: 'Μεγάλο' },
 		removeFromTabs: 'Αφαίρεση από τις καρτέλες',
+		nextView: 'Μετάβαση στην επόμενη προβολή',
+		previousView: 'Μετάβαση στην προηγούμενη προβολή',
 	},
 	es: {
 		showTabs: 'Mostrar pestañas de vistas',
@@ -106,6 +122,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Predeterminado', red: 'Rojo', orange: 'Naranja', yellow: 'Amarillo', green: 'Verde', cyan: 'Cian', blue: 'Azul', purple: 'Morado', pink: 'Rosa' },
 		sizes: { small: 'Pequeño', medium: 'Mediano', large: 'Grande' },
 		removeFromTabs: 'Quitar de las pestañas',
+		nextView: 'Cambiar a la vista siguiente',
+		previousView: 'Cambiar a la vista anterior',
 	},
 	fa: {
 		showTabs: 'نمایش زبانه‌های نما',
@@ -117,6 +135,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'پیش‌فرض', red: 'قرمز', orange: 'نارنجی', yellow: 'زرد', green: 'سبز', cyan: 'فیروزه‌ای', blue: 'آبی', purple: 'بنفش', pink: 'صورتی' },
 		sizes: { small: 'کوچک', medium: 'متوسط', large: 'بزرگ' },
 		removeFromTabs: 'حذف از زبانه‌ها',
+		nextView: 'رفتن به نمای بعدی',
+		previousView: 'رفتن به نمای قبلی',
 	},
 	fi: {
 		showTabs: 'Näytä näkymävälilehdet',
@@ -128,6 +148,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Oletus', red: 'Punainen', orange: 'Oranssi', yellow: 'Keltainen', green: 'Vihreä', cyan: 'Syaani', blue: 'Sininen', purple: 'Violetti', pink: 'Pinkki' },
 		sizes: { small: 'Pieni', medium: 'Keskikokoinen', large: 'Suuri' },
 		removeFromTabs: 'Poista välilehdistä',
+		nextView: 'Vaihda seuraavaan näkymään',
+		previousView: 'Vaihda edelliseen näkymään',
 	},
 	fr: {
 		showTabs: 'Afficher les onglets de vues',
@@ -139,6 +161,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Par défaut', red: 'Rouge', orange: 'Orange', yellow: 'Jaune', green: 'Vert', cyan: 'Cyan', blue: 'Bleu', purple: 'Violet', pink: 'Rose' },
 		sizes: { small: 'Petite', medium: 'Moyenne', large: 'Grande' },
 		removeFromTabs: 'Retirer des onglets',
+		nextView: 'Passer à la vue suivante',
+		previousView: 'Passer à la vue précédente',
 	},
 	he: {
 		showTabs: 'הצגת לשוניות תצוגה',
@@ -150,6 +174,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'ברירת מחדל', red: 'אדום', orange: 'כתום', yellow: 'צהוב', green: 'ירוק', cyan: 'ציאן', blue: 'כחול', purple: 'סגול', pink: 'ורוד' },
 		sizes: { small: 'קטן', medium: 'בינוני', large: 'גדול' },
 		removeFromTabs: 'הסרה מהלשוניות',
+		nextView: 'מעבר לתצוגה הבאה',
+		previousView: 'מעבר לתצוגה הקודמת',
 	},
 	hu: {
 		showTabs: 'Nézetfülek megjelenítése',
@@ -161,6 +187,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Alapértelmezett', red: 'Piros', orange: 'Narancs', yellow: 'Sárga', green: 'Zöld', cyan: 'Cián', blue: 'Kék', purple: 'Lila', pink: 'Rózsaszín' },
 		sizes: { small: 'Kicsi', medium: 'Közepes', large: 'Nagy' },
 		removeFromTabs: 'Eltávolítás a fülek közül',
+		nextView: 'Váltás a következő nézetre',
+		previousView: 'Váltás az előző nézetre',
 	},
 	id: {
 		showTabs: 'Tampilkan tab tampilan',
@@ -172,6 +200,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Bawaan', red: 'Merah', orange: 'Oranye', yellow: 'Kuning', green: 'Hijau', cyan: 'Sian', blue: 'Biru', purple: 'Ungu', pink: 'Merah muda' },
 		sizes: { small: 'Kecil', medium: 'Sedang', large: 'Besar' },
 		removeFromTabs: 'Hapus dari tab',
+		nextView: 'Beralih ke tampilan berikutnya',
+		previousView: 'Beralih ke tampilan sebelumnya',
 	},
 	it: {
 		showTabs: 'Mostra le schede delle viste',
@@ -183,6 +213,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Predefinito', red: 'Rosso', orange: 'Arancione', yellow: 'Giallo', green: 'Verde', cyan: 'Ciano', blue: 'Blu', purple: 'Viola', pink: 'Rosa' },
 		sizes: { small: 'Piccola', medium: 'Media', large: 'Grande' },
 		removeFromTabs: 'Rimuovi dalle schede',
+		nextView: 'Passa alla vista successiva',
+		previousView: 'Passa alla vista precedente',
 	},
 	ja: {
 		showTabs: 'ビューのタブを表示',
@@ -194,6 +226,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: '既定', red: '赤', orange: '橙', yellow: '黄', green: '緑', cyan: '水色', blue: '青', purple: '紫', pink: 'ピンク' },
 		sizes: { small: '小', medium: '中', large: '大' },
 		removeFromTabs: 'タブから外す',
+		nextView: '次のビューに切り替え',
+		previousView: '前のビューに切り替え',
 	},
 	km: {
 		showTabs: 'បង្ហាញផ្ទាំងទិដ្ឋភាព',
@@ -205,6 +239,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'លំនាំដើម', red: 'ក្រហម', orange: 'ទឹកក្រូច', yellow: 'លឿង', green: 'បៃតង', cyan: 'ស៊ីយ៉ាន', blue: 'ខៀវ', purple: 'ស្វាយ', pink: 'ផ្កាឈូក' },
 		sizes: { small: 'តូច', medium: 'មធ្យម', large: 'ធំ' },
 		removeFromTabs: 'ដកចេញពីផ្ទាំង',
+		nextView: 'ប្ដូរទៅទិដ្ឋភាពបន្ទាប់',
+		previousView: 'ប្ដូរទៅទិដ្ឋភាពមុន',
 	},
 	ko: {
 		showTabs: '보기 탭 표시',
@@ -216,6 +252,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: '기본값', red: '빨강', orange: '주황', yellow: '노랑', green: '초록', cyan: '청록', blue: '파랑', purple: '보라', pink: '분홍' },
 		sizes: { small: '작게', medium: '보통', large: '크게' },
 		removeFromTabs: '탭에서 제거',
+		nextView: '다음 보기로 전환',
+		previousView: '이전 보기로 전환',
 	},
 	nl: {
 		showTabs: 'Weergavetabbladen tonen',
@@ -227,6 +265,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Standaard', red: 'Rood', orange: 'Oranje', yellow: 'Geel', green: 'Groen', cyan: 'Cyaan', blue: 'Blauw', purple: 'Paars', pink: 'Roze' },
 		sizes: { small: 'Klein', medium: 'Middel', large: 'Groot' },
 		removeFromTabs: 'Verwijderen uit tabbladen',
+		nextView: 'Naar volgende weergave',
+		previousView: 'Naar vorige weergave',
 	},
 	no: {
 		showTabs: 'Vis visningsfaner',
@@ -238,6 +278,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Standard', red: 'Rød', orange: 'Oransje', yellow: 'Gul', green: 'Grønn', cyan: 'Cyan', blue: 'Blå', purple: 'Lilla', pink: 'Rosa' },
 		sizes: { small: 'Liten', medium: 'Middels', large: 'Stor' },
 		removeFromTabs: 'Fjern fra faner',
+		nextView: 'Bytt til neste visning',
+		previousView: 'Bytt til forrige visning',
 	},
 	pl: {
 		showTabs: 'Pokaż karty widoków',
@@ -249,6 +291,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Domyślny', red: 'Czerwony', orange: 'Pomarańczowy', yellow: 'Żółty', green: 'Zielony', cyan: 'Cyjan', blue: 'Niebieski', purple: 'Fioletowy', pink: 'Różowy' },
 		sizes: { small: 'Mały', medium: 'Średni', large: 'Duży' },
 		removeFromTabs: 'Usuń z kart',
+		nextView: 'Przełącz na następny widok',
+		previousView: 'Przełącz na poprzedni widok',
 	},
 	pt: {
 		showTabs: 'Mostrar separadores de vistas',
@@ -260,6 +304,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Predefinição', red: 'Vermelho', orange: 'Laranja', yellow: 'Amarelo', green: 'Verde', cyan: 'Ciano', blue: 'Azul', purple: 'Roxo', pink: 'Rosa' },
 		sizes: { small: 'Pequeno', medium: 'Médio', large: 'Grande' },
 		removeFromTabs: 'Remover dos separadores',
+		nextView: 'Mudar para a vista seguinte',
+		previousView: 'Mudar para a vista anterior',
 	},
 	"pt-BR": {
 		showTabs: 'Mostrar abas de visualizações',
@@ -271,6 +317,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Padrão', red: 'Vermelho', orange: 'Laranja', yellow: 'Amarelo', green: 'Verde', cyan: 'Ciano', blue: 'Azul', purple: 'Roxo', pink: 'Rosa' },
 		sizes: { small: 'Pequeno', medium: 'Médio', large: 'Grande' },
 		removeFromTabs: 'Remover das abas',
+		nextView: 'Alternar para a próxima visualização',
+		previousView: 'Alternar para a visualização anterior',
 	},
 	ro: {
 		showTabs: 'Afișează filele vizualizărilor',
@@ -282,6 +330,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Implicit', red: 'Roșu', orange: 'Portocaliu', yellow: 'Galben', green: 'Verde', cyan: 'Cyan', blue: 'Albastru', purple: 'Mov', pink: 'Roz' },
 		sizes: { small: 'Mică', medium: 'Medie', large: 'Mare' },
 		removeFromTabs: 'Elimină din file',
+		nextView: 'Comută la vizualizarea următoare',
+		previousView: 'Comută la vizualizarea anterioară',
 	},
 	ru: {
 		showTabs: 'Показывать вкладки представлений',
@@ -293,6 +343,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'По умолчанию', red: 'Красный', orange: 'Оранжевый', yellow: 'Жёлтый', green: 'Зелёный', cyan: 'Голубой', blue: 'Синий', purple: 'Фиолетовый', pink: 'Розовый' },
 		sizes: { small: 'Маленький', medium: 'Средний', large: 'Большой' },
 		removeFromTabs: 'Убрать из вкладок',
+		nextView: 'Перейти к следующему представлению',
+		previousView: 'Перейти к предыдущему представлению',
 	},
 	sk: {
 		showTabs: 'Zobraziť karty zobrazení',
@@ -304,6 +356,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Predvolené', red: 'Červená', orange: 'Oranžová', yellow: 'Žltá', green: 'Zelená', cyan: 'Azúrová', blue: 'Modrá', purple: 'Fialová', pink: 'Ružová' },
 		sizes: { small: 'Malá', medium: 'Stredná', large: 'Veľká' },
 		removeFromTabs: 'Odstrániť z kariet',
+		nextView: 'Prepnúť na ďalšie zobrazenie',
+		previousView: 'Prepnúť na predchádzajúce zobrazenie',
 	},
 	sv: {
 		showTabs: 'Visa vyflikar',
@@ -315,6 +369,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Standard', red: 'Röd', orange: 'Orange', yellow: 'Gul', green: 'Grön', cyan: 'Cyan', blue: 'Blå', purple: 'Lila', pink: 'Rosa' },
 		sizes: { small: 'Liten', medium: 'Mellan', large: 'Stor' },
 		removeFromTabs: 'Ta bort från flikar',
+		nextView: 'Byt till nästa vy',
+		previousView: 'Byt till föregående vy',
 	},
 	th: {
 		showTabs: 'แสดงแท็บมุมมอง',
@@ -326,6 +382,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'ค่าเริ่มต้น', red: 'แดง', orange: 'ส้ม', yellow: 'เหลือง', green: 'เขียว', cyan: 'ฟ้าอมเขียว', blue: 'น้ำเงิน', purple: 'ม่วง', pink: 'ชมพู' },
 		sizes: { small: 'เล็ก', medium: 'กลาง', large: 'ใหญ่' },
 		removeFromTabs: 'นำออกจากแท็บ',
+		nextView: 'สลับไปมุมมองถัดไป',
+		previousView: 'สลับไปมุมมองก่อนหน้า',
 	},
 	tr: {
 		showTabs: 'Görünüm sekmelerini göster',
@@ -337,6 +395,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Varsayılan', red: 'Kırmızı', orange: 'Turuncu', yellow: 'Sarı', green: 'Yeşil', cyan: 'Camgöbeği', blue: 'Mavi', purple: 'Mor', pink: 'Pembe' },
 		sizes: { small: 'Küçük', medium: 'Orta', large: 'Büyük' },
 		removeFromTabs: 'Sekmelerden kaldır',
+		nextView: 'Sonraki görünüme geç',
+		previousView: 'Önceki görünüme geç',
 	},
 	uk: {
 		showTabs: 'Показувати вкладки представлень',
@@ -348,6 +408,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'За замовчуванням', red: 'Червоний', orange: 'Помаранчевий', yellow: 'Жовтий', green: 'Зелений', cyan: 'Блакитний', blue: 'Синій', purple: 'Фіолетовий', pink: 'Рожевий' },
 		sizes: { small: 'Малий', medium: 'Середній', large: 'Великий' },
 		removeFromTabs: 'Прибрати з вкладок',
+		nextView: 'Перейти до наступного представлення',
+		previousView: 'Перейти до попереднього представлення',
 	},
 	vi: {
 		showTabs: 'Hiện tab chế độ xem',
@@ -359,6 +421,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: 'Mặc định', red: 'Đỏ', orange: 'Cam', yellow: 'Vàng', green: 'Xanh lá', cyan: 'Xanh lơ', blue: 'Xanh dương', purple: 'Tím', pink: 'Hồng' },
 		sizes: { small: 'Nhỏ', medium: 'Vừa', large: 'Lớn' },
 		removeFromTabs: 'Gỡ khỏi tab',
+		nextView: 'Chuyển sang chế độ xem tiếp theo',
+		previousView: 'Chuyển sang chế độ xem trước',
 	},
 	zh: {
 		showTabs: '显示视图标签',
@@ -370,6 +434,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: '默认', red: '红色', orange: '橙色', yellow: '黄色', green: '绿色', cyan: '青色', blue: '蓝色', purple: '紫色', pink: '粉色' },
 		sizes: { small: '小', medium: '中', large: '大' },
 		removeFromTabs: '从标签中移除',
+		nextView: '切换到下一个视图',
+		previousView: '切换到上一个视图',
 	},
 	"zh-TW": {
 		showTabs: '顯示檢視分頁',
@@ -381,6 +447,8 @@ const STRINGS: Record<string, Strings> = {
 		colors: { default: '預設', red: '紅色', orange: '橙色', yellow: '黃色', green: '綠色', cyan: '青色', blue: '藍色', purple: '紫色', pink: '粉紅色' },
 		sizes: { small: '小', medium: '中', large: '大' },
 		removeFromTabs: '從分頁中移除',
+		nextView: '切換到下一個檢視',
+		previousView: '切換到上一個檢視',
 	},
 };
 

@@ -14,6 +14,7 @@ See every view of an Obsidian [base](https://help.obsidian.md/bases) at a glance
 - **Per-view tab settings**: choose whether each view has a tab, and set the tab's color (outline) and size (width).
 - **Context menu**: right-click a tab to change its color or size, or to remove it from the tabs.
 - **Scrolls when crowded**: when the tabs don't fit, they scroll sideways (the mouse wheel works too) and fade at the edges. The built-in toolbar buttons keep their size.
+- **Keyboard switching**: commands to switch to the next or previous tab, which you can bind to any hotkeys.
 
 ## Installation
 
@@ -35,6 +36,8 @@ You can also open **Configure view** from the view menu and use the **Tab settin
 ![The Tab settings section at the bottom of Configure view](assets/configure-view.png)
 
 To bring back a removed tab, open that view's **Configure view** from the view menu and turn **Show in tabs** back on.
+
+To switch views from the keyboard, assign hotkeys to **Switch to next view** and **Switch to previous view** in **Settings → Hotkeys**. They move through the tabs in order, wrap around at the ends, and skip views removed from the tabs. No hotkeys are set by default.
 
 To turn the tabs off everywhere, switch off **Show view tabs** in the plugin's settings.
 

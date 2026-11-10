@@ -53,6 +53,25 @@ export function serializeTabSettings(settings: TabSettings): Record<string, unkn
 	return Object.keys(result).length > 0 ? result : null;
 }
 
+/**
+ * The name `step` places after `current` in `order`, wrapping around, counting only names in
+ * `visible`. When `current` is not visible itself, it starts from its place in `order`, so a
+ * hidden current view still moves to its neighbouring tab. null when nothing visible is left to switch to.
+ */
+export function cycleName(order: string[], visible: Set<string>, current: string | null, step: 1 | -1): string | null {
+	const count = order.length;
+	if (count === 0) return null;
+	const start = current === null ? -1 : order.indexOf(current);
+	// Without a known current view, "next" picks the first tab and "previous" the last
+	let index = start < 0 ? (step === 1 ? -1 : count) : start;
+	for (let i = 0; i < count; i++) {
+		index = (((index + step) % count) + count) % count;
+		const name = order[index] as string;
+		if (visible.has(name)) return name === current ? null : name;
+	}
+	return null;
+}
+
 /** A new array with the item at `from` moved to `to`. Unchanged if either index is out of range. */
 export function moveItem<T>(items: T[], from: number, to: number): T[] {
 	if (from === to || from < 0 || to < 0 || from >= items.length || to >= items.length) return items.slice();

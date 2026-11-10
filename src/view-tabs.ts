@@ -1,5 +1,6 @@
 import { EventRef, Menu } from 'obsidian';
 import {
+	cycleName,
 	DEFAULT_TAB_SETTINGS,
 	moveItem,
 	parseTabSettings,
@@ -28,6 +29,45 @@ const DRAG_TYPE = 'application/x-view-tabs-for-bases';
 
 /** Marks a toolbar that holds tabs, so the CSS can adjust it without :has (slow to invalidate). */
 const HOST_CLASS = 'view-tabs-for-bases-host';
+
+interface TabItem {
+	name: string;
+	config: BasesViewConfig | null;
+	settings: TabSettings;
+}
+
+/**
+ * Every view in order with its tab settings, hidden ones included (settings.show tells them
+ * apart), plus the view configs they came from. The tab strip and the next/previous commands
+ * both read this, so they always agree. If the view configs can't be read, `configs` is null
+ * and every view is listed by name only, with default settings.
+ */
+function getTabItems(controller: BasesController): { items: TabItem[]; configs: BasesViewConfig[] | null } {
+	const configs = getViewConfigs(controller);
+	if (!configs) {
+		const items = getViewNames(controller).map((name) => ({ name, config: null, settings: DEFAULT_TAB_SETTINGS }));
+		return { items, configs };
+	}
+	const items = configs.map((config) => ({
+		name: config.name,
+		config,
+		settings: parseTabSettings(readViewConfig(config, TAB_SETTINGS_KEY)),
+	}));
+	return { items, configs };
+}
+
+/** Switch to the next (1) or previous (-1) tab, wrapping around. Hidden tabs are skipped. */
+export function cycleView(controller: BasesController, step: 1 | -1): void {
+	const { items } = getTabItems(controller);
+	const visible = new Set(items.filter((item) => item.settings.show).map((item) => item.name));
+	const next = cycleName(
+		items.map((item) => item.name),
+		visible,
+		getCurrentViewName(controller),
+		step,
+	);
+	if (next !== null) selectView(controller, next);
+}
 
 /** The tab strip of one open base. */
 export class ViewTabs {
@@ -73,20 +113,11 @@ export class ViewTabs {
 		const scrollLeft = this.containerEl.scrollLeft;
 		this.containerEl.empty();
 		const current = getCurrentViewName(this.controller);
-		const configs = getViewConfigs(this.controller);
-		// If the view configs can't be read, show every view by name only (no hiding, color, size or reordering)
-		const items: { name: string; config: BasesViewConfig | null; settings: TabSettings }[] = configs
-			? configs
-					.map((config) => ({
-						name: config.name,
-						config,
-						settings: parseTabSettings(readViewConfig(config, TAB_SETTINGS_KEY)),
-					}))
-					.filter((item) => item.settings.show)
-			: getViewNames(this.controller).map((name) => ({ name, config: null, settings: DEFAULT_TAB_SETTINGS }));
+		const { items, configs } = getTabItems(this.controller);
 
 		let activeEl: HTMLElement | null = null;
 		for (const { name, config, settings } of items) {
+			if (!settings.show) continue;
 			const tabEl = this.containerEl.createEl('button', {
 				cls: `view-tabs-for-bases-tab mod-${settings.size}`,
 				text: name,
