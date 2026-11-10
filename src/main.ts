@@ -8,8 +8,8 @@ import { text } from './i18n';
 export default class ViewTabsForBasesPlugin extends Plugin {
 	settings: ViewTabsForBasesSettings = DEFAULT_SETTINGS;
 	private readonly tabs = new Map<View, ViewTabs>();
-	/** Undo functions of the view-state workaround, per open base. */
-	private readonly restorers = new Map<View, () => void>();
+	/** The view-state workaround on each open base: the controller it's on and how to remove it. */
+	private readonly restorers = new Map<View, { controller: BasesController; undo: () => void }>();
 	private configSection: ViewConfigSection | null = null;
 	private readonly requestSync = debounce(() => this.sync(), 50, true);
 
@@ -82,6 +82,18 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 			if (controller) open.set(leaf.view, controller);
 		}
 
+		// Detach first from bases that were closed, or whose view now has a different controller
+		for (const [view, tabs] of this.tabs) {
+			if (open.get(view) === tabs.controller) continue;
+			tabs.destroy();
+			this.tabs.delete(view);
+		}
+		for (const [view, restorer] of this.restorers) {
+			if (open.get(view) === restorer.controller) continue;
+			restorer.undo();
+			this.restorers.delete(view);
+		}
+
 		if (this.settings.showTabs) {
 			this.configSection ??= new ViewConfigSection(
 				() => this.findMenuOwner(),
@@ -91,23 +103,12 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 				if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller));
 			}
 		}
-		for (const [view, tabs] of this.tabs) {
-			if (open.has(view)) continue;
-			tabs.destroy();
-			this.tabs.delete(view);
-		}
-
 		if (this.settings.restoreViewState) {
 			for (const [view, controller] of open) {
 				if (this.restorers.has(view)) continue;
 				const undo = restoreViewStateOnSwitch(controller);
-				if (undo) this.restorers.set(view, undo);
+				if (undo) this.restorers.set(view, { controller, undo });
 			}
-		}
-		for (const [view, undo] of this.restorers) {
-			if (open.has(view)) continue;
-			undo();
-			this.restorers.delete(view);
 		}
 	}
 
@@ -135,7 +136,7 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		this.tabs.clear();
 		this.configSection?.destroy();
 		this.configSection = null;
-		for (const undo of this.restorers.values()) undo();
+		for (const { undo } of this.restorers.values()) undo();
 		this.restorers.clear();
 	}
 }
