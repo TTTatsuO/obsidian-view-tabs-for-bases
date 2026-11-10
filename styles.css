@@ -29,6 +29,20 @@
 	display: none;
 }
 
+/* Below the toolbar: a row of its own, as wide as the base. Side spacing is a margin, not
+   padding, so the edge fade lines up with where the tabs are cut off. */
+.view-tabs-for-bases.mod-below {
+	flex: 0 0 auto;
+	margin: 0 var(--size-4-2);
+	padding: var(--size-4-1) 0;
+}
+
+/* Wrap onto more lines instead of scrolling sideways */
+.view-tabs-for-bases.mod-below.mod-wrap {
+	flex-wrap: wrap;
+	overflow-x: visible;
+}
+
 /* Fade the edge on each side that has hidden tabs */
 .view-tabs-for-bases.has-more-end {
 	mask-image: linear-gradient(to right, black calc(100% - var(--view-tabs-for-bases-fade)), transparent);
@@ -52,8 +66,9 @@
 	--view-tabs-for-bases-color: var(--interactive-accent);
 	flex: 0 0 auto;
 	justify-content: center;
+	gap: var(--size-2-2);
 	height: auto;
-	padding: var(--size-2-1) var(--size-4-2);
+	padding: var(--size-2-1) var(--size-4-3);
 	border: 1px solid var(--background-modifier-border);
 	border-radius: var(--radius-m);
 	background-color: transparent;
@@ -77,9 +92,21 @@
 	min-width: 10em;
 }
 
-/* Color = outline color, taken from the theme */
+/* The view type's icon, the same one the view menu shows */
+.view-tabs-for-bases .view-tabs-for-bases-tab-icon {
+	display: flex;
+	color: var(--icon-color);
+	--icon-size: var(--icon-xs);
+	--icon-stroke: var(--icon-xs-stroke-width);
+}
+
+/* Color, taken from the theme: the icon and a soft outline, plus a tint while selected */
 .view-tabs-for-bases .view-tabs-for-bases-tab[data-color] {
-	border-color: var(--view-tabs-for-bases-color);
+	border-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 40%, transparent);
+}
+
+.view-tabs-for-bases .view-tabs-for-bases-tab[data-color] .view-tabs-for-bases-tab-icon {
+	color: var(--view-tabs-for-bases-color);
 }
 
 .view-tabs-for-bases .view-tabs-for-bases-tab[data-color="red"] { --view-tabs-for-bases-color: var(--color-red); }
@@ -96,15 +123,21 @@
 	color: var(--text-normal);
 }
 
+/* An uncolored icon brightens with its label; colored and selected ones keep their color */
+.view-tabs-for-bases .view-tabs-for-bases-tab:not([data-color], .is-active):hover .view-tabs-for-bases-tab-icon {
+	color: var(--icon-color-hover);
+}
+
+/* The selected tab is filled with a light tint of its color instead of an outline */
 .view-tabs-for-bases .view-tabs-for-bases-tab.is-active {
 	border-color: var(--view-tabs-for-bases-color);
+	background-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 28%, transparent);
 	color: var(--text-normal);
 	font-weight: var(--font-semibold);
 }
 
-/* A colored tab gets a light tint of its color while selected */
-.view-tabs-for-bases .view-tabs-for-bases-tab[data-color].is-active {
-	background-color: color-mix(in srgb, var(--view-tabs-for-bases-color) 18%, transparent);
+.view-tabs-for-bases .view-tabs-for-bases-tab.is-active .view-tabs-for-bases-tab-icon {
+	color: var(--view-tabs-for-bases-color);
 }
 
 .view-tabs-for-bases .view-tabs-for-bases-tab.is-dragging {

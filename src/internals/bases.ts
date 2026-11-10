@@ -8,6 +8,8 @@ import type { EventRef, View } from 'obsidian';
 /** One view's config. get/set are also public API (BasesViewConfig); keys are saved in that view in the .base file. */
 export interface BasesViewConfig {
 	name: string;
+	/** The view type ("table", "cards", ... or a plugin's own). Not public API. */
+	type?: unknown;
 	get(key: string): unknown;
 	set(key: string, value: unknown): void;
 }
@@ -19,6 +21,10 @@ export interface BasesController {
 		views: BasesViewConfig[];
 		save(): void;
 	} | null;
+	/** The Bases core plugin, which knows each view type's icon. */
+	plugin?: {
+		getRegistration?(type: string): { icon?: unknown } | null;
+	};
 	getQueryViewNames(): string[];
 	selectView(name: string): void;
 	events: {
@@ -84,6 +90,21 @@ export function getViewConfigs(controller: BasesController): BasesViewConfig[] |
 	return views;
 }
 
+/**
+ * The icon of a view's type, as shown in the view menu, or null. Like the view menu, a type
+ * that isn't registered (its plugin is off, say) gets the table icon.
+ */
+export function getViewIcon(controller: BasesController, config: BasesViewConfig): string | null {
+	try {
+		const plugin = controller.plugin;
+		if (typeof config.type !== 'string' || typeof plugin?.getRegistration !== 'function') return null;
+		const icon = plugin.getRegistration(config.type)?.icon;
+		return typeof icon === 'string' && icon !== '' ? icon : 'lucide-table';
+	} catch {
+		return null;
+	}
+}
+
 /** Read a value from a view config, or undefined. */
 export function readViewConfig(config: BasesViewConfig, key: string): unknown {
 	try {
@@ -122,11 +143,20 @@ export function saveViewOrder(controller: BasesController, ordered: BasesViewCon
 	}
 }
 
-/** Where to insert the tabs: right after the result count. null if the toolbar isn't found. */
-export function findTabsAnchor(controller: BasesController): { toolbarEl: HTMLElement; afterEl: Element | null } | null {
+/**
+ * Where to insert the tabs: right after the result count, or below the toolbar's header row
+ * (headerEl). null if the toolbar isn't found.
+ */
+export function findTabsAnchor(
+	controller: BasesController,
+): { toolbarEl: HTMLElement; afterEl: Element | null; headerEl: HTMLElement | null } | null {
 	const toolbarEl = controller.viewHeaderEl.querySelector<HTMLElement>('.bases-toolbar');
 	if (!toolbarEl) return null;
-	return { toolbarEl, afterEl: toolbarEl.querySelector('.bases-toolbar-result-count') };
+	return {
+		toolbarEl,
+		afterEl: toolbarEl.querySelector('.bases-toolbar-result-count'),
+		headerEl: toolbarEl.closest<HTMLElement>('.bases-header'),
+	};
 }
 
 /** The button that opens the built-in view menu. */

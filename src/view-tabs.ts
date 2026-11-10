@@ -1,4 +1,4 @@
-import { EventRef, Menu } from 'obsidian';
+import { EventRef, Menu, setIcon } from 'obsidian';
 import {
 	cycleName,
 	DEFAULT_TAB_SETTINGS,
@@ -16,6 +16,7 @@ import {
 	findTabsAnchor,
 	getCurrentViewName,
 	getViewConfigs,
+	getViewIcon,
 	getViewNames,
 	readViewConfig,
 	saveViewOrder,
@@ -23,12 +24,22 @@ import {
 	writeViewConfig,
 } from './internals/bases';
 import { text } from './i18n';
+import type { TabPosition } from './settings';
 
 /** Drag data type. With text/plain, dropping a tab on a note would insert its name as text. */
 const DRAG_TYPE = 'application/x-view-tabs-for-bases';
 
 /** Marks a toolbar that holds tabs, so the CSS can adjust it without :has (slow to invalidate). */
 const HOST_CLASS = 'view-tabs-for-bases-host';
+
+/** How the strip looks and where it goes, from the plugin settings. */
+export interface TabStripOptions {
+	showIcons: boolean;
+	/** Next to the result count, or on a row of its own below the toolbar. */
+	position: TabPosition;
+	/** Below the toolbar only: wrap onto more lines instead of scrolling sideways. */
+	wrap: boolean;
+}
 
 interface TabItem {
 	name: string;
@@ -77,8 +88,13 @@ export class ViewTabs {
 	private toolbarEl: HTMLElement | null = null;
 	private draggingName: string | null = null;
 
-	constructor(readonly controller: BasesController) {
+	constructor(
+		readonly controller: BasesController,
+		private readonly options: TabStripOptions,
+	) {
 		this.containerEl = createDiv({ cls: 'view-tabs-for-bases' });
+		// Wrapping only applies below the toolbar; the CSS checks mod-below too
+		this.containerEl.toggleClass('mod-wrap', options.wrap);
 		this.viewChangedRef = controller.events.on('view-changed', () => this.render());
 
 		// Scroll sideways when the tabs don't fit; turn vertical wheel movement into horizontal scrolling
@@ -102,13 +118,22 @@ export class ViewTabs {
 	render(): void {
 		const anchor = findTabsAnchor(this.controller);
 		if (!anchor) return;
-		if (anchor.afterEl) anchor.afterEl.after(this.containerEl);
-		else anchor.toolbarEl.prepend(this.containerEl);
-		if (this.toolbarEl !== anchor.toolbarEl) {
+		// Below the toolbar when asked and possible; otherwise next to the result count
+		const below = this.options.position === 'below' && anchor.headerEl !== null;
+		this.containerEl.toggleClass('mod-below', below);
+		if (below && anchor.headerEl) {
+			anchor.headerEl.after(this.containerEl);
 			this.toolbarEl?.removeClass(HOST_CLASS);
-			this.toolbarEl = anchor.toolbarEl;
+			this.toolbarEl = null;
+		} else {
+			if (anchor.afterEl) anchor.afterEl.after(this.containerEl);
+			else anchor.toolbarEl.prepend(this.containerEl);
+			if (this.toolbarEl !== anchor.toolbarEl) {
+				this.toolbarEl?.removeClass(HOST_CLASS);
+				this.toolbarEl = anchor.toolbarEl;
+			}
+			this.toolbarEl.addClass(HOST_CLASS);
 		}
-		this.toolbarEl.addClass(HOST_CLASS);
 
 		const scrollLeft = this.containerEl.scrollLeft;
 		this.containerEl.empty();
@@ -120,9 +145,11 @@ export class ViewTabs {
 			if (!settings.show) continue;
 			const tabEl = this.containerEl.createEl('button', {
 				cls: `view-tabs-for-bases-tab mod-${settings.size}`,
-				text: name,
 				attr: { type: 'button' },
 			});
+			const icon = this.options.showIcons && config ? getViewIcon(this.controller, config) : null;
+			if (icon) setIcon(tabEl.createSpan({ cls: 'view-tabs-for-bases-tab-icon', attr: { 'aria-hidden': 'true' } }), icon);
+			tabEl.createSpan({ cls: 'view-tabs-for-bases-tab-name', text: name });
 			if (settings.color) tabEl.dataset.color = settings.color;
 			if (name === current) {
 				tabEl.addClass('is-active');

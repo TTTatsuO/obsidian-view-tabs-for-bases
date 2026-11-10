@@ -1,6 +1,6 @@
 import { debounce, Plugin, TFile, View } from 'obsidian';
 import { BasesController, getBasesController, isViewMenuOpen, restoreViewStateOnSwitch } from './internals/bases';
-import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS } from './settings';
+import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS, parseTabPosition } from './settings';
 import { ViewConfigSection } from './view-config-section';
 import { cycleView, ViewTabs } from './view-tabs';
 import { text } from './i18n';
@@ -50,6 +50,9 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		// Read known keys only, so settings removed in a later version don't linger in data.json
 		this.settings = {
 			showTabs: data?.showTabs ?? DEFAULT_SETTINGS.showTabs,
+			showIcons: data?.showIcons ?? DEFAULT_SETTINGS.showIcons,
+			tabPosition: parseTabPosition(data?.tabPosition),
+			wrapTabs: data?.wrapTabs ?? DEFAULT_SETTINGS.wrapTabs,
 			restoreViewState: data?.restoreViewState ?? DEFAULT_SETTINGS.restoreViewState,
 		};
 	}
@@ -99,8 +102,13 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 				() => this.findMenuOwner(),
 				() => this.requestRender(),
 			);
+			const options = {
+				showIcons: this.settings.showIcons,
+				position: this.settings.tabPosition,
+				wrap: this.settings.wrapTabs,
+			};
 			for (const [view, controller] of open) {
-				if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller));
+				if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller, options));
 			}
 		}
 		if (this.settings.restoreViewState) {

@@ -4,21 +4,22 @@
 
 Alle Ansichten einer Obsidian-[Base](https://help.obsidian.md/bases) auf einen Blick. Dieses Plugin zeigt die Ansichten einer Base als Tabs direkt neben der Ergebnisanzahl, sodass du mit einem Klick zwischen Ansichten wechseln kannst, ohne das Ansichtsmenü zu öffnen.
 
-![Eine Base „Projects“ mit den Ansichten All projects, Active, Due soon, By owner und Board als Tabs neben „8 results“](../assets/tabs.png)
+![Wechsel zwischen den Ansichten einer Base „Projects“ per Klick auf die Tabs: All projects (Tabelle), Board (Kanban), Due soon (Liste), Gallery (Karten) und By owner (Tabelle)](../assets/demo.gif)
 
 ## Funktionen
 
-- **Tabs in der Werkzeugleiste**: Jede Ansicht erhält neben der Ergebnisanzahl einen Tab; die aktuelle Ansicht ist hervorgehoben.
+- **Tabs in der Werkzeugleiste**: Jede Ansicht erhält neben der Ergebnisanzahl einen Tab, mit dem Symbol des Ansichtstyps; die aktuelle Ansicht ist hervorgehoben.
 - **Wechsel mit einem Klick**: Ein Klick auf einen Tab öffnet seine Ansicht.
 - **Per Drag-and-drop sortieren**: Ziehe einen Tab auf einen anderen, um ihn zu verschieben. Dabei ändert sich die Reihenfolge der Ansichten selbst, sodass das eingebaute Ansichtsmenü dieselbe Reihenfolge zeigt.
-- **Tab-Einstellungen pro Ansicht**: Lege für jede Ansicht fest, ob sie einen Tab hat, und wähle Farbe (Rahmen) und Größe (Breite) des Tabs.
+- **Tab-Einstellungen pro Ansicht**: Lege für jede Ansicht fest, ob sie einen Tab hat, und wähle Farbe (Symbol und Rahmen; der ausgewählte Tab wird damit gefüllt) und Größe (Breite) des Tabs.
 - **Kontextmenü**: Klicke mit der rechten Maustaste auf einen Tab, um Farbe oder Größe zu ändern oder ihn aus den Tabs zu entfernen.
 - **Scrollt bei Platzmangel**: Passen die Tabs nicht hinein, lassen sie sich seitlich scrollen (auch mit dem Mausrad) und blenden an den Rändern aus. Die eingebauten Schaltflächen der Werkzeugleiste behalten ihre Größe.
+- **Tabs unter der Werkzeugleiste**: Die Tabs können auch in einer eigenen Zeile unter der Werkzeugleiste stehen und dort auf mehrere Zeilen umbrechen.
 - **Wechseln per Tastatur**: Befehle zum Wechseln zum nächsten oder vorherigen Tab, die du beliebigen Tastenkürzeln zuweisen kannst.
 
 ## Installation
 
-- **Community-Plugins** (sobald gelistet): Öffne **Settings → Community plugins → Browse**, suche nach „View Tabs for Bases“, wähle **Install** und dann **Enable**.
+- **Community-Plugins**: Öffne **Settings → Community plugins → Browse**, suche nach „View Tabs for Bases“, wähle **Install** und dann **Enable**.
 - **Manuell**: Lade `main.js`, `manifest.json` und `styles.css` aus dem [neuesten Release](https://github.com/TTTatsuO/obsidian-view-tabs-for-bases/releases/latest) nach `<Vault>/.obsidian/plugins/view-tabs-for-bases/` herunter und aktiviere das Plugin unter **Settings → Community plugins**.
 
 Erfordert Obsidian 1.14.0 oder neuer. Nur für Desktop.
@@ -26,6 +27,8 @@ Erfordert Obsidian 1.14.0 oder neuer. Nur für Desktop.
 ## Verwendung
 
 Öffne eine `.base`-Datei. Ihre Ansichten erscheinen als Tabs neben der Ergebnisanzahl.
+
+![Eine Base „Projects“, deren Ansichten als Tabs neben „12 results“ stehen, jeweils mit dem Symbol des Ansichtstyps. Board ist ausgewählt und zeigt ein Kanban-Board](../assets/tabs.png)
 
 Um einen Tab zu ändern, klicke ihn mit der rechten Maustaste an und wähle eine Farbe, eine Größe oder **Aus Tabs entfernen**.
 
@@ -39,7 +42,15 @@ Um einen entfernten Tab zurückzuholen, öffne über das Ansichtsmenü **Configu
 
 Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den Befehlen **Zur nächsten Ansicht wechseln** und **Zur vorherigen Ansicht wechseln** Tastenkürzel zu. Sie gehen die Tabs der Reihe nach durch, springen am Ende wieder an den Anfang und überspringen aus den Tabs entfernte Ansichten. Standardmäßig sind keine Tastenkürzel gesetzt.
 
-Um die Tabs überall auszuschalten, deaktiviere **Ansichts-Tabs anzeigen** in den Einstellungen des Plugins.
+### Plugin-Einstellungen
+
+- **Ansichts-Tabs anzeigen**: schaltet die Tabs überall aus.
+- **Symbole für Ansichtstyp anzeigen**: zeigt auf jedem Tab das Symbol des Ansichtstyps (Tabelle, Karten usw.). Standardmäßig an.
+- **Position der Tabs**: **Neben der Ergebnisanzahl** (Standard) oder **Unter der Werkzeugleiste**.
+- **Tabs umbrechen**: Unter der Werkzeugleiste werden Tabs, die nicht passen, auf weitere Zeilen umbrochen, statt seitlich zu scrollen. Nur verfügbar, wenn **Position der Tabs** auf **Unter der Werkzeugleiste** steht.
+- **Ausgewählte Zelle beim Ansichtswechsel behalten**: siehe unten.
+
+![Die Tabs in einer eigenen Zeile unter der Werkzeugleiste, Gallery ist ausgewählt](../assets/tabs-below.png)
 
 ### Ausgewählte Zelle behalten
 
