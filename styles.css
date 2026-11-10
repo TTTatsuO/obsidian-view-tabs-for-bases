@@ -29,6 +29,20 @@
 	display: none;
 }
 
+/* Below the toolbar: a row of its own, as wide as the base */
+.view-tabs-for-bases.mod-below {
+	flex: 0 0 auto;
+	margin: 0;
+	padding: var(--size-4-1) var(--size-4-2);
+	border-bottom: var(--border-width) solid var(--background-modifier-border);
+}
+
+/* Wrap onto more lines instead of scrolling sideways */
+.view-tabs-for-bases.mod-below.mod-wrap {
+	flex-wrap: wrap;
+	overflow-x: visible;
+}
+
 /* Fade the edge on each side that has hidden tabs */
 .view-tabs-for-bases.has-more-end {
 	mask-image: linear-gradient(to right, black calc(100% - var(--view-tabs-for-bases-fade)), transparent);

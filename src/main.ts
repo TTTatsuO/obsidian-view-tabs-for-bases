@@ -51,6 +51,8 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		this.settings = {
 			showTabs: data?.showTabs ?? DEFAULT_SETTINGS.showTabs,
 			showIcons: data?.showIcons ?? DEFAULT_SETTINGS.showIcons,
+			tabPosition: data?.tabPosition === 'below' ? 'below' : 'inline',
+			wrapTabs: data?.wrapTabs ?? DEFAULT_SETTINGS.wrapTabs,
 			restoreViewState: data?.restoreViewState ?? DEFAULT_SETTINGS.restoreViewState,
 		};
 	}
@@ -100,8 +102,13 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 				() => this.findMenuOwner(),
 				() => this.requestRender(),
 			);
+			const options = {
+				showIcons: this.settings.showIcons,
+				position: this.settings.tabPosition,
+				wrap: this.settings.wrapTabs,
+			};
 			for (const [view, controller] of open) {
-				if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller, this.settings.showIcons));
+				if (!this.tabs.has(view)) this.tabs.set(view, new ViewTabs(controller, options));
 			}
 		}
 		if (this.settings.restoreViewState) {

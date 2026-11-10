@@ -139,11 +139,20 @@ export function saveViewOrder(controller: BasesController, ordered: BasesViewCon
 	}
 }
 
-/** Where to insert the tabs: right after the result count. null if the toolbar isn't found. */
-export function findTabsAnchor(controller: BasesController): { toolbarEl: HTMLElement; afterEl: Element | null } | null {
+/**
+ * Where to insert the tabs: right after the result count, or below the toolbar's header row
+ * (headerEl). null if the toolbar isn't found.
+ */
+export function findTabsAnchor(
+	controller: BasesController,
+): { toolbarEl: HTMLElement; afterEl: Element | null; headerEl: HTMLElement | null } | null {
 	const toolbarEl = controller.viewHeaderEl.querySelector<HTMLElement>('.bases-toolbar');
 	if (!toolbarEl) return null;
-	return { toolbarEl, afterEl: toolbarEl.querySelector('.bases-toolbar-result-count') };
+	return {
+		toolbarEl,
+		afterEl: toolbarEl.querySelector('.bases-toolbar-result-count'),
+		headerEl: toolbarEl.closest<HTMLElement>('.bases-header'),
+	};
 }
 
 /** The button that opens the built-in view menu. */
