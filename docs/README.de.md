@@ -14,6 +14,7 @@ Alle Ansichten einer Obsidian-[Base](https://help.obsidian.md/bases) auf einen B
 - **Tab-Einstellungen pro Ansicht**: Lege für jede Ansicht fest, ob sie einen Tab hat, und wähle Farbe (Rahmen) und Größe (Breite) des Tabs.
 - **Kontextmenü**: Klicke mit der rechten Maustaste auf einen Tab, um Farbe oder Größe zu ändern oder ihn aus den Tabs zu entfernen.
 - **Scrollt bei Platzmangel**: Passen die Tabs nicht hinein, lassen sie sich seitlich scrollen (auch mit dem Mausrad) und blenden an den Rändern aus. Die eingebauten Schaltflächen der Werkzeugleiste behalten ihre Größe.
+- **Wechseln per Tastatur**: Befehle zum Wechseln zum nächsten oder vorherigen Tab, die du beliebigen Tastenkürzeln zuweisen kannst.
 
 ## Installation
 
@@ -35,6 +36,8 @@ Du kannst auch über das Ansichtsmenü **Configure view** (die Ansichtseinstellu
 ![Der Abschnitt Tab-Einstellungen ganz unten in Configure view](../assets/configure-view.png)
 
 Um einen entfernten Tab zurückzuholen, öffne über das Ansichtsmenü **Configure view** dieser Ansicht und schalte **In Tabs anzeigen** wieder ein.
+
+Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den Befehlen **Zur nächsten Ansicht wechseln** und **Zur vorherigen Ansicht wechseln** Tastenkürzel zu. Sie gehen die Tabs der Reihe nach durch, springen am Ende wieder an den Anfang und überspringen aus den Tabs entfernte Ansichten. Standardmäßig sind keine Tastenkürzel gesetzt.
 
 Um die Tabs überall auszuschalten, deaktiviere **Ansichts-Tabs anzeigen** in den Einstellungen des Plugins.
 

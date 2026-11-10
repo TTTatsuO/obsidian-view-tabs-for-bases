@@ -14,6 +14,7 @@ Ve de un vistazo todas las vistas de una [base](https://help.obsidian.md/bases) 
 - **Ajustes de pestaña por vista**: elige si cada vista tiene pestaña y define el color (contorno) y el tamaño (ancho) de la pestaña.
 - **Menú contextual**: haz clic derecho en una pestaña para cambiar su color o tamaño, o para quitarla de las pestañas.
 - **Se desplaza cuando no cabe**: si las pestañas no caben, se desplazan en horizontal (también con la rueda del ratón) y se desvanecen en los bordes. Los botones integrados de la barra de herramientas mantienen su tamaño.
+- **Cambio con el teclado**: comandos para cambiar a la pestaña siguiente o anterior, que puedes asignar a cualquier atajo.
 
 ## Instalación
 
@@ -35,6 +36,8 @@ También puedes abrir **Configure view** (los ajustes de la vista) desde el men�
 ![La sección Ajustes de pestaña al final de Configure view](../assets/configure-view.png)
 
 Para recuperar una pestaña quitada, abre **Configure view** de esa vista desde el menú de vistas y vuelve a activar **Mostrar en pestañas**.
+
+Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista siguiente** y **Cambiar a la vista anterior** en **Settings → Hotkeys**. Recorren las pestañas en orden, vuelven al otro extremo al llegar al final y omiten las vistas quitadas de las pestañas. No hay atajos asignados por defecto.
 
 Para desactivar las pestañas en todas partes, desactiva **Mostrar pestañas de vistas** en los ajustes del plugin.
 

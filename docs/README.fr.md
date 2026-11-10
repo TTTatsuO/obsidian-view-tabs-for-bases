@@ -14,6 +14,7 @@ Voyez d’un coup d’œil toutes les vues d’une [base](https://help.obsidian.
 - **Réglages d’onglet par vue** : choisissez si chaque vue a un onglet, et définissez la couleur (contour) et la taille (largeur) de l’onglet.
 - **Menu contextuel** : faites un clic droit sur un onglet pour changer sa couleur ou sa taille, ou pour le retirer des onglets.
 - **Défilement quand la place manque** : quand les onglets ne tiennent pas, ils défilent horizontalement (la molette de la souris fonctionne aussi) et s’estompent sur les bords. Les boutons intégrés de la barre d’outils gardent leur taille.
+- **Changement au clavier** : des commandes pour passer à l’onglet suivant ou précédent, à associer aux raccourcis de votre choix.
 
 ## Installation
 
@@ -35,6 +36,8 @@ Vous pouvez aussi ouvrir **Configure view** (les réglages de la vue) depuis le 
 ![La section Paramètres de l’onglet en bas de Configure view](../assets/configure-view.png)
 
 Pour faire revenir un onglet retiré, ouvrez **Configure view** de cette vue depuis le menu des vues et réactivez **Afficher dans les onglets**.
+
+Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue suivante** et **Passer à la vue précédente** dans **Settings → Hotkeys**. Elles parcourent les onglets dans l’ordre, reviennent au début une fois à la fin et ignorent les vues retirées des onglets. Aucun raccourci n’est défini par défaut.
 
 Pour désactiver les onglets partout, désactivez **Afficher les onglets de vues** dans les réglages du plugin.
 
