@@ -44,9 +44,9 @@ To switch views from the keyboard, assign hotkeys to **Switch to next view** and
 
 ### Plugin settings
 
-- **View tab position**: **Next to the result count** (the default), **Below the toolbar**, or **Don't show** to turn the tabs off everywhere.
+- **Where to show view tabs**: **Next to the result count** (the default), **Below the toolbar**, or **Don't show** to turn the tabs off everywhere.
 - **Show view type icons**: show each view's type icon (table, cards and so on) on its tab. On by default.
-- **Wrap view tabs**: below the toolbar, wrap tabs that don't fit onto more lines instead of scrolling sideways. Available only when **View tab position** is **Below the toolbar**.
+- **Wrap view tabs**: below the toolbar, wrap tabs that don't fit onto more lines instead of scrolling sideways. Available only when **Where to show view tabs** is **Below the toolbar**.
 - **Keep the selected cell when switching views**: see below.
 
 ![The tabs on a row of their own below the toolbar, with Gallery selected](assets/tabs-below.png)
