@@ -45,8 +45,8 @@ Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den 
 ### Plugin-Einstellungen
 
 - **Position der Ansichts-Tabs**: **Neben der Ergebnisanzahl** (Standard), **Unter der Werkzeugleiste** oder **Nicht anzeigen**, um die Tabs überall auszuschalten.
-- **Symbole für Ansichtstyp anzeigen**: zeigt auf jedem Tab das Symbol des Ansichtstyps (Tabelle, Karten usw.). Standardmäßig an.
 - **Ansichts-Tabs umbrechen**: Unter der Werkzeugleiste werden Tabs, die nicht passen, auf weitere Zeilen umbrochen, statt seitlich zu scrollen. Nur verfügbar, wenn **Position der Ansichts-Tabs** auf **Unter der Werkzeugleiste** steht.
+- **Symbole für Ansichtstyp anzeigen**: zeigt auf jedem Tab das Symbol des Ansichtstyps (Tabelle, Karten usw.). Standardmäßig an.
 - **Ausgewählte Zelle beim Ansichtswechsel behalten**: siehe unten.
 
 ![Die Tabs in einer eigenen Zeile unter der Werkzeugleiste, Gallery ist ausgewählt](../assets/tabs-below.png)

@@ -45,8 +45,8 @@ Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista sigui
 ### Ajustes del plugin
 
 - **Posición de las pestañas de vistas**: **Junto al número de resultados** (por defecto), **Bajo la barra de herramientas** o **No mostrar** para desactivar las pestañas en todas partes.
-- **Mostrar iconos del tipo de vista**: muestra en cada pestaña el icono del tipo de vista (tabla, tarjetas, etc.). Activado por defecto.
 - **Ajustar pestañas de vistas**: bajo la barra de herramientas, las pestañas que no caben pasan a más líneas en lugar de desplazarse en horizontal. Solo disponible cuando **Posición de las pestañas de vistas** es **Bajo la barra de herramientas**.
+- **Mostrar iconos del tipo de vista**: muestra en cada pestaña el icono del tipo de vista (tabla, tarjetas, etc.). Activado por defecto.
 - **Mantener la celda seleccionada al cambiar de vista**: ver abajo.
 
 ![Las pestañas en una fila propia bajo la barra de herramientas, con Gallery seleccionada](../assets/tabs-below.png)
