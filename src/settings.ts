@@ -51,14 +51,14 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 						},
 					},
 					{
-						name: t.showIcons,
-						desc: t.showIconsDesc,
-						control: { type: 'toggle', key: 'showIcons', defaultValue: DEFAULT_SETTINGS.showIcons, disabled: tabsOff },
-					},
-					{
 						name: t.wrapTabs,
 						desc: t.wrapTabsDesc,
 						control: { type: 'toggle', key: 'wrapTabs', defaultValue: DEFAULT_SETTINGS.wrapTabs, disabled: notBelow },
+					},
+					{
+						name: t.showIcons,
+						desc: t.showIconsDesc,
+						control: { type: 'toggle', key: 'showIcons', defaultValue: DEFAULT_SETTINGS.showIcons, disabled: tabsOff },
 					},
 				],
 			},
