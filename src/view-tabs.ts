@@ -36,7 +36,7 @@ const HOST_CLASS = 'view-tabs-for-bases-host';
 export interface TabStripOptions {
 	showIcons: boolean;
 	/** Next to the result count, or on a row of its own below the toolbar. */
-	position: TabPosition;
+	position: Exclude<TabPosition, 'hidden'>;
 	/** Below the toolbar only: wrap onto more lines instead of scrolling sideways. */
 	wrap: boolean;
 }

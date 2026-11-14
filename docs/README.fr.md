@@ -44,10 +44,9 @@ Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue s
 
 ### Réglages du plugin
 
-- **Afficher les onglets de vues** : désactive les onglets partout.
+- **Position des onglets de vues** : **À côté du nombre de résultats** (par défaut), **Sous la barre d’outils**, ou **Ne pas afficher** pour désactiver les onglets partout.
+- **Renvoyer les onglets de vues à la ligne** : sous la barre d’outils, les onglets qui ne tiennent pas passent sur plusieurs lignes au lieu de défiler horizontalement. Disponible uniquement quand **Position des onglets de vues** vaut **Sous la barre d’outils**.
 - **Afficher les icônes du type de vue** : affiche sur chaque onglet l’icône du type de vue (tableau, cartes, etc.). Activé par défaut.
-- **Position des onglets** : **À côté du nombre de résultats** (par défaut) ou **Sous la barre d’outils**.
-- **Renvoyer les onglets à la ligne** : sous la barre d’outils, les onglets qui ne tiennent pas passent sur plusieurs lignes au lieu de défiler horizontalement. Disponible uniquement quand **Position des onglets** vaut **Sous la barre d’outils**.
 - **Garder la cellule sélectionnée en changeant de vue** : voir ci-dessous.
 
 ![Les onglets sur une ligne à part sous la barre d’outils, avec Gallery sélectionné](../assets/tabs-below.png)
