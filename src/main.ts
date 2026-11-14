@@ -46,12 +46,12 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 	}
 
 	async loadSettings(): Promise<void> {
-		const data = (await this.loadData()) as Partial<ViewTabsForBasesSettings> | null;
+		// showTabs: up to 0.3.0, turning the tabs off was a toggle of its own; now it's a tab position
+		const data = (await this.loadData()) as (Partial<ViewTabsForBasesSettings> & { showTabs?: unknown }) | null;
 		// Read known keys only, so settings removed in a later version don't linger in data.json
 		this.settings = {
-			showTabs: data?.showTabs ?? DEFAULT_SETTINGS.showTabs,
 			showIcons: data?.showIcons ?? DEFAULT_SETTINGS.showIcons,
-			tabPosition: parseTabPosition(data?.tabPosition),
+			tabPosition: data?.showTabs === false ? 'hidden' : parseTabPosition(data?.tabPosition),
 			wrapTabs: data?.wrapTabs ?? DEFAULT_SETTINGS.wrapTabs,
 			restoreViewState: data?.restoreViewState ?? DEFAULT_SETTINGS.restoreViewState,
 		};
@@ -97,14 +97,15 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 			this.restorers.delete(view);
 		}
 
-		if (this.settings.showTabs) {
+		const { tabPosition } = this.settings;
+		if (tabPosition !== 'hidden') {
 			this.configSection ??= new ViewConfigSection(
 				() => this.findMenuOwner(),
 				() => this.requestRender(),
 			);
 			const options = {
 				showIcons: this.settings.showIcons,
-				position: this.settings.tabPosition,
+				position: tabPosition,
 				wrap: this.settings.wrapTabs,
 			};
 			for (const [view, controller] of open) {
