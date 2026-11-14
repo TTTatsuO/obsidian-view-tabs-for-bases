@@ -6,7 +6,7 @@ import { getLanguage } from 'obsidian';
 const EN = {
 	showIcons: 'Show view type icons',
 	showIconsDesc: 'Show each view\'s type icon, such as table or cards, on its tab.',
-	tabPosition: 'View tab position',
+	tabPosition: 'Where to show view tabs',
 	tabPositionDesc: 'Where the tabs go: next to the result count, on a row of their own below the toolbar, or nowhere.',
 	positionInline: 'Next to the result count',
 	positionBelow: 'Below the toolbar',
@@ -363,7 +363,7 @@ const STRINGS: Record<string, Strings> = {
 	ja: {
 		showIcons: 'ビューの種類のアイコンを表示',
 		showIconsDesc: '各タブに、表やカードなど、そのビューの種類のアイコンを表示します。',
-		tabPosition: 'ビューのタブの位置',
+		tabPosition: 'ビューのタブを表示する位置',
 		tabPositionDesc: 'タブを置く場所。結果件数の横か、ツールバーの下の専用の行か、表示しないか。',
 		positionInline: '結果件数の横',
 		positionBelow: 'ツールバーの下',
