@@ -29,10 +29,7 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 		super(app, plugin);
 	}
 
-	/**
-	 * Declarative settings (Obsidian 1.13+): rendered by Obsidian and included in
-	 * settings search. A single section, so no heading (plugin guidelines).
-	 */
+	/** Declarative settings (Obsidian 1.13+): rendered by Obsidian and included in settings search. */
 	getSettingDefinitions(): SettingDefinitionItem[] {
 		const t = text();
 		// Settings that only matter in some cases stay visible but turn off, so people see they exist
@@ -40,29 +37,41 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 		const notBelow = () => this.plugin.settings.tabPosition !== 'below';
 		return [
 			{
-				name: t.tabPosition,
-				desc: t.tabPositionDesc,
-				control: {
-					type: 'dropdown',
-					key: 'tabPosition',
-					defaultValue: DEFAULT_SETTINGS.tabPosition,
-					options: { inline: t.positionInline, below: t.positionBelow, hidden: t.positionHidden },
-				},
+				type: 'group',
+				heading: t.headingTabs,
+				items: [
+					{
+						name: t.tabPosition,
+						desc: t.tabPositionDesc,
+						control: {
+							type: 'dropdown',
+							key: 'tabPosition',
+							defaultValue: DEFAULT_SETTINGS.tabPosition,
+							options: { inline: t.positionInline, below: t.positionBelow, hidden: t.positionHidden },
+						},
+					},
+					{
+						name: t.showIcons,
+						desc: t.showIconsDesc,
+						control: { type: 'toggle', key: 'showIcons', defaultValue: DEFAULT_SETTINGS.showIcons, disabled: tabsOff },
+					},
+					{
+						name: t.wrapTabs,
+						desc: t.wrapTabsDesc,
+						control: { type: 'toggle', key: 'wrapTabs', defaultValue: DEFAULT_SETTINGS.wrapTabs, disabled: notBelow },
+					},
+				],
 			},
 			{
-				name: t.showIcons,
-				desc: t.showIconsDesc,
-				control: { type: 'toggle', key: 'showIcons', defaultValue: DEFAULT_SETTINGS.showIcons, disabled: tabsOff },
-			},
-			{
-				name: t.wrapTabs,
-				desc: t.wrapTabsDesc,
-				control: { type: 'toggle', key: 'wrapTabs', defaultValue: DEFAULT_SETTINGS.wrapTabs, disabled: notBelow },
-			},
-			{
-				name: t.restoreViewState,
-				desc: t.restoreViewStateDesc,
-				control: { type: 'toggle', key: 'restoreViewState', defaultValue: DEFAULT_SETTINGS.restoreViewState },
+				type: 'group',
+				heading: t.headingSwitching,
+				items: [
+					{
+						name: t.restoreViewState,
+						desc: t.restoreViewStateDesc,
+						control: { type: 'toggle', key: 'restoreViewState', defaultValue: DEFAULT_SETTINGS.restoreViewState },
+					},
+				],
 			},
 		];
 	}

@@ -24,6 +24,8 @@ const EN = {
 	previousView: 'Switch to previous view',
 	restoreViewState: 'Keep the selected cell when switching views',
 	restoreViewStateDesc: 'Obsidian sometimes forgets the selected cell and scroll position when you switch between two views of the same type and come back. This puts them back. It relies on Obsidian\'s internals, so turn it off if switching views behaves oddly.',
+	headingTabs: 'View tabs',
+	headingSwitching: 'Switching views',
 };
 
 export type Strings = typeof EN;
@@ -51,6 +53,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'التبديل إلى العرض السابق',
 		restoreViewState: 'الاحتفاظ بالخلية المحددة عند تبديل العروض',
 		restoreViewStateDesc: 'ينسى Obsidian أحيانًا الخلية المحددة وموضع التمرير عند التبديل بين عرضين من النوع نفسه ثم العودة. هذا الخيار يعيدهما. يعتمد على أجزاء داخلية من Obsidian، لذا أوقفه إذا تصرّف تبديل العروض بشكل غريب.',
+		headingTabs: 'علامات تبويب العروض',
+		headingSwitching: 'تبديل العروض',
 	},
 	bn: {
 		showIcons: 'ভিউয়ের ধরনের আইকন দেখান',
@@ -73,6 +77,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'আগের ভিউতে যান',
 		restoreViewState: 'ভিউ বদলালেও নির্বাচিত সেল রাখুন',
 		restoreViewStateDesc: 'একই ধরনের দুটি ভিউয়ের মধ্যে বদলে ফিরে এলে Obsidian কখনো কখনো নির্বাচিত সেল ও স্ক্রল অবস্থান ভুলে যায়। এটি সেগুলো ফিরিয়ে আনে। এটি Obsidian-এর ভেতরের অংশের ওপর নির্ভর করে, তাই ভিউ বদলানো অদ্ভুত আচরণ করলে এটি বন্ধ করুন।',
+		headingTabs: 'ভিউ ট্যাব',
+		headingSwitching: 'ভিউ বদলানো',
 	},
 	ca: {
 		showIcons: 'Mostra les icones del tipus de vista',
@@ -95,6 +101,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Canvia a la vista anterior',
 		restoreViewState: 'Conserva la cel·la seleccionada en canviar de vista',
 		restoreViewStateDesc: 'De vegades Obsidian oblida la cel·la seleccionada i la posició de desplaçament quan canvies entre dues vistes del mateix tipus i tornes. Això les recupera. Depèn de parts internes d’Obsidian, així que desactiva-ho si el canvi de vista es comporta de manera estranya.',
+		headingTabs: 'Pestanyes de vistes',
+		headingSwitching: 'Canvi de vista',
 	},
 	cs: {
 		showIcons: 'Zobrazit ikony typu zobrazení',
@@ -117,6 +125,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Přepnout na předchozí zobrazení',
 		restoreViewState: 'Zachovat vybranou buňku při přepínání zobrazení',
 		restoreViewStateDesc: 'Obsidian někdy zapomene vybranou buňku a pozici posunu, když přepnete mezi dvěma zobrazeními stejného typu a vrátíte se. Tato volba je obnoví. Spoléhá na vnitřní části Obsidianu, proto ji vypněte, pokud se přepínání zobrazení chová podivně.',
+		headingTabs: 'Karty zobrazení',
+		headingSwitching: 'Přepínání zobrazení',
 	},
 	da: {
 		showIcons: 'Vis ikoner for visningstype',
@@ -139,6 +149,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Skift til forrige visning',
 		restoreViewState: 'Behold den valgte celle ved skift af visning',
 		restoreViewStateDesc: 'Obsidian glemmer nogle gange den valgte celle og rulleplaceringen, når du skifter mellem to visninger af samme type og vender tilbage. Dette sætter dem tilbage. Det bygger på Obsidians interne dele, så slå det fra, hvis skift af visning opfører sig mærkeligt.',
+		headingTabs: 'Visningsfaner',
+		headingSwitching: 'Skift af visning',
 	},
 	de: {
 		showIcons: 'Symbole für Ansichtstyp anzeigen',
@@ -161,6 +173,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Zur vorherigen Ansicht wechseln',
 		restoreViewState: 'Ausgewählte Zelle beim Ansichtswechsel behalten',
 		restoreViewStateDesc: 'Obsidian vergisst manchmal die ausgewählte Zelle und die Scrollposition, wenn du zwischen zwei Ansichten desselben Typs wechselst und zurückkehrst. Diese Option stellt sie wieder her. Sie nutzt interne Teile von Obsidian; schalte sie aus, wenn sich der Ansichtswechsel seltsam verhält.',
+		headingTabs: 'Ansichts-Tabs',
+		headingSwitching: 'Ansichtswechsel',
 	},
 	el: {
 		showIcons: 'Εμφάνιση εικονιδίων τύπου προβολής',
@@ -183,6 +197,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Μετάβαση στην προηγούμενη προβολή',
 		restoreViewState: 'Διατήρηση του επιλεγμένου κελιού κατά την αλλαγή προβολής',
 		restoreViewStateDesc: 'Το Obsidian μερικές φορές ξεχνά το επιλεγμένο κελί και τη θέση κύλισης όταν αλλάζετε ανάμεσα σε δύο προβολές του ίδιου τύπου και επιστρέφετε. Αυτή η επιλογή τα επαναφέρει. Βασίζεται σε εσωτερικά μέρη του Obsidian, οπότε απενεργοποιήστε την αν η αλλαγή προβολής συμπεριφέρεται παράξενα.',
+		headingTabs: 'Καρτέλες προβολών',
+		headingSwitching: 'Αλλαγή προβολής',
 	},
 	es: {
 		showIcons: 'Mostrar iconos del tipo de vista',
@@ -205,6 +221,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Cambiar a la vista anterior',
 		restoreViewState: 'Mantener la celda seleccionada al cambiar de vista',
 		restoreViewStateDesc: 'A veces Obsidian olvida la celda seleccionada y la posición de desplazamiento cuando cambias entre dos vistas del mismo tipo y vuelves. Esto las restaura. Depende de partes internas de Obsidian, así que desactívalo si el cambio de vista se comporta de forma extraña.',
+		headingTabs: 'Pestañas de vistas',
+		headingSwitching: 'Cambio de vista',
 	},
 	fa: {
 		showIcons: 'نمایش نماد نوع نما',
@@ -227,6 +245,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'رفتن به نمای قبلی',
 		restoreViewState: 'حفظ سلول انتخاب‌شده هنگام تغییر نما',
 		restoreViewStateDesc: 'Obsidian گاهی سلول انتخاب‌شده و موقعیت پیمایش را وقتی بین دو نمای هم‌نوع جابه‌جا می‌شوید و برمی‌گردید فراموش می‌کند. این گزینه آن‌ها را برمی‌گرداند. به بخش‌های داخلی Obsidian وابسته است، پس اگر تغییر نما رفتار عجیبی داشت آن را خاموش کنید.',
+		headingTabs: 'زبانه‌های نما',
+		headingSwitching: 'تغییر نما',
 	},
 	fi: {
 		showIcons: 'Näytä näkymätyypin kuvakkeet',
@@ -249,6 +269,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Vaihda edelliseen näkymään',
 		restoreViewState: 'Säilytä valittu solu näkymää vaihdettaessa',
 		restoreViewStateDesc: 'Obsidian unohtaa joskus valitun solun ja vierityskohdan, kun vaihdat kahden samantyyppisen näkymän välillä ja palaat takaisin. Tämä palauttaa ne. Se perustuu Obsidianin sisäisiin osiin, joten poista se käytöstä, jos näkymän vaihtaminen toimii oudosti.',
+		headingTabs: 'Näkymävälilehdet',
+		headingSwitching: 'Näkymän vaihtaminen',
 	},
 	fr: {
 		showIcons: 'Afficher les icônes du type de vue',
@@ -271,6 +293,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Passer à la vue précédente',
 		restoreViewState: 'Garder la cellule sélectionnée en changeant de vue',
 		restoreViewStateDesc: 'Obsidian oublie parfois la cellule sélectionnée et la position de défilement quand vous passez d’une vue à une autre du même type puis revenez. Cette option les rétablit. Elle s’appuie sur des éléments internes d’Obsidian ; désactivez-la si le changement de vue se comporte bizarrement.',
+		headingTabs: 'Onglets de vues',
+		headingSwitching: 'Changement de vue',
 	},
 	he: {
 		showIcons: 'הצגת סמלי סוג התצוגה',
@@ -293,6 +317,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'מעבר לתצוגה הקודמת',
 		restoreViewState: 'שמירת התא שנבחר בעת החלפת תצוגה',
 		restoreViewStateDesc: 'Obsidian שוכח לפעמים את התא שנבחר ואת מיקום הגלילה כשעוברים בין שתי תצוגות מאותו סוג וחוזרים. אפשרות זו מחזירה אותם. היא נשענת על חלקים פנימיים של Obsidian, לכן כבו אותה אם החלפת התצוגה מתנהגת באופן מוזר.',
+		headingTabs: 'לשוניות תצוגה',
+		headingSwitching: 'החלפת תצוגה',
 	},
 	hu: {
 		showIcons: 'Nézettípus ikonjainak megjelenítése',
@@ -315,6 +341,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Váltás az előző nézetre',
 		restoreViewState: 'A kijelölt cella megtartása nézetváltáskor',
 		restoreViewStateDesc: 'Az Obsidian néha elfelejti a kijelölt cellát és a görgetési helyzetet, ha két azonos típusú nézet között váltasz, majd visszatérsz. Ez visszaállítja őket. Az Obsidian belső részeire támaszkodik, ezért kapcsold ki, ha a nézetváltás furcsán viselkedik.',
+		headingTabs: 'Nézetfülek',
+		headingSwitching: 'Nézetváltás',
 	},
 	id: {
 		showIcons: 'Tampilkan ikon jenis tampilan',
@@ -337,6 +365,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Beralih ke tampilan sebelumnya',
 		restoreViewState: 'Pertahankan sel terpilih saat berganti tampilan',
 		restoreViewStateDesc: 'Obsidian terkadang melupakan sel terpilih dan posisi gulir saat Anda berpindah antara dua tampilan bertipe sama lalu kembali. Opsi ini mengembalikannya. Opsi ini bergantung pada bagian internal Obsidian, jadi matikan jika pergantian tampilan berperilaku aneh.',
+		headingTabs: 'Tab tampilan',
+		headingSwitching: 'Berganti tampilan',
 	},
 	it: {
 		showIcons: 'Mostra le icone del tipo di vista',
@@ -359,6 +389,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Passa alla vista precedente',
 		restoreViewState: 'Mantieni la cella selezionata al cambio di vista',
 		restoreViewStateDesc: 'A volte Obsidian dimentica la cella selezionata e la posizione di scorrimento quando passi tra due viste dello stesso tipo e torni indietro. Questa opzione le ripristina. Si basa su parti interne di Obsidian, quindi disattivala se il cambio di vista si comporta in modo strano.',
+		headingTabs: 'Schede delle viste',
+		headingSwitching: 'Cambio di vista',
 	},
 	ja: {
 		showIcons: 'ビューの種類のアイコンを表示',
@@ -381,6 +413,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: '前のビューに切り替え',
 		restoreViewState: 'ビューを切り替えても選択中のセルを保つ',
 		restoreViewStateDesc: '同じ種類のビューを行き来すると、Obsidian が選択中のセルとスクロール位置を忘れることがあります。これを元に戻します。Obsidian の内部の仕組みを使うため、ビューの切り替えがおかしいときはオフにしてください。',
+		headingTabs: 'ビューのタブ',
+		headingSwitching: 'ビューの切り替え',
 	},
 	km: {
 		showIcons: 'បង្ហាញរូបតំណាងប្រភេទទិដ្ឋភាព',
@@ -403,6 +437,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'ប្ដូរទៅទិដ្ឋភាពមុន',
 		restoreViewState: 'រក្សាក្រឡាដែលបានជ្រើសនៅពេលប្ដូរទិដ្ឋភាព',
 		restoreViewStateDesc: 'ពេលខ្លះ Obsidian ភ្លេចក្រឡាដែលបានជ្រើស និងទីតាំងរំកិល នៅពេលអ្នកប្ដូររវាងទិដ្ឋភាពពីរប្រភេទដូចគ្នា ហើយត្រឡប់មកវិញ។ ជម្រើសនេះដាក់វាត្រឡប់មកវិញ។ វាពឹងលើផ្នែកខាងក្នុងរបស់ Obsidian ដូច្នេះសូមបិទវា ប្រសិនបើការប្ដូរទិដ្ឋភាពដំណើរការចម្លែក។',
+		headingTabs: 'ផ្ទាំងទិដ្ឋភាព',
+		headingSwitching: 'ការប្ដូរទិដ្ឋភាព',
 	},
 	ko: {
 		showIcons: '보기 유형 아이콘 표시',
@@ -425,6 +461,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: '이전 보기로 전환',
 		restoreViewState: '보기를 전환해도 선택한 셀 유지',
 		restoreViewStateDesc: '같은 유형의 두 보기 사이를 오가면 Obsidian이 선택한 셀과 스크롤 위치를 잊어버릴 때가 있습니다. 이 옵션은 그것을 되돌립니다. Obsidian의 내부 구조에 의존하므로, 보기 전환이 이상하게 동작하면 끄세요.',
+		headingTabs: '보기 탭',
+		headingSwitching: '보기 전환',
 	},
 	nl: {
 		showIcons: 'Pictogrammen voor weergavetype tonen',
@@ -447,6 +485,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Naar vorige weergave',
 		restoreViewState: 'Geselecteerde cel behouden bij wisselen van weergave',
 		restoreViewStateDesc: 'Obsidian vergeet soms de geselecteerde cel en de scrollpositie wanneer je tussen twee weergaven van hetzelfde type wisselt en terugkeert. Dit zet ze terug. Het steunt op interne onderdelen van Obsidian, dus zet het uit als het wisselen van weergave vreemd werkt.',
+		headingTabs: 'Weergavetabbladen',
+		headingSwitching: 'Wisselen van weergave',
 	},
 	no: {
 		showIcons: 'Vis ikoner for visningstype',
@@ -469,6 +509,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Bytt til forrige visning',
 		restoreViewState: 'Behold den valgte cellen ved bytte av visning',
 		restoreViewStateDesc: 'Obsidian glemmer noen ganger den valgte cellen og rulleposisjonen når du bytter mellom to visninger av samme type og går tilbake. Dette setter dem tilbake. Det bygger på Obsidians interne deler, så slå det av hvis bytte av visning oppfører seg rart.',
+		headingTabs: 'Visningsfaner',
+		headingSwitching: 'Bytte av visning',
 	},
 	pl: {
 		showIcons: 'Pokaż ikony typu widoku',
@@ -491,6 +533,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Przełącz na poprzedni widok',
 		restoreViewState: 'Zachowaj zaznaczoną komórkę przy zmianie widoku',
 		restoreViewStateDesc: 'Obsidian czasem zapomina zaznaczoną komórkę i pozycję przewinięcia, gdy przełączasz się między dwoma widokami tego samego typu i wracasz. Ta opcja je przywraca. Opiera się na wewnętrznych elementach Obsidiana, więc wyłącz ją, jeśli przełączanie widoków działa dziwnie.',
+		headingTabs: 'Karty widoków',
+		headingSwitching: 'Przełączanie widoków',
 	},
 	pt: {
 		showIcons: 'Mostrar ícones do tipo de vista',
@@ -513,6 +557,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Mudar para a vista anterior',
 		restoreViewState: 'Manter a célula selecionada ao mudar de vista',
 		restoreViewStateDesc: 'Por vezes o Obsidian esquece a célula selecionada e a posição de deslocamento quando muda entre duas vistas do mesmo tipo e regressa. Esta opção repõe-nas. Depende de partes internas do Obsidian, por isso desative-a se a mudança de vista se comportar de forma estranha.',
+		headingTabs: 'Separadores de vistas',
+		headingSwitching: 'Mudança de vista',
 	},
 	"pt-BR": {
 		showIcons: 'Mostrar ícones do tipo de visualização',
@@ -535,6 +581,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Alternar para a visualização anterior',
 		restoreViewState: 'Manter a célula selecionada ao trocar de visualização',
 		restoreViewStateDesc: 'Às vezes o Obsidian esquece a célula selecionada e a posição de rolagem quando você alterna entre duas visualizações do mesmo tipo e volta. Esta opção as restaura. Ela depende de partes internas do Obsidian, então desative-a se a troca de visualização se comportar de forma estranha.',
+		headingTabs: 'Abas de visualizações',
+		headingSwitching: 'Troca de visualização',
 	},
 	ro: {
 		showIcons: 'Afișează pictogramele tipului de vizualizare',
@@ -557,6 +605,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Comută la vizualizarea anterioară',
 		restoreViewState: 'Păstrează celula selectată la schimbarea vizualizării',
 		restoreViewStateDesc: 'Uneori Obsidian uită celula selectată și poziția de derulare când comuți între două vizualizări de același tip și revii. Această opțiune le readuce. Se bazează pe părți interne ale Obsidian, așa că dezactiveaz-o dacă schimbarea vizualizării se comportă ciudat.',
+		headingTabs: 'Filele vizualizărilor',
+		headingSwitching: 'Schimbarea vizualizării',
 	},
 	ru: {
 		showIcons: 'Показывать значки типа представления',
@@ -579,6 +629,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Перейти к предыдущему представлению',
 		restoreViewState: 'Сохранять выбранную ячейку при смене представления',
 		restoreViewStateDesc: 'Obsidian иногда забывает выбранную ячейку и позицию прокрутки, когда вы переключаетесь между двумя представлениями одного типа и возвращаетесь. Этот параметр восстанавливает их. Он опирается на внутренние механизмы Obsidian, поэтому выключите его, если переключение представлений работает странно.',
+		headingTabs: 'Вкладки представлений',
+		headingSwitching: 'Переключение представлений',
 	},
 	sk: {
 		showIcons: 'Zobraziť ikony typu zobrazenia',
@@ -601,6 +653,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Prepnúť na predchádzajúce zobrazenie',
 		restoreViewState: 'Zachovať vybranú bunku pri prepínaní zobrazení',
 		restoreViewStateDesc: 'Obsidian niekedy zabudne vybranú bunku a pozíciu posunu, keď prepnete medzi dvoma zobrazeniami rovnakého typu a vrátite sa. Táto voľba ich obnoví. Spolieha sa na vnútorné časti Obsidianu, preto ju vypnite, ak sa prepínanie zobrazení správa zvláštne.',
+		headingTabs: 'Karty zobrazení',
+		headingSwitching: 'Prepínanie zobrazení',
 	},
 	sv: {
 		showIcons: 'Visa ikoner för vytyp',
@@ -623,6 +677,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Byt till föregående vy',
 		restoreViewState: 'Behåll den markerade cellen vid byte av vy',
 		restoreViewStateDesc: 'Obsidian glömmer ibland den markerade cellen och rullningspositionen när du byter mellan två vyer av samma typ och går tillbaka. Det här återställer dem. Det bygger på Obsidians interna delar, så stäng av det om vybyten beter sig konstigt.',
+		headingTabs: 'Vyflikar',
+		headingSwitching: 'Byte av vy',
 	},
 	th: {
 		showIcons: 'แสดงไอคอนประเภทมุมมอง',
@@ -645,6 +701,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'สลับไปมุมมองก่อนหน้า',
 		restoreViewState: 'คงเซลล์ที่เลือกไว้เมื่อสลับมุมมอง',
 		restoreViewStateDesc: 'บางครั้ง Obsidian ลืมเซลล์ที่เลือกและตำแหน่งการเลื่อนเมื่อคุณสลับไปมาระหว่างมุมมองประเภทเดียวกันแล้วกลับมา ตัวเลือกนี้จะคืนค่าให้ ตัวเลือกนี้อาศัยส่วนภายในของ Obsidian จึงควรปิดหากการสลับมุมมองทำงานผิดปกติ',
+		headingTabs: 'แท็บมุมมอง',
+		headingSwitching: 'การสลับมุมมอง',
 	},
 	tr: {
 		showIcons: 'Görünüm türü simgelerini göster',
@@ -667,6 +725,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Önceki görünüme geç',
 		restoreViewState: 'Görünüm değiştirirken seçili hücreyi koru',
 		restoreViewStateDesc: 'Obsidian, aynı türdeki iki görünüm arasında geçip geri döndüğünüzde bazen seçili hücreyi ve kaydırma konumunu unutur. Bu seçenek onları geri getirir. Obsidian\'ın iç yapısına dayandığı için görünüm değiştirme tuhaf davranırsa kapatın.',
+		headingTabs: 'Görünüm sekmeleri',
+		headingSwitching: 'Görünüm değiştirme',
 	},
 	uk: {
 		showIcons: 'Показувати значки типу подання',
@@ -689,6 +749,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Перейти до попереднього представлення',
 		restoreViewState: 'Зберігати вибрану клітинку під час зміни представлення',
 		restoreViewStateDesc: 'Obsidian іноді забуває вибрану клітинку та позицію прокручування, коли ви перемикаєтеся між двома представленнями одного типу й повертаєтеся. Цей параметр відновлює їх. Він спирається на внутрішні механізми Obsidian, тож вимкніть його, якщо перемикання представлень працює дивно.',
+		headingTabs: 'Вкладки представлень',
+		headingSwitching: 'Перемикання представлень',
 	},
 	vi: {
 		showIcons: 'Hiện biểu tượng loại chế độ xem',
@@ -711,6 +773,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: 'Chuyển sang chế độ xem trước',
 		restoreViewState: 'Giữ ô đang chọn khi chuyển chế độ xem',
 		restoreViewStateDesc: 'Obsidian đôi khi quên ô đang chọn và vị trí cuộn khi bạn chuyển qua lại giữa hai chế độ xem cùng loại. Tùy chọn này khôi phục chúng. Nó dựa vào phần bên trong của Obsidian, nên hãy tắt nếu việc chuyển chế độ xem hoạt động bất thường.',
+		headingTabs: 'Tab chế độ xem',
+		headingSwitching: 'Chuyển chế độ xem',
 	},
 	zh: {
 		showIcons: '显示视图类型图标',
@@ -733,6 +797,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: '切换到上一个视图',
 		restoreViewState: '切换视图时保留选中的单元格',
 		restoreViewStateDesc: '在同类型的两个视图之间切换再返回时，Obsidian 有时会忘记选中的单元格和滚动位置。此选项会将其恢复。它依赖 Obsidian 的内部机制，如果切换视图表现异常，请将其关闭。',
+		headingTabs: '视图标签',
+		headingSwitching: '切换视图',
 	},
 	"zh-TW": {
 		showIcons: '顯示檢視類型圖示',
@@ -755,6 +821,8 @@ const STRINGS: Record<string, Strings> = {
 		previousView: '切換到上一個檢視',
 		restoreViewState: '切換檢視時保留選取的儲存格',
 		restoreViewStateDesc: '在同類型的兩個檢視之間切換再返回時，Obsidian 有時會忘記選取的儲存格和捲動位置。此選項會將其恢復。它依賴 Obsidian 的內部機制，如果切換檢視表現異常，請將其關閉。',
+		headingTabs: '檢視分頁',
+		headingSwitching: '切換檢視',
 	},
 };
 
