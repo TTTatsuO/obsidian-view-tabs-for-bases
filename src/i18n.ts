@@ -25,7 +25,7 @@ const EN = {
 	restoreViewState: 'Keep the selected cell when switching views',
 	restoreViewStateDesc: 'Obsidian sometimes forgets the selected cell and scroll position when you switch between two views of the same type and come back. This puts them back. It relies on Obsidian\'s internals, so turn it off if switching views behaves oddly.',
 	headingTabs: 'View tabs',
-	headingKeepPlace: 'Keeping your place',
+	headingKeepPlace: 'Selection and scroll position',
 };
 
 export type Strings = typeof EN;
