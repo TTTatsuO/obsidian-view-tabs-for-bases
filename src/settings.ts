@@ -64,7 +64,7 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 			},
 			{
 				type: 'group',
-				heading: t.headingSwitching,
+				heading: t.headingKeepPlace,
 				items: [
 					{
 						name: t.restoreViewState,
