@@ -40,7 +40,7 @@ También puedes abrir **Configure view** (los ajustes de la vista) desde el men�
 
 Para recuperar una pestaña quitada, abre **Configure view** de esa vista desde el menú de vistas y vuelve a activar **Mostrar en pestañas**.
 
-Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista siguiente** y **Cambiar a la vista anterior** en **Settings → Hotkeys**. Recorren las pestañas en orden, vuelven al otro extremo al llegar al final y omiten las vistas quitadas de las pestañas. No hay atajos asignados por defecto.
+Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista siguiente** y **Cambiar a la vista anterior** en **Settings → Hotkeys**. Recorren las pestañas en orden, vuelven al otro extremo al llegar al final y omiten las vistas quitadas de las pestañas. No hay atajos asignados por defecto. El botón **Configurar atajos** en los ajustes de este complemento abre esa página mostrando solo estos comandos.
 
 ### Ajustes del plugin
 
@@ -48,6 +48,7 @@ Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista sigui
 - **Ajustar pestañas de vistas**: bajo la barra de herramientas, las pestañas que no caben pasan a más líneas en lugar de desplazarse en horizontal. Solo disponible cuando **Posición de las pestañas de vistas** es **Bajo la barra de herramientas**.
 - **Mostrar iconos del tipo de vista**: muestra en cada pestaña el icono del tipo de vista (tabla, tarjetas, etc.). Activado por defecto.
 - **Mantener la celda seleccionada al cambiar de vista**: ver abajo.
+- **Configurar atajos**: abre **Settings → Hotkeys** mostrando solo los comandos de este complemento.
 
 ![Las pestañas en una fila propia bajo la barra de herramientas, con Gallery seleccionada](../assets/tabs-below.png)
 

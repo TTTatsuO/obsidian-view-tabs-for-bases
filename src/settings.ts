@@ -1,5 +1,6 @@
 import { App, PluginSettingTab, SettingDefinitionItem } from 'obsidian';
 import { text } from './i18n';
+import { openHotkeysFor } from './internals/hotkeys';
 import type ViewTabsForBasesPlugin from './main';
 
 /** Where the tabs go: next to the result count, on a row of their own below the toolbar, or nowhere. */
@@ -70,6 +71,19 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 						name: t.restoreViewState,
 						desc: t.restoreViewStateDesc,
 						control: { type: 'toggle', key: 'restoreViewState', defaultValue: DEFAULT_SETTINGS.restoreViewState },
+					},
+				],
+			},
+			{
+				type: 'group',
+				heading: t.headingHotkeys,
+				items: [
+					{
+						name: t.openHotkeys,
+						desc: t.openHotkeysDesc,
+						action: () => {
+							openHotkeysFor(this.app, this.plugin.manifest.id);
+						},
 					},
 				],
 			},

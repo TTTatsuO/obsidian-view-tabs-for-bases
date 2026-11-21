@@ -1,7 +1,8 @@
 import type { EventRef, View } from 'obsidian';
 
-// The only place that touches non-public parts of Obsidian. A Bases view (an open .base file)
-// has a controller that lists the views and switches between them (checked on 1.14).
+// With the other files in src/internals/, the only place that touches non-public parts of
+// Obsidian. A Bases view (an open .base file) has a controller that lists the views and
+// switches between them (checked on 1.14).
 // Nothing here throws: when something is unavailable these functions return null, false or an
 // empty value, and callers keep working with less.
 

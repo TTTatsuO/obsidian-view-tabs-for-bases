@@ -40,7 +40,7 @@ Vous pouvez aussi ouvrir **Configure view** (les réglages de la vue) depuis le 
 
 Pour faire revenir un onglet retiré, ouvrez **Configure view** de cette vue depuis le menu des vues et réactivez **Afficher dans les onglets**.
 
-Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue suivante** et **Passer à la vue précédente** dans **Settings → Hotkeys**. Elles parcourent les onglets dans l’ordre, reviennent au début une fois à la fin et ignorent les vues retirées des onglets. Aucun raccourci n’est défini par défaut.
+Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue suivante** et **Passer à la vue précédente** dans **Settings → Hotkeys**. Elles parcourent les onglets dans l’ordre, reviennent au début une fois à la fin et ignorent les vues retirées des onglets. Aucun raccourci n’est défini par défaut. Le bouton **Définir les raccourcis** dans les paramètres de ce plugin ouvre cette page en n’affichant que ces commandes.
 
 ### Réglages du plugin
 
@@ -48,6 +48,7 @@ Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue s
 - **Renvoyer les onglets de vues à la ligne** : sous la barre d’outils, les onglets qui ne tiennent pas passent sur plusieurs lignes au lieu de défiler horizontalement. Disponible uniquement quand **Position des onglets de vues** vaut **Sous la barre d’outils**.
 - **Afficher les icônes du type de vue** : affiche sur chaque onglet l’icône du type de vue (tableau, cartes, etc.). Activé par défaut.
 - **Garder la cellule sélectionnée en changeant de vue** : voir ci-dessous.
+- **Définir les raccourcis** : ouvre **Settings → Hotkeys** en n’affichant que les commandes de ce plugin.
 
 ![Les onglets sur une ligne à part sous la barre d’outils, avec Gallery sélectionné](../assets/tabs-below.png)
 
