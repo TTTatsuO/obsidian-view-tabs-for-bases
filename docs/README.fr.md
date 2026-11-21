@@ -43,7 +43,7 @@ Pour faire revenir un onglet retiré, ouvrez **Configure view** de cette vue dep
 
 Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue suivante** et **Passer à la vue précédente** dans **Settings → Hotkeys**. Elles parcourent les onglets dans l’ordre, reviennent au début une fois à la fin et ignorent les vues retirées des onglets. Aucun raccourci n’est défini par défaut. Le bouton **Définir les raccourcis** dans les paramètres de ce plugin ouvre cette page en n’affichant que ces commandes.
 
-Pour déplacer la cellule sélectionnée d’un tableau avec d’autres touches, attribuez des raccourcis à **Déplacer la cellule vers le haut**, **Déplacer la cellule vers le bas**, **Déplacer la cellule vers la gauche** et **Déplacer la cellule vers la droite**. Elles font la même chose que les flèches, ne fonctionnent que dans les vues tableau et ne font rien pendant que vous modifiez le texte d’une cellule.
+Pour déplacer la cellule sélectionnée d’un tableau avec d’autres touches, attribuez des raccourcis à **Déplacer la cellule vers le haut**, **Déplacer la cellule vers le bas**, **Déplacer la cellule vers la gauche** et **Déplacer la cellule vers la droite**. Elles font la même chose que les flèches, ne fonctionnent que dans les vues tableau et ne font rien pendant que vous modifiez le texte d’une cellule. Obsidian n’accepte pas une seule lettre comme raccourci ; pour h j k l, activez **Déplacer les cellules du tableau avec h j k l** dans les paramètres de ce plugin.
 
 ### Réglages du plugin
 
@@ -52,6 +52,7 @@ Pour déplacer la cellule sélectionnée d’un tableau avec d’autres touches,
 - **Afficher les icônes du type de vue** : affiche sur chaque onglet l’icône du type de vue (tableau, cartes, etc.). Activé par défaut.
 - **Garder la cellule sélectionnée en changeant de vue** : voir ci-dessous.
 - **Définir les raccourcis** : ouvre **Settings → Hotkeys** en n’affichant que les commandes de ce plugin.
+- **Déplacer les cellules du tableau avec h j k l** : h, j, k et l déplacent la cellule sélectionnée vers la gauche, le bas, le haut et la droite, comme les flèches. Elles s’écrivent toujours pendant la modification du texte d’une cellule. Désactivé par défaut.
 
 ![Les onglets sur une ligne à part sous la barre d’outils, avec Gallery sélectionné](../assets/tabs-below.png)
 

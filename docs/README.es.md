@@ -43,7 +43,7 @@ Para recuperar una pestaña quitada, abre **Configure view** de esa vista desde 
 
 Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista siguiente** y **Cambiar a la vista anterior** en **Settings → Hotkeys**. Recorren las pestañas en orden, vuelven al otro extremo al llegar al final y omiten las vistas quitadas de las pestañas. No hay atajos asignados por defecto. El botón **Configurar atajos** en los ajustes de este complemento abre esa página mostrando solo estos comandos.
 
-Para mover la celda seleccionada de una tabla con otras teclas, asigna atajos a **Mover celda arriba**, **Mover celda abajo**, **Mover celda a la izquierda** y **Mover celda a la derecha**. Hacen lo mismo que las flechas, solo funcionan en vistas de tabla y no hacen nada mientras editas el texto de una celda.
+Para mover la celda seleccionada de una tabla con otras teclas, asigna atajos a **Mover celda arriba**, **Mover celda abajo**, **Mover celda a la izquierda** y **Mover celda a la derecha**. Hacen lo mismo que las flechas, solo funcionan en vistas de tabla y no hacen nada mientras editas el texto de una celda. Obsidian no acepta una sola letra como atajo; para h j k l, activa **Mover celdas de la tabla con h j k l** en los ajustes de este complemento.
 
 ### Ajustes del plugin
 
@@ -52,6 +52,7 @@ Para mover la celda seleccionada de una tabla con otras teclas, asigna atajos a 
 - **Mostrar iconos del tipo de vista**: muestra en cada pestaña el icono del tipo de vista (tabla, tarjetas, etc.). Activado por defecto.
 - **Mantener la celda seleccionada al cambiar de vista**: ver abajo.
 - **Configurar atajos**: abre **Settings → Hotkeys** mostrando solo los comandos de este complemento.
+- **Mover celdas de la tabla con h j k l**: h, j, k y l mueven la celda seleccionada a la izquierda, abajo, arriba y a la derecha, como las flechas. Siguen escribiendo mientras editas el texto de una celda. Desactivado por defecto.
 
 ![Las pestañas en una fila propia bajo la barra de herramientas, con Gallery seleccionada](../assets/tabs-below.png)
 

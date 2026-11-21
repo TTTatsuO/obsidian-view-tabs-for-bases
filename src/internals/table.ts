@@ -46,7 +46,35 @@ export function moveCell(controller: BasesController, direction: CellDirection):
 	try {
 		// Keep focus on the table so the selection shows and the real arrow keys carry on from here
 		if (!el.contains(el.doc.activeElement)) el.focus({ preventScroll: true });
-		el.dispatchEvent(new KeyboardEvent('keydown', { key: ARROW_KEYS[direction], bubbles: true, cancelable: true }));
+		pressArrow(el, direction);
+		return true;
+	} catch {
+		return false;
+	}
+}
+
+/** Send the table the arrow key for a direction. */
+function pressArrow(el: HTMLElement, direction: CellDirection): void {
+	el.dispatchEvent(new KeyboardEvent('keydown', { key: ARROW_KEYS[direction], bubbles: true, cancelable: true }));
+}
+
+const VIM_KEYS: Record<string, CellDirection> = { h: 'left', j: 'down', k: 'up', l: 'right' };
+
+/**
+ * For a keydown listener: when h, j, k or l is pressed with no modifier while a table's cells have
+ * focus, move the cell instead and return true. The table gives these letters no job of its own;
+ * while a cell's text is being edited, focus is in the editor, so typing is left alone.
+ */
+export function handleVimKey(evt: KeyboardEvent): boolean {
+	if (evt.defaultPrevented || evt.isComposing || evt.ctrlKey || evt.metaKey || evt.altKey || evt.shiftKey) return false;
+	const direction = VIM_KEYS[evt.key];
+	if (!direction) return false;
+	try {
+		// The table's cells have focus when its container itself does (checked on 1.15)
+		const target = evt.target as Node | null;
+		if (!target?.instanceOf?.(HTMLElement) || !target.classList.contains('bases-table-container')) return false;
+		evt.preventDefault();
+		pressArrow(target, direction);
 		return true;
 	} catch {
 		return false;

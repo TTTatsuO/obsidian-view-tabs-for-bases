@@ -1,7 +1,7 @@
 import { debounce, Plugin, TFile, View } from 'obsidian';
 import { BasesController, getBasesController, isViewMenuOpen, restoreViewStateOnSwitch } from './internals/bases';
 import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS, parseTabPosition } from './settings';
-import { CellDirection, canMoveCell, moveCell } from './internals/table';
+import { CellDirection, canMoveCell, handleVimKey, moveCell } from './internals/table';
 import { ViewConfigSection } from './view-config-section';
 import { cycleView, ViewTabs } from './view-tabs';
 import { text } from './i18n';
@@ -44,6 +44,15 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 			});
 		}
 
+		// h j k l in tables: a plain key can't be a hotkey, so this listens for it directly, in every window
+		const onKeydown = (evt: KeyboardEvent) => {
+			if (this.settings.vimKeys) handleVimKey(evt);
+		};
+		this.registerDomEvent(window, 'keydown', onKeydown, true);
+		this.registerEvent(
+			this.app.workspace.on('window-open', (_win, win) => this.registerDomEvent(win, 'keydown', onKeydown, true)),
+		);
+
 		this.app.workspace.onLayoutReady(() => this.sync());
 		this.registerEvent(this.app.workspace.on('layout-change', () => this.requestSync()));
 		this.registerEvent(this.app.workspace.on('active-leaf-change', () => this.requestSync()));
@@ -68,6 +77,7 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 			tabPosition: data?.showTabs === false ? 'hidden' : parseTabPosition(data?.tabPosition),
 			wrapTabs: data?.wrapTabs ?? DEFAULT_SETTINGS.wrapTabs,
 			restoreViewState: data?.restoreViewState ?? DEFAULT_SETTINGS.restoreViewState,
+			vimKeys: data?.vimKeys ?? DEFAULT_SETTINGS.vimKeys,
 		};
 	}
 

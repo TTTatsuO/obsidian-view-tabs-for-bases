@@ -16,6 +16,7 @@ export interface ViewTabsForBasesSettings {
 	tabPosition: TabPosition;
 	wrapTabs: boolean;
 	restoreViewState: boolean;
+	vimKeys: boolean;
 }
 
 export const DEFAULT_SETTINGS: ViewTabsForBasesSettings = {
@@ -23,6 +24,7 @@ export const DEFAULT_SETTINGS: ViewTabsForBasesSettings = {
 	tabPosition: 'inline',
 	wrapTabs: false,
 	restoreViewState: true,
+	vimKeys: false,
 };
 
 export class ViewTabsForBasesSettingTab extends PluginSettingTab {
@@ -76,7 +78,7 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 			},
 			{
 				type: 'group',
-				heading: t.headingHotkeys,
+				heading: t.headingKeyboard,
 				items: [
 					{
 						name: t.openHotkeys,
@@ -84,6 +86,11 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 						action: () => {
 							openHotkeysFor(this.app, this.plugin.manifest.id);
 						},
+					},
+					{
+						name: t.vimKeys,
+						desc: t.vimKeysDesc,
+						control: { type: 'toggle', key: 'vimKeys', defaultValue: DEFAULT_SETTINGS.vimKeys },
 					},
 				],
 			},
@@ -93,7 +100,7 @@ export class ViewTabsForBasesSettingTab extends PluginSettingTab {
 	async setControlValue(key: string, value: unknown): Promise<void> {
 		if (key === 'tabPosition') {
 			this.plugin.settings.tabPosition = parseTabPosition(value);
-		} else if (key === 'showIcons' || key === 'wrapTabs' || key === 'restoreViewState') {
+		} else if (key === 'showIcons' || key === 'wrapTabs' || key === 'restoreViewState' || key === 'vimKeys') {
 			this.plugin.settings[key] = value === true;
 		} else {
 			return;

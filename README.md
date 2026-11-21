@@ -43,7 +43,7 @@ To bring back a removed tab, open that view's **Configure view** from the view m
 
 To switch views from the keyboard, assign hotkeys to **Switch to next view** and **Switch to previous view** in **Settings → Hotkeys**. They move through the tabs in order, wrap around at the ends, and skip views removed from the tabs. No hotkeys are set by default. The **Set hotkeys** button in this plugin's settings opens that page showing only these commands.
 
-To move the selected cell of a table with other keys, assign hotkeys to **Move cell up**, **Move cell down**, **Move cell left** and **Move cell right**. They do what the arrow keys do, work only in table views, and do nothing while you are editing a cell's text.
+To move the selected cell of a table with other keys, assign hotkeys to **Move cell up**, **Move cell down**, **Move cell left** and **Move cell right**. They do what the arrow keys do, work only in table views, and do nothing while you are editing a cell's text. Obsidian doesn't take a single letter as a hotkey; for h j k l, turn on **Move table cells with h j k l** in this plugin's settings.
 
 ### Plugin settings
 
@@ -52,6 +52,7 @@ To move the selected cell of a table with other keys, assign hotkeys to **Move c
 - **Show view type icons**: show each view's type icon (table, cards and so on) on its tab. On by default.
 - **Keep the selected cell when switching views**: see below.
 - **Set hotkeys**: opens **Settings → Hotkeys** showing only this plugin's commands.
+- **Move table cells with h j k l**: h, j, k and l move the selected cell left, down, up and right, like the arrow keys. They still type while you edit a cell's text. Off by default.
 
 ![The tabs on a row of their own below the toolbar, with Gallery selected](assets/tabs-below.png)
 

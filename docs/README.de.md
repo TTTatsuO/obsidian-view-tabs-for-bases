@@ -43,7 +43,7 @@ Um einen entfernten Tab zurückzuholen, öffne über das Ansichtsmenü **Configu
 
 Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den Befehlen **Zur nächsten Ansicht wechseln** und **Zur vorherigen Ansicht wechseln** Tastenkürzel zu. Sie gehen die Tabs der Reihe nach durch, springen am Ende wieder an den Anfang und überspringen aus den Tabs entfernte Ansichten. Standardmäßig sind keine Tastenkürzel gesetzt. Die Schaltfläche **Tastenkürzel festlegen** in den Einstellungen dieses Plugins öffnet diese Seite nur mit diesen Befehlen.
 
-Um die ausgewählte Zelle einer Tabelle mit anderen Tasten zu bewegen, weise **Zelle nach oben**, **Zelle nach unten**, **Zelle nach links** und **Zelle nach rechts** Tastenkürzel zu. Sie tun dasselbe wie die Pfeiltasten, funktionieren nur in Tabellenansichten und tun nichts, während du den Text einer Zelle bearbeitest.
+Um die ausgewählte Zelle einer Tabelle mit anderen Tasten zu bewegen, weise **Zelle nach oben**, **Zelle nach unten**, **Zelle nach links** und **Zelle nach rechts** Tastenkürzel zu. Sie tun dasselbe wie die Pfeiltasten, funktionieren nur in Tabellenansichten und tun nichts, während du den Text einer Zelle bearbeitest. Obsidian akzeptiert keinen einzelnen Buchstaben als Tastenkürzel; für h j k l schalte in den Einstellungen dieses Plugins **Tabellenzellen mit h j k l bewegen** ein.
 
 ### Plugin-Einstellungen
 
@@ -52,6 +52,7 @@ Um die ausgewählte Zelle einer Tabelle mit anderen Tasten zu bewegen, weise **Z
 - **Symbole für Ansichtstyp anzeigen**: zeigt auf jedem Tab das Symbol des Ansichtstyps (Tabelle, Karten usw.). Standardmäßig an.
 - **Ausgewählte Zelle beim Ansichtswechsel behalten**: siehe unten.
 - **Tastenkürzel festlegen**: öffnet **Settings → Hotkeys** nur mit den Befehlen dieses Plugins.
+- **Tabellenzellen mit h j k l bewegen**: h, j, k und l bewegen die ausgewählte Zelle nach links, unten, oben und rechts, wie die Pfeiltasten. Beim Bearbeiten des Zelltexts tippen sie weiterhin. Standardmäßig aus.
 
 ![Die Tabs in einer eigenen Zeile unter der Werkzeugleiste, Gallery ist ausgewählt](../assets/tabs-below.png)
 
