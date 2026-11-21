@@ -50,7 +50,7 @@ Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista sigui
 - **Mostrar iconos del tipo de vista**: muestra en cada pestaña el icono del tipo de vista (tabla, tarjetas, etc.). Activado por defecto.
 - **Mantener la celda seleccionada al cambiar de vista**: ver abajo.
 - **Configurar atajos**: abre **Settings → Hotkeys** mostrando solo los comandos de este complemento.
-- **Mover celdas de la tabla con h j k l**: h, j, k y l mueven la celda seleccionada a la izquierda, abajo, arriba y a la derecha, como las flechas. Siguen escribiendo mientras editas el texto de una celda. Desactivado por defecto.
+- **Mover celdas de la tabla con h j k l**: h, j, k y l mueven la celda seleccionada a la izquierda, abajo, arriba y a la derecha, como las flechas. Con Mayús, seleccionas un rango. Siguen escribiendo mientras editas el texto de una celda. Desactivado por defecto.
 
 ![Las pestañas en una fila propia bajo la barra de herramientas, con Gallery seleccionada](../assets/tabs-below.png)
 

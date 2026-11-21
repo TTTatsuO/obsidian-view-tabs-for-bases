@@ -50,7 +50,7 @@ Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue s
 - **Afficher les icônes du type de vue** : affiche sur chaque onglet l’icône du type de vue (tableau, cartes, etc.). Activé par défaut.
 - **Garder la cellule sélectionnée en changeant de vue** : voir ci-dessous.
 - **Définir les raccourcis** : ouvre **Settings → Hotkeys** en n’affichant que les commandes de ce plugin.
-- **Déplacer les cellules du tableau avec h j k l** : h, j, k et l déplacent la cellule sélectionnée vers la gauche, le bas, le haut et la droite, comme les flèches. Elles s’écrivent toujours pendant la modification du texte d’une cellule. Désactivé par défaut.
+- **Déplacer les cellules du tableau avec h j k l** : h, j, k et l déplacent la cellule sélectionnée vers la gauche, le bas, le haut et la droite, comme les flèches. Avec Maj, vous sélectionnez une plage. Elles s’écrivent toujours pendant la modification du texte d’une cellule. Désactivé par défaut.
 
 ![Les onglets sur une ligne à part sous la barre d’outils, avec Gallery sélectionné](../assets/tabs-below.png)
 

@@ -50,7 +50,7 @@ To switch views from the keyboard, assign hotkeys to **Switch to next view** and
 - **Show view type icons**: show each view's type icon (table, cards and so on) on its tab. On by default.
 - **Keep the selected cell when switching views**: see below.
 - **Set hotkeys**: opens **Settings → Hotkeys** showing only this plugin's commands.
-- **Move table cells with h j k l**: h, j, k and l move the selected cell left, down, up and right, like the arrow keys. They still type while you edit a cell's text. Off by default.
+- **Move table cells with h j k l**: h, j, k and l move the selected cell left, down, up and right, like the arrow keys. Hold Shift to select a range. They still type while you edit a cell's text. Off by default.
 
 ![The tabs on a row of their own below the toolbar, with Gallery selected](assets/tabs-below.png)
 

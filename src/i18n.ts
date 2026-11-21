@@ -30,7 +30,7 @@ const EN = {
 	openHotkeys: 'Set hotkeys',
 	openHotkeysDesc: 'Assign keys for switching to the next or previous view. Opens Settings → Hotkeys showing only this plugin\'s commands.',
 	vimKeys: 'Move table cells with h j k l',
-	vimKeysDesc: 'When on, h, j, k and l move the selected cell of a table left, down, up and right, like the arrow keys. While you edit a cell\'s text, they type as usual.',
+	vimKeysDesc: 'When on, h, j, k and l move the selected cell of a table left, down, up and right, like the arrow keys. With Shift, they select a range. While you edit a cell\'s text, they type as usual.',
 };
 
 export type Strings = typeof EN;
@@ -64,7 +64,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'تعيين الاختصارات',
 		openHotkeysDesc: 'عيّن مفاتيح للتبديل إلى العرض التالي أو السابق. يفتح الإعدادات ← اختصارات لوحة المفاتيح مع عرض أوامر هذه الإضافة فقط.',
 		vimKeys: 'نقل خلايا الجدول بـ h j k l',
-		vimKeysDesc: 'عند التفعيل، تنقل h وj وk وl الخلية المحددة في الجدول يسارًا وأسفل وأعلى ويمينًا مثل مفاتيح الأسهم. أثناء تحرير نص الخلية تكتب كالمعتاد.',
+		vimKeysDesc: 'عند التفعيل، تنقل h وj وk وl الخلية المحددة في الجدول يسارًا وأسفل وأعلى ويمينًا مثل مفاتيح الأسهم. مع Shift تحدد نطاقًا. أثناء تحرير نص الخلية تكتب كالمعتاد.',
 	},
 	bn: {
 		showIcons: 'ভিউয়ের ধরনের আইকন দেখান',
@@ -93,7 +93,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'হটকি সেট করুন',
 		openHotkeysDesc: 'পরের বা আগের ভিউতে যাওয়ার জন্য কী নির্ধারণ করুন। শুধু এই প্লাগইনের কমান্ড দেখিয়ে সেটিংস → হটকি খোলে।',
 		vimKeys: 'h j k l দিয়ে টেবিলের সেল সরান',
-		vimKeysDesc: 'চালু থাকলে h, j, k ও l তীর কী-এর মতো টেবিলের নির্বাচিত সেল বাঁয়ে, নিচে, উপরে ও ডানে সরায়। সেলের লেখা সম্পাদনার সময় এগুলো স্বাভাবিকভাবে টাইপ হয়।',
+		vimKeysDesc: 'চালু থাকলে h, j, k ও l তীর কী-এর মতো টেবিলের নির্বাচিত সেল বাঁয়ে, নিচে, উপরে ও ডানে সরায়। Shift চেপে রাখলে একটি পরিসর নির্বাচন হয়। সেলের লেখা সম্পাদনার সময় এগুলো স্বাভাবিকভাবে টাইপ হয়।',
 	},
 	ca: {
 		showIcons: 'Mostra les icones del tipus de vista',
@@ -122,7 +122,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Defineix les dreceres',
 		openHotkeysDesc: 'Assigna tecles per canviar a la vista següent o anterior. Obre Configuració → Dreceres de teclat amb només les ordres d’aquest connector.',
 		vimKeys: 'Mou les cel·les de la taula amb h j k l',
-		vimKeysDesc: 'Quan està activat, h, j, k i l mouen la cel·la seleccionada d’una taula a l’esquerra, avall, amunt i a la dreta, com les fletxes. Mentre edites el text d’una cel·la, s’escriuen com sempre.',
+		vimKeysDesc: 'Quan està activat, h, j, k i l mouen la cel·la seleccionada d’una taula a l’esquerra, avall, amunt i a la dreta, com les fletxes. Amb Maj, seleccionen un interval. Mentre edites el text d’una cel·la, s’escriuen com sempre.',
 	},
 	cs: {
 		showIcons: 'Zobrazit ikony typu zobrazení',
@@ -151,7 +151,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Nastavit zkratky',
 		openHotkeysDesc: 'Přiřaďte klávesy pro přepnutí na další nebo předchozí zobrazení. Otevře Nastavení → Klávesové zkratky jen s příkazy tohoto pluginu.',
 		vimKeys: 'Posouvat buňky tabulky klávesami h j k l',
-		vimKeysDesc: 'Když je zapnuto, h, j, k a l posouvají vybranou buňku tabulky doleva, dolů, nahoru a doprava jako šipky. Při úpravě textu buňky se píší jako obvykle.',
+		vimKeysDesc: 'Když je zapnuto, h, j, k a l posouvají vybranou buňku tabulky doleva, dolů, nahoru a doprava jako šipky. Se Shiftem vybírají oblast. Při úpravě textu buňky se píší jako obvykle.',
 	},
 	da: {
 		showIcons: 'Vis ikoner for visningstype',
@@ -180,7 +180,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Angiv genvejstaster',
 		openHotkeysDesc: 'Tildel taster til at skifte til næste eller forrige visning. Åbner Indstillinger → Genvejstaster med kun dette plugins kommandoer.',
 		vimKeys: 'Flyt tabelceller med h j k l',
-		vimKeysDesc: 'Når det er slået til, flytter h, j, k og l den valgte celle i en tabel til venstre, ned, op og til højre ligesom piletasterne. Mens du redigerer en celles tekst, skriver de som normalt.',
+		vimKeysDesc: 'Når det er slået til, flytter h, j, k og l den valgte celle i en tabel til venstre, ned, op og til højre ligesom piletasterne. Med Shift markerer de et område. Mens du redigerer en celles tekst, skriver de som normalt.',
 	},
 	de: {
 		showIcons: 'Symbole für Ansichtstyp anzeigen',
@@ -209,7 +209,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Tastenkürzel festlegen',
 		openHotkeysDesc: 'Lege Tasten für den Wechsel zur nächsten oder vorherigen Ansicht fest. Öffnet Einstellungen → Tastenkürzel mit nur den Befehlen dieses Plugins.',
 		vimKeys: 'Tabellenzellen mit h j k l bewegen',
-		vimKeysDesc: 'Wenn aktiviert, bewegen h, j, k und l die ausgewählte Zelle einer Tabelle nach links, unten, oben und rechts, wie die Pfeiltasten. Beim Bearbeiten des Zelltexts tippen sie wie gewohnt.',
+		vimKeysDesc: 'Wenn aktiviert, bewegen h, j, k und l die ausgewählte Zelle einer Tabelle nach links, unten, oben und rechts, wie die Pfeiltasten. Mit Umschalt wählen sie einen Bereich aus. Beim Bearbeiten des Zelltexts tippen sie wie gewohnt.',
 	},
 	el: {
 		showIcons: 'Εμφάνιση εικονιδίων τύπου προβολής',
@@ -238,7 +238,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Ορισμός συντομεύσεων',
 		openHotkeysDesc: 'Ορίστε πλήκτρα για μετάβαση στην επόμενη ή την προηγούμενη προβολή. Ανοίγει Ρυθμίσεις → Συντομεύσεις πληκτρολογίου μόνο με τις εντολές αυτού του πρόσθετου.',
 		vimKeys: 'Μετακίνηση κελιών πίνακα με h j k l',
-		vimKeysDesc: 'Όταν είναι ενεργό, τα h, j, k και l μετακινούν το επιλεγμένο κελί πίνακα αριστερά, κάτω, πάνω και δεξιά, όπως τα βέλη. Όταν επεξεργάζεστε το κείμενο ενός κελιού, πληκτρολογούν κανονικά.',
+		vimKeysDesc: 'Όταν είναι ενεργό, τα h, j, k και l μετακινούν το επιλεγμένο κελί πίνακα αριστερά, κάτω, πάνω και δεξιά, όπως τα βέλη. Με Shift επιλέγουν περιοχή. Όταν επεξεργάζεστε το κείμενο ενός κελιού, πληκτρολογούν κανονικά.',
 	},
 	es: {
 		showIcons: 'Mostrar iconos del tipo de vista',
@@ -267,7 +267,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Configurar atajos',
 		openHotkeysDesc: 'Asigna teclas para cambiar a la vista siguiente o anterior. Abre Ajustes → Atajos de teclado mostrando solo los comandos de este complemento.',
 		vimKeys: 'Mover celdas de la tabla con h j k l',
-		vimKeysDesc: 'Si está activado, h, j, k y l mueven la celda seleccionada de una tabla a la izquierda, abajo, arriba y a la derecha, como las flechas. Mientras editas el texto de una celda, escriben como siempre.',
+		vimKeysDesc: 'Si está activado, h, j, k y l mueven la celda seleccionada de una tabla a la izquierda, abajo, arriba y a la derecha, como las flechas. Con Mayús, seleccionan un rango. Mientras editas el texto de una celda, escriben como siempre.',
 	},
 	fa: {
 		showIcons: 'نمایش نماد نوع نما',
@@ -296,7 +296,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'تنظیم میانبرها',
 		openHotkeysDesc: 'برای رفتن به نمای بعدی یا قبلی کلید تعیین کنید. تنظیمات ← میانبرها را فقط با فرمان‌های این افزونه باز می‌کند.',
 		vimKeys: 'جابه‌جایی سلول‌های جدول با h j k l',
-		vimKeysDesc: 'وقتی روشن است، h، j، k و l سلول انتخاب‌شده جدول را مانند کلیدهای جهت به چپ، پایین، بالا و راست می‌برند. هنگام ویرایش متن سلول، مثل همیشه تایپ می‌شوند.',
+		vimKeysDesc: 'وقتی روشن است، h، j، k و l سلول انتخاب‌شده جدول را مانند کلیدهای جهت به چپ، پایین، بالا و راست می‌برند. با Shift یک محدوده انتخاب می‌کنند. هنگام ویرایش متن سلول، مثل همیشه تایپ می‌شوند.',
 	},
 	fi: {
 		showIcons: 'Näytä näkymätyypin kuvakkeet',
@@ -325,7 +325,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Aseta pikanäppäimet',
 		openHotkeysDesc: 'Määritä näppäimet seuraavaan tai edelliseen näkymään vaihtamiseen. Avaa Asetukset → Pikanäppäimet näyttäen vain tämän laajennuksen komennot.',
 		vimKeys: 'Siirrä taulukon soluja näppäimillä h j k l',
-		vimKeysDesc: 'Kun asetus on päällä, h, j, k ja l siirtävät taulukon valittua solua vasemmalle, alas, ylös ja oikealle kuten nuolinäppäimet. Kun muokkaat solun tekstiä, ne kirjoittavat tavalliseen tapaan.',
+		vimKeysDesc: 'Kun asetus on päällä, h, j, k ja l siirtävät taulukon valittua solua vasemmalle, alas, ylös ja oikealle kuten nuolinäppäimet. Vaihtonäppäimen kanssa ne valitsevat alueen. Kun muokkaat solun tekstiä, ne kirjoittavat tavalliseen tapaan.',
 	},
 	fr: {
 		showIcons: 'Afficher les icônes du type de vue',
@@ -354,7 +354,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Définir les raccourcis',
 		openHotkeysDesc: 'Attribuez des touches pour passer à la vue suivante ou précédente. Ouvre Paramètres → Raccourcis clavier en n’affichant que les commandes de ce plugin.',
 		vimKeys: 'Déplacer les cellules du tableau avec h j k l',
-		vimKeysDesc: 'Activé, h, j, k et l déplacent la cellule sélectionnée d’un tableau vers la gauche, le bas, le haut et la droite, comme les flèches. Pendant que vous modifiez le texte d’une cellule, elles s’écrivent normalement.',
+		vimKeysDesc: 'Activé, h, j, k et l déplacent la cellule sélectionnée d’un tableau vers la gauche, le bas, le haut et la droite, comme les flèches. Avec Maj, elles sélectionnent une plage. Pendant que vous modifiez le texte d’une cellule, elles s’écrivent normalement.',
 	},
 	he: {
 		showIcons: 'הצגת סמלי סוג התצוגה',
@@ -383,7 +383,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'הגדרת קיצורים',
 		openHotkeysDesc: 'הקצו מקשים למעבר לתצוגה הבאה או הקודמת. פותח את הגדרות ← קיצורי מקלדת עם הפקודות של תוסף זה בלבד.',
 		vimKeys: 'הזזת תאי טבלה עם h j k l',
-		vimKeysDesc: 'כשהאפשרות פועלת, h,‏ j,‏ k ו־l מזיזים את התא הנבחר בטבלה שמאלה, למטה, למעלה וימינה, כמו מקשי החצים. בזמן עריכת טקסט התא הם מקלידים כרגיל.',
+		vimKeysDesc: 'כשהאפשרות פועלת, h,‏ j,‏ k ו־l מזיזים את התא הנבחר בטבלה שמאלה, למטה, למעלה וימינה, כמו מקשי החצים. עם Shift הם בוחרים טווח. בזמן עריכת טקסט התא הם מקלידים כרגיל.',
 	},
 	hu: {
 		showIcons: 'Nézettípus ikonjainak megjelenítése',
@@ -412,7 +412,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Gyorsbillentyűk beállítása',
 		openHotkeysDesc: 'Rendelj billentyűket a következő vagy előző nézetre váltáshoz. Megnyitja a Beállítások → Gyorsbillentyűk oldalt csak ennek a bővítménynek a parancsaival.',
 		vimKeys: 'Táblázatcellák mozgatása h j k l billentyűkkel',
-		vimKeysDesc: 'Bekapcsolva a h, j, k és l a nyílbillentyűkhöz hasonlóan balra, le, fel és jobbra mozgatja a táblázat kijelölt celláját. Cella szövegének szerkesztése közben a szokásos módon gépelnek.',
+		vimKeysDesc: 'Bekapcsolva a h, j, k és l a nyílbillentyűkhöz hasonlóan balra, le, fel és jobbra mozgatja a táblázat kijelölt celláját. Shifttel együtt tartományt jelölnek ki. Cella szövegének szerkesztése közben a szokásos módon gépelnek.',
 	},
 	id: {
 		showIcons: 'Tampilkan ikon jenis tampilan',
@@ -441,7 +441,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Atur pintasan',
 		openHotkeysDesc: 'Tetapkan tombol untuk berpindah ke tampilan berikutnya atau sebelumnya. Membuka Pengaturan → Pintasan yang hanya menampilkan perintah plugin ini.',
 		vimKeys: 'Pindahkan sel tabel dengan h j k l',
-		vimKeysDesc: 'Jika aktif, h, j, k, dan l memindahkan sel yang dipilih di tabel ke kiri, bawah, atas, dan kanan seperti tombol panah. Saat Anda mengedit teks sel, tombol tersebut mengetik seperti biasa.',
+		vimKeysDesc: 'Jika aktif, h, j, k, dan l memindahkan sel yang dipilih di tabel ke kiri, bawah, atas, dan kanan seperti tombol panah. Dengan Shift, tombol ini memilih rentang. Saat Anda mengedit teks sel, tombol tersebut mengetik seperti biasa.',
 	},
 	it: {
 		showIcons: 'Mostra le icone del tipo di vista',
@@ -470,7 +470,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Imposta i tasti rapidi',
 		openHotkeysDesc: 'Assegna i tasti per passare alla vista successiva o precedente. Apre Impostazioni → Tasti di scelta rapida mostrando solo i comandi di questo plugin.',
 		vimKeys: 'Sposta le celle della tabella con h j k l',
-		vimKeysDesc: 'Se attivo, h, j, k e l spostano la cella selezionata di una tabella a sinistra, in basso, in alto e a destra, come le frecce. Mentre modifichi il testo di una cella, scrivono come sempre.',
+		vimKeysDesc: 'Se attivo, h, j, k e l spostano la cella selezionata di una tabella a sinistra, in basso, in alto e a destra, come le frecce. Con Maiusc selezionano un intervallo. Mentre modifichi il testo di una cella, scrivono come sempre.',
 	},
 	ja: {
 		showIcons: 'ビューの種類のアイコンを表示',
@@ -499,7 +499,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'ホットキーを設定',
 		openHotkeysDesc: '次のビュー・前のビューへの切り替えにキーを割り当てます。設定の「ホットキー」を、このプラグインのコマンドだけに絞って開きます。',
 		vimKeys: 'h j k l で表のセルを移動',
-		vimKeysDesc: 'オンにすると、表で選択中のセルを h・j・k・l で左・下・上・右へ動かせます。矢印キーと同じ動きです。セルの文字を編集している間は、ふつうに文字が入力されます。',
+		vimKeysDesc: 'オンにすると、表で選択中のセルを h・j・k・l で左・下・上・右へ動かせます。矢印キーと同じ動きです。Shift を押しながらだと範囲を選択します。セルの文字を編集している間は、ふつうに文字が入力されます。',
 	},
 	km: {
 		showIcons: 'បង្ហាញរូបតំណាងប្រភេទទិដ្ឋភាព',
@@ -528,7 +528,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'កំណត់គ្រាប់ចុចផ្លូវកាត់',
 		openHotkeysDesc: 'កំណត់គ្រាប់ចុចសម្រាប់ប្ដូរទៅទិដ្ឋភាពបន្ទាប់ ឬមុន។ បើក ការកំណត់ → គ្រាប់ចុចផ្លូវកាត់ ដោយបង្ហាញតែពាក្យបញ្ជារបស់កម្មវិធីជំនួយនេះ។',
 		vimKeys: 'ផ្លាស់ក្រឡាតារាងដោយ h j k l',
-		vimKeysDesc: 'ពេលបើក h, j, k និង l ផ្លាស់ក្រឡាដែលបានជ្រើសក្នុងតារាងទៅឆ្វេង ចុះក្រោម ឡើងលើ និងស្ដាំ ដូចគ្រាប់ចុចព្រួញ។ ពេលកែអត្ថបទក្រឡា វាវាយអក្សរដូចធម្មតា។',
+		vimKeysDesc: 'ពេលបើក h, j, k និង l ផ្លាស់ក្រឡាដែលបានជ្រើសក្នុងតារាងទៅឆ្វេង ចុះក្រោម ឡើងលើ និងស្ដាំ ដូចគ្រាប់ចុចព្រួញ។ ជាមួយ Shift វាជ្រើសជួរមួយ។ ពេលកែអត្ថបទក្រឡា វាវាយអក្សរដូចធម្មតា។',
 	},
 	ko: {
 		showIcons: '보기 유형 아이콘 표시',
@@ -557,7 +557,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: '단축키 설정',
 		openHotkeysDesc: '다음 또는 이전 보기로 전환하는 키를 지정합니다. 이 플러그인의 명령만 보이도록 설정 → 단축키를 엽니다.',
 		vimKeys: 'h j k l로 표 셀 이동',
-		vimKeysDesc: '켜면 h, j, k, l이 화살표 키처럼 표에서 선택한 셀을 왼쪽, 아래, 위, 오른쪽으로 옮깁니다. 셀의 텍스트를 편집하는 동안에는 평소처럼 입력됩니다.',
+		vimKeysDesc: '켜면 h, j, k, l이 화살표 키처럼 표에서 선택한 셀을 왼쪽, 아래, 위, 오른쪽으로 옮깁니다. Shift를 누른 채로 누르면 범위를 선택합니다. 셀의 텍스트를 편집하는 동안에는 평소처럼 입력됩니다.',
 	},
 	nl: {
 		showIcons: 'Pictogrammen voor weergavetype tonen',
@@ -586,7 +586,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Sneltoetsen instellen',
 		openHotkeysDesc: 'Wijs toetsen toe om naar de volgende of vorige weergave te gaan. Opent Instellingen → Sneltoetsen met alleen de opdrachten van deze plug-in.',
 		vimKeys: 'Tabelcellen verplaatsen met h j k l',
-		vimKeysDesc: 'Als dit aan staat, verplaatsen h, j, k en l de geselecteerde cel van een tabel naar links, omlaag, omhoog en naar rechts, net als de pijltoetsen. Tijdens het bewerken van de tekst van een cel typen ze gewoon.',
+		vimKeysDesc: 'Als dit aan staat, verplaatsen h, j, k en l de geselecteerde cel van een tabel naar links, omlaag, omhoog en naar rechts, net als de pijltoetsen. Met Shift selecteren ze een bereik. Tijdens het bewerken van de tekst van een cel typen ze gewoon.',
 	},
 	no: {
 		showIcons: 'Vis ikoner for visningstype',
@@ -615,7 +615,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Angi hurtigtaster',
 		openHotkeysDesc: 'Tildel taster for å bytte til neste eller forrige visning. Åpner Innstillinger → Hurtigtaster med bare kommandoene til denne utvidelsen.',
 		vimKeys: 'Flytt tabellceller med h j k l',
-		vimKeysDesc: 'Når dette er på, flytter h, j, k og l den valgte cellen i en tabell til venstre, ned, opp og til høyre, som piltastene. Mens du redigerer teksten i en celle, skriver de som vanlig.',
+		vimKeysDesc: 'Når dette er på, flytter h, j, k og l den valgte cellen i en tabell til venstre, ned, opp og til høyre, som piltastene. Med Shift markerer de et område. Mens du redigerer teksten i en celle, skriver de som vanlig.',
 	},
 	pl: {
 		showIcons: 'Pokaż ikony typu widoku',
@@ -644,7 +644,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Ustaw skróty',
 		openHotkeysDesc: 'Przypisz klawisze do przełączania na następny lub poprzedni widok. Otwiera Ustawienia → Skróty klawiszowe z poleceniami tylko tej wtyczki.',
 		vimKeys: 'Przenoś komórki tabeli klawiszami h j k l',
-		vimKeysDesc: 'Po włączeniu h, j, k i l przenoszą zaznaczoną komórkę tabeli w lewo, w dół, w górę i w prawo, jak strzałki. Podczas edycji tekstu komórki piszą jak zwykle.',
+		vimKeysDesc: 'Po włączeniu h, j, k i l przenoszą zaznaczoną komórkę tabeli w lewo, w dół, w górę i w prawo, jak strzałki. Z Shiftem zaznaczają zakres. Podczas edycji tekstu komórki piszą jak zwykle.',
 	},
 	pt: {
 		showIcons: 'Mostrar ícones do tipo de vista',
@@ -673,7 +673,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Definir teclas de atalho',
 		openHotkeysDesc: 'Atribua teclas para mudar para a vista seguinte ou anterior. Abre Definições → Teclas de atalho só com os comandos deste plugin.',
 		vimKeys: 'Mover células da tabela com h j k l',
-		vimKeysDesc: 'Quando ativado, h, j, k e l movem a célula selecionada de uma tabela para a esquerda, para baixo, para cima e para a direita, como as setas. Enquanto edita o texto de uma célula, escrevem normalmente.',
+		vimKeysDesc: 'Quando ativado, h, j, k e l movem a célula selecionada de uma tabela para a esquerda, para baixo, para cima e para a direita, como as setas. Com Shift, selecionam um intervalo. Enquanto edita o texto de uma célula, escrevem normalmente.',
 	},
 	"pt-BR": {
 		showIcons: 'Mostrar ícones do tipo de visualização',
@@ -702,7 +702,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Definir atalhos',
 		openHotkeysDesc: 'Atribua teclas para trocar para a visualização seguinte ou anterior. Abre Configurações → Atalhos de teclado mostrando só os comandos deste plugin.',
 		vimKeys: 'Mover células da tabela com h j k l',
-		vimKeysDesc: 'Quando ativado, h, j, k e l movem a célula selecionada de uma tabela para a esquerda, para baixo, para cima e para a direita, como as setas. Enquanto você edita o texto de uma célula, elas digitam normalmente.',
+		vimKeysDesc: 'Quando ativado, h, j, k e l movem a célula selecionada de uma tabela para a esquerda, para baixo, para cima e para a direita, como as setas. Com Shift, elas selecionam um intervalo. Enquanto você edita o texto de uma célula, elas digitam normalmente.',
 	},
 	ro: {
 		showIcons: 'Afișează pictogramele tipului de vizualizare',
@@ -731,7 +731,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Setează tastele rapide',
 		openHotkeysDesc: 'Atribuie taste pentru trecerea la vizualizarea următoare sau anterioară. Deschide Setări → Taste rapide doar cu comenzile acestui plugin.',
 		vimKeys: 'Mută celulele tabelului cu h j k l',
-		vimKeysDesc: 'Când este activat, h, j, k și l mută celula selectată dintr-un tabel la stânga, în jos, în sus și la dreapta, ca săgețile. Cât timp editezi textul unei celule, scriu ca de obicei.',
+		vimKeysDesc: 'Când este activat, h, j, k și l mută celula selectată dintr-un tabel la stânga, în jos, în sus și la dreapta, ca săgețile. Cu Shift, selectează un interval. Cât timp editezi textul unei celule, scriu ca de obicei.',
 	},
 	ru: {
 		showIcons: 'Показывать значки типа представления',
@@ -760,7 +760,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Назначить горячие клавиши',
 		openHotkeysDesc: 'Назначьте клавиши для переключения на следующее или предыдущее представление. Открывает Настройки → Горячие клавиши только с командами этого плагина.',
 		vimKeys: 'Перемещать ячейки таблицы клавишами h j k l',
-		vimKeysDesc: 'Если включено, h, j, k и l перемещают выбранную ячейку таблицы влево, вниз, вверх и вправо, как стрелки. Пока вы редактируете текст ячейки, они печатают как обычно.',
+		vimKeysDesc: 'Если включено, h, j, k и l перемещают выбранную ячейку таблицы влево, вниз, вверх и вправо, как стрелки. С Shift они выделяют диапазон. Пока вы редактируете текст ячейки, они печатают как обычно.',
 	},
 	sk: {
 		showIcons: 'Zobraziť ikony typu zobrazenia',
@@ -789,7 +789,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Nastaviť skratky',
 		openHotkeysDesc: 'Priraďte klávesy na prepnutie na ďalšie alebo predchádzajúce zobrazenie. Otvorí Nastavenia → Klávesové skratky len s príkazmi tohto doplnku.',
 		vimKeys: 'Posúvať bunky tabuľky klávesmi h j k l',
-		vimKeysDesc: 'Keď je zapnuté, h, j, k a l posúvajú vybranú bunku tabuľky doľava, dole, hore a doprava ako šípky. Pri úprave textu bunky sa píšu ako zvyčajne.',
+		vimKeysDesc: 'Keď je zapnuté, h, j, k a l posúvajú vybranú bunku tabuľky doľava, dole, hore a doprava ako šípky. So Shiftom označujú oblasť. Pri úprave textu bunky sa píšu ako zvyčajne.',
 	},
 	sv: {
 		showIcons: 'Visa ikoner för vytyp',
@@ -818,7 +818,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Ställ in kortkommandon',
 		openHotkeysDesc: 'Tilldela tangenter för att byta till nästa eller föregående vy. Öppnar Inställningar → Kortkommandon med bara det här tilläggets kommandon.',
 		vimKeys: 'Flytta tabellceller med h j k l',
-		vimKeysDesc: 'När detta är på flyttar h, j, k och l den markerade cellen i en tabell åt vänster, nedåt, uppåt och åt höger, som piltangenterna. Medan du redigerar en cells text skriver de som vanligt.',
+		vimKeysDesc: 'När detta är på flyttar h, j, k och l den markerade cellen i en tabell åt vänster, nedåt, uppåt och åt höger, som piltangenterna. Med Skift markerar de ett område. Medan du redigerar en cells text skriver de som vanligt.',
 	},
 	th: {
 		showIcons: 'แสดงไอคอนประเภทมุมมอง',
@@ -847,7 +847,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'ตั้งค่าปุ่มลัด',
 		openHotkeysDesc: 'กำหนดปุ่มสำหรับสลับไปยังมุมมองถัดไปหรือก่อนหน้า เปิด การตั้งค่า → ปุ่มลัด โดยแสดงเฉพาะคำสั่งของปลั๊กอินนี้',
 		vimKeys: 'ย้ายเซลล์ตารางด้วย h j k l',
-		vimKeysDesc: 'เมื่อเปิด h, j, k และ l จะย้ายเซลล์ที่เลือกในตารางไปซ้าย ลง ขึ้น และขวา เหมือนปุ่มลูกศร ขณะแก้ไขข้อความในเซลล์ จะพิมพ์ได้ตามปกติ',
+		vimKeysDesc: 'เมื่อเปิด h, j, k และ l จะย้ายเซลล์ที่เลือกในตารางไปซ้าย ลง ขึ้น และขวา เหมือนปุ่มลูกศร เมื่อกด Shift ค้างไว้ จะเลือกเป็นช่วง ขณะแก้ไขข้อความในเซลล์ จะพิมพ์ได้ตามปกติ',
 	},
 	tr: {
 		showIcons: 'Görünüm türü simgelerini göster',
@@ -876,7 +876,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Kısayolları ayarla',
 		openHotkeysDesc: 'Sonraki veya önceki görünüme geçmek için tuş atayın. Yalnızca bu eklentinin komutlarını göstererek Ayarlar → Kısayol tuşları sayfasını açar.',
 		vimKeys: 'Tablo hücrelerini h j k l ile taşı',
-		vimKeysDesc: 'Açıkken h, j, k ve l, ok tuşları gibi tablodaki seçili hücreyi sola, aşağı, yukarı ve sağa taşır. Bir hücrenin metnini düzenlerken her zamanki gibi yazarlar.',
+		vimKeysDesc: 'Açıkken h, j, k ve l, ok tuşları gibi tablodaki seçili hücreyi sola, aşağı, yukarı ve sağa taşır. Shift ile bir aralık seçerler. Bir hücrenin metnini düzenlerken her zamanki gibi yazarlar.',
 	},
 	uk: {
 		showIcons: 'Показувати значки типу подання',
@@ -905,7 +905,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Призначити гарячі клавіші',
 		openHotkeysDesc: 'Призначте клавіші для переходу до наступного або попереднього представлення. Відкриває Налаштування → Гарячі клавіші лише з командами цього плагіна.',
 		vimKeys: 'Переміщувати клітинки таблиці клавішами h j k l',
-		vimKeysDesc: 'Якщо ввімкнено, h, j, k і l переміщують вибрану клітинку таблиці ліворуч, вниз, вгору і праворуч, як стрілки. Під час редагування тексту клітинки вони друкують як завжди.',
+		vimKeysDesc: 'Якщо ввімкнено, h, j, k і l переміщують вибрану клітинку таблиці ліворуч, вниз, вгору і праворуч, як стрілки. З Shift вони виділяють діапазон. Під час редагування тексту клітинки вони друкують як завжди.',
 	},
 	vi: {
 		showIcons: 'Hiện biểu tượng loại chế độ xem',
@@ -934,7 +934,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: 'Đặt phím tắt',
 		openHotkeysDesc: 'Gán phím để chuyển sang chế độ xem tiếp theo hoặc trước đó. Mở Cài đặt → Phím tắt chỉ hiển thị các lệnh của plugin này.',
 		vimKeys: 'Di chuyển ô của bảng bằng h j k l',
-		vimKeysDesc: 'Khi bật, h, j, k và l di chuyển ô đang chọn trong bảng sang trái, xuống, lên và sang phải như các phím mũi tên. Khi bạn đang sửa chữ trong ô, chúng gõ như bình thường.',
+		vimKeysDesc: 'Khi bật, h, j, k và l di chuyển ô đang chọn trong bảng sang trái, xuống, lên và sang phải như các phím mũi tên. Khi giữ Shift, chúng chọn một vùng. Khi bạn đang sửa chữ trong ô, chúng gõ như bình thường.',
 	},
 	zh: {
 		showIcons: '显示视图类型图标',
@@ -963,7 +963,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: '设置快捷键',
 		openHotkeysDesc: '为切换到下一个或上一个视图分配按键。打开“设置 → 快捷键”，只显示此插件的命令。',
 		vimKeys: '用 h j k l 移动表格单元格',
-		vimKeysDesc: '开启后，h、j、k、l 会像方向键一样，将表格中选中的单元格向左、下、上、右移动。编辑单元格文字时，它们照常输入。',
+		vimKeysDesc: '开启后，h、j、k、l 会像方向键一样，将表格中选中的单元格向左、下、上、右移动。按住 Shift 时会选择一个范围。编辑单元格文字时，它们照常输入。',
 	},
 	"zh-TW": {
 		showIcons: '顯示檢視類型圖示',
@@ -992,7 +992,7 @@ const STRINGS: Record<string, Strings> = {
 		openHotkeys: '設定快捷鍵',
 		openHotkeysDesc: '為切換到下一個或上一個檢視指定按鍵。開啟「設定 → 快捷鍵」，只顯示此外掛的指令。',
 		vimKeys: '用 h j k l 移動表格儲存格',
-		vimKeysDesc: '開啟後，h、j、k、l 會像方向鍵一樣，將表格中選取的儲存格向左、下、上、右移動。編輯儲存格文字時，它們照常輸入。',
+		vimKeysDesc: '開啟後，h、j、k、l 會像方向鍵一樣，將表格中選取的儲存格向左、下、上、右移動。按住 Shift 時會選取一個範圍。編輯儲存格文字時，它們照常輸入。',
 	},
 };
 

@@ -50,7 +50,7 @@ Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den 
 - **Symbole für Ansichtstyp anzeigen**: zeigt auf jedem Tab das Symbol des Ansichtstyps (Tabelle, Karten usw.). Standardmäßig an.
 - **Ausgewählte Zelle beim Ansichtswechsel behalten**: siehe unten.
 - **Tastenkürzel festlegen**: öffnet **Settings → Hotkeys** nur mit den Befehlen dieses Plugins.
-- **Tabellenzellen mit h j k l bewegen**: h, j, k und l bewegen die ausgewählte Zelle nach links, unten, oben und rechts, wie die Pfeiltasten. Beim Bearbeiten des Zelltexts tippen sie weiterhin. Standardmäßig aus.
+- **Tabellenzellen mit h j k l bewegen**: h, j, k und l bewegen die ausgewählte Zelle nach links, unten, oben und rechts, wie die Pfeiltasten. Mit Umschalt wählst du einen Bereich aus. Beim Bearbeiten des Zelltexts tippen sie weiterhin. Standardmäßig aus.
 
 ![Die Tabs in einer eigenen Zeile unter der Werkzeugleiste, Gallery ist ausgewählt](../assets/tabs-below.png)
 
