@@ -1,64 +1,8 @@
-import type { BasesController } from './bases';
-
-// Moving the selected cell of a table view. The table handles the arrow keys in a keydown
-// listener on its container and has no method for it, so the commands send that listener the
+// Moving the selected cell of a table view with h j k l. The table handles the arrow keys in a
+// keydown listener on its container and has no method for it, so this sends that listener the
 // arrow key itself (checked on 1.15). Nothing here throws.
 
-export type CellDirection = 'up' | 'down' | 'left' | 'right';
-
-const ARROW_KEYS: Record<CellDirection, string> = {
-	up: 'ArrowUp',
-	down: 'ArrowDown',
-	left: 'ArrowLeft',
-	right: 'ArrowRight',
-};
-
-/** The container of the table being shown, or null when the view isn't a table. */
-function getTableContainer(controller: BasesController): HTMLElement | null {
-	try {
-		const view = (controller as unknown as { view?: { type?: unknown; containerEl?: unknown } | null }).view;
-		if (view?.type !== 'table') return null;
-		// instanceOf also works for elements in pop-out windows
-		const el = view.containerEl as Node | undefined;
-		return el?.instanceOf?.(HTMLElement) ? el : null;
-	} catch {
-		return null;
-	}
-}
-
-/** Whether focus is in a text field, where the keys belong to the text rather than the table. */
-function isTyping(el: HTMLElement): boolean {
-	const active = el.doc.activeElement;
-	if (!active?.instanceOf(HTMLElement)) return false;
-	return active.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(active.tagName);
-}
-
-/** Whether a cell can be moved now: a table is shown and no text is being edited. */
-export function canMoveCell(controller: BasesController): boolean {
-	const el = getTableContainer(controller);
-	return el !== null && !isTyping(el);
-}
-
-/** Move the selected cell one step, as the arrow key would. Returns false if that isn't possible. */
-export function moveCell(controller: BasesController, direction: CellDirection): boolean {
-	const el = getTableContainer(controller);
-	if (!el || isTyping(el)) return false;
-	try {
-		// Keep focus on the table so the selection shows and the real arrow keys carry on from here
-		if (!el.contains(el.doc.activeElement)) el.focus({ preventScroll: true });
-		pressArrow(el, direction);
-		return true;
-	} catch {
-		return false;
-	}
-}
-
-/** Send the table the arrow key for a direction. */
-function pressArrow(el: HTMLElement, direction: CellDirection): void {
-	el.dispatchEvent(new KeyboardEvent('keydown', { key: ARROW_KEYS[direction], bubbles: true, cancelable: true }));
-}
-
-const VIM_KEYS: Record<string, CellDirection> = { h: 'left', j: 'down', k: 'up', l: 'right' };
+const VIM_KEYS: Record<string, string> = { h: 'ArrowLeft', j: 'ArrowDown', k: 'ArrowUp', l: 'ArrowRight' };
 
 /**
  * For a keydown listener: when h, j, k or l is pressed with no modifier while a table's cells have
@@ -67,14 +11,14 @@ const VIM_KEYS: Record<string, CellDirection> = { h: 'left', j: 'down', k: 'up',
  */
 export function handleVimKey(evt: KeyboardEvent): boolean {
 	if (evt.defaultPrevented || evt.isComposing || evt.ctrlKey || evt.metaKey || evt.altKey || evt.shiftKey) return false;
-	const direction = VIM_KEYS[evt.key];
-	if (!direction) return false;
+	const arrow = VIM_KEYS[evt.key];
+	if (!arrow) return false;
 	try {
 		// The table's cells have focus when its container itself does (checked on 1.15)
 		const target = evt.target as Node | null;
 		if (!target?.instanceOf?.(HTMLElement) || !target.classList.contains('bases-table-container')) return false;
 		evt.preventDefault();
-		pressArrow(target, direction);
+		target.dispatchEvent(new KeyboardEvent('keydown', { key: arrow, bubbles: true, cancelable: true }));
 		return true;
 	} catch {
 		return false;
