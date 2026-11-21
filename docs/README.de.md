@@ -16,6 +16,7 @@ Alle Ansichten einer Obsidian-[Base](https://help.obsidian.md/bases) auf einen B
 - **Scrollt bei Platzmangel**: Passen die Tabs nicht hinein, lassen sie sich seitlich scrollen (auch mit dem Mausrad) und blenden an den Rändern aus. Die eingebauten Schaltflächen der Werkzeugleiste behalten ihre Größe.
 - **Tabs unter der Werkzeugleiste**: Die Tabs können auch in einer eigenen Zeile unter der Werkzeugleiste stehen und dort auf mehrere Zeilen umbrechen.
 - **Wechseln per Tastatur**: Befehle zum Wechseln zum nächsten oder vorherigen Tab, die du beliebigen Tastenkürzeln zuweisen kannst.
+- **h j k l in Tabellen**: auf Wunsch die ausgewählte Zelle einer Tabelle mit h, j, k und l bewegen, wie mit den Pfeiltasten.
 
 ## Installation
 
@@ -40,7 +41,7 @@ Du kannst auch über das Ansichtsmenü **Configure view** (die Ansichtseinstellu
 
 Um einen entfernten Tab zurückzuholen, öffne über das Ansichtsmenü **Configure view** dieser Ansicht und schalte **In Tabs anzeigen** wieder ein.
 
-Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den Befehlen **Zur nächsten Ansicht wechseln** und **Zur vorherigen Ansicht wechseln** Tastenkürzel zu. Sie gehen die Tabs der Reihe nach durch, springen am Ende wieder an den Anfang und überspringen aus den Tabs entfernte Ansichten. Standardmäßig sind keine Tastenkürzel gesetzt.
+Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den Befehlen **Zur nächsten Ansicht wechseln** und **Zur vorherigen Ansicht wechseln** Tastenkürzel zu. Sie gehen die Tabs der Reihe nach durch, springen am Ende wieder an den Anfang und überspringen aus den Tabs entfernte Ansichten. Standardmäßig sind keine Tastenkürzel gesetzt. Die Schaltfläche **Tastenkürzel festlegen** in den Einstellungen dieses Plugins öffnet diese Seite nur mit diesen Befehlen.
 
 ### Plugin-Einstellungen
 
@@ -48,6 +49,8 @@ Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den 
 - **Ansichts-Tabs umbrechen**: Unter der Werkzeugleiste werden Tabs, die nicht passen, auf weitere Zeilen umbrochen, statt seitlich zu scrollen. Nur verfügbar, wenn **Position der Ansichts-Tabs** auf **Unter der Werkzeugleiste** steht.
 - **Symbole für Ansichtstyp anzeigen**: zeigt auf jedem Tab das Symbol des Ansichtstyps (Tabelle, Karten usw.). Standardmäßig an.
 - **Ausgewählte Zelle beim Ansichtswechsel behalten**: siehe unten.
+- **Tastenkürzel festlegen**: öffnet **Settings → Hotkeys** nur mit den Befehlen dieses Plugins.
+- **Tabellenzellen mit h j k l bewegen**: h, j, k und l bewegen die ausgewählte Zelle nach links, unten, oben und rechts, wie die Pfeiltasten. Mit Umschalt wählst du einen Bereich aus. Beim Bearbeiten des Zelltexts tippen sie weiterhin. Standardmäßig aus.
 
 ![Die Tabs in einer eigenen Zeile unter der Werkzeugleiste, Gallery ist ausgewählt](../assets/tabs-below.png)
 

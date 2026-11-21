@@ -16,6 +16,7 @@ Voyez d’un coup d’œil toutes les vues d’une [base](https://help.obsidian.
 - **Défilement quand la place manque** : quand les onglets ne tiennent pas, ils défilent horizontalement (la molette de la souris fonctionne aussi) et s’estompent sur les bords. Les boutons intégrés de la barre d’outils gardent leur taille.
 - **Onglets sous la barre d’outils** : les onglets peuvent aussi occuper leur propre ligne sous la barre d’outils, où ils peuvent passer sur plusieurs lignes.
 - **Changement au clavier** : des commandes pour passer à l’onglet suivant ou précédent, à associer aux raccourcis de votre choix.
+- **h j k l dans les tableaux** : en option, déplacez la cellule sélectionnée d’un tableau avec h, j, k et l, comme avec les flèches.
 
 ## Installation
 
@@ -40,7 +41,7 @@ Vous pouvez aussi ouvrir **Configure view** (les réglages de la vue) depuis le 
 
 Pour faire revenir un onglet retiré, ouvrez **Configure view** de cette vue depuis le menu des vues et réactivez **Afficher dans les onglets**.
 
-Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue suivante** et **Passer à la vue précédente** dans **Settings → Hotkeys**. Elles parcourent les onglets dans l’ordre, reviennent au début une fois à la fin et ignorent les vues retirées des onglets. Aucun raccourci n’est défini par défaut.
+Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue suivante** et **Passer à la vue précédente** dans **Settings → Hotkeys**. Elles parcourent les onglets dans l’ordre, reviennent au début une fois à la fin et ignorent les vues retirées des onglets. Aucun raccourci n’est défini par défaut. Le bouton **Définir les raccourcis** dans les paramètres de ce plugin ouvre cette page en n’affichant que ces commandes.
 
 ### Réglages du plugin
 
@@ -48,6 +49,8 @@ Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue s
 - **Renvoyer les onglets de vues à la ligne** : sous la barre d’outils, les onglets qui ne tiennent pas passent sur plusieurs lignes au lieu de défiler horizontalement. Disponible uniquement quand **Position des onglets de vues** vaut **Sous la barre d’outils**.
 - **Afficher les icônes du type de vue** : affiche sur chaque onglet l’icône du type de vue (tableau, cartes, etc.). Activé par défaut.
 - **Garder la cellule sélectionnée en changeant de vue** : voir ci-dessous.
+- **Définir les raccourcis** : ouvre **Settings → Hotkeys** en n’affichant que les commandes de ce plugin.
+- **Déplacer les cellules du tableau avec h j k l** : h, j, k et l déplacent la cellule sélectionnée vers la gauche, le bas, le haut et la droite, comme les flèches. Avec Maj, vous sélectionnez une plage. Elles s’écrivent toujours pendant la modification du texte d’une cellule. Désactivé par défaut.
 
 ![Les onglets sur une ligne à part sous la barre d’outils, avec Gallery sélectionné](../assets/tabs-below.png)
 

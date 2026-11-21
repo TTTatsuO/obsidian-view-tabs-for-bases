@@ -16,6 +16,7 @@ See every view of an Obsidian [base](https://help.obsidian.md/bases) at a glance
 - **Scrolls when crowded**: when the tabs don't fit, they scroll sideways (the mouse wheel works too) and fade at the edges. The built-in toolbar buttons keep their size.
 - **Tabs below the toolbar**: optionally put the tabs on a row of their own under the toolbar, where they can wrap onto more lines.
 - **Keyboard switching**: commands to switch to the next or previous tab, which you can bind to any hotkeys.
+- **h j k l in tables**: optionally move the selected cell of a table with h, j, k and l, like the arrow keys.
 
 ## Installation
 
@@ -40,7 +41,7 @@ You can also open **Configure view** from the view menu and use the **Tab settin
 
 To bring back a removed tab, open that view's **Configure view** from the view menu and turn **Show in tabs** back on.
 
-To switch views from the keyboard, assign hotkeys to **Switch to next view** and **Switch to previous view** in **Settings → Hotkeys**. They move through the tabs in order, wrap around at the ends, and skip views removed from the tabs. No hotkeys are set by default.
+To switch views from the keyboard, assign hotkeys to **Switch to next view** and **Switch to previous view** in **Settings → Hotkeys**. They move through the tabs in order, wrap around at the ends, and skip views removed from the tabs. No hotkeys are set by default. The **Set hotkeys** button in this plugin's settings opens that page showing only these commands.
 
 ### Plugin settings
 
@@ -48,6 +49,8 @@ To switch views from the keyboard, assign hotkeys to **Switch to next view** and
 - **Wrap view tabs**: below the toolbar, wrap tabs that don't fit onto more lines instead of scrolling sideways. Available only when **Where to show view tabs** is **Below the toolbar**.
 - **Show view type icons**: show each view's type icon (table, cards and so on) on its tab. On by default.
 - **Keep the selected cell when switching views**: see below.
+- **Set hotkeys**: opens **Settings → Hotkeys** showing only this plugin's commands.
+- **Move table cells with h j k l**: h, j, k and l move the selected cell left, down, up and right, like the arrow keys. Hold Shift to select a range. They still type while you edit a cell's text. Off by default.
 
 ![The tabs on a row of their own below the toolbar, with Gallery selected](assets/tabs-below.png)
 

@@ -16,6 +16,7 @@ Ve de un vistazo todas las vistas de una [base](https://help.obsidian.md/bases) 
 - **Se desplaza cuando no cabe**: si las pestañas no caben, se desplazan en horizontal (también con la rueda del ratón) y se desvanecen en los bordes. Los botones integrados de la barra de herramientas mantienen su tamaño.
 - **Pestañas bajo la barra de herramientas**: si quieres, las pestañas pueden ir en una fila propia bajo la barra de herramientas, donde pueden pasar a varias líneas.
 - **Cambio con el teclado**: comandos para cambiar a la pestaña siguiente o anterior, que puedes asignar a cualquier atajo.
+- **h j k l en tablas**: opcionalmente, mueve la celda seleccionada de una tabla con h, j, k y l, como con las flechas.
 
 ## Instalación
 
@@ -40,7 +41,7 @@ También puedes abrir **Configure view** (los ajustes de la vista) desde el men�
 
 Para recuperar una pestaña quitada, abre **Configure view** de esa vista desde el menú de vistas y vuelve a activar **Mostrar en pestañas**.
 
-Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista siguiente** y **Cambiar a la vista anterior** en **Settings → Hotkeys**. Recorren las pestañas en orden, vuelven al otro extremo al llegar al final y omiten las vistas quitadas de las pestañas. No hay atajos asignados por defecto.
+Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista siguiente** y **Cambiar a la vista anterior** en **Settings → Hotkeys**. Recorren las pestañas en orden, vuelven al otro extremo al llegar al final y omiten las vistas quitadas de las pestañas. No hay atajos asignados por defecto. El botón **Configurar atajos** en los ajustes de este complemento abre esa página mostrando solo estos comandos.
 
 ### Ajustes del plugin
 
@@ -48,6 +49,8 @@ Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista sigui
 - **Ajustar pestañas de vistas**: bajo la barra de herramientas, las pestañas que no caben pasan a más líneas en lugar de desplazarse en horizontal. Solo disponible cuando **Posición de las pestañas de vistas** es **Bajo la barra de herramientas**.
 - **Mostrar iconos del tipo de vista**: muestra en cada pestaña el icono del tipo de vista (tabla, tarjetas, etc.). Activado por defecto.
 - **Mantener la celda seleccionada al cambiar de vista**: ver abajo.
+- **Configurar atajos**: abre **Settings → Hotkeys** mostrando solo los comandos de este complemento.
+- **Mover celdas de la tabla con h j k l**: h, j, k y l mueven la celda seleccionada a la izquierda, abajo, arriba y a la derecha, como las flechas. Con Mayús, seleccionas un rango. Siguen escribiendo mientras editas el texto de una celda. Desactivado por defecto.
 
 ![Las pestañas en una fila propia bajo la barra de herramientas, con Gallery seleccionada](../assets/tabs-below.png)
 
