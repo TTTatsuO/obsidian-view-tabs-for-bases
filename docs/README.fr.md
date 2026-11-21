@@ -16,6 +16,7 @@ Voyez d’un coup d’œil toutes les vues d’une [base](https://help.obsidian.
 - **Défilement quand la place manque** : quand les onglets ne tiennent pas, ils défilent horizontalement (la molette de la souris fonctionne aussi) et s’estompent sur les bords. Les boutons intégrés de la barre d’outils gardent leur taille.
 - **Onglets sous la barre d’outils** : les onglets peuvent aussi occuper leur propre ligne sous la barre d’outils, où ils peuvent passer sur plusieurs lignes.
 - **Changement au clavier** : des commandes pour passer à l’onglet suivant ou précédent, à associer aux raccourcis de votre choix.
+- **Déplacement de cellule sur n’importe quelle touche** : des commandes pour déplacer la cellule sélectionnée d’un tableau vers le haut, le bas, la gauche ou la droite, afin de confier le rôle des flèches à d’autres raccourcis.
 
 ## Installation
 
@@ -41,6 +42,8 @@ Vous pouvez aussi ouvrir **Configure view** (les réglages de la vue) depuis le 
 Pour faire revenir un onglet retiré, ouvrez **Configure view** de cette vue depuis le menu des vues et réactivez **Afficher dans les onglets**.
 
 Pour changer de vue au clavier, attribuez des raccourcis à **Passer à la vue suivante** et **Passer à la vue précédente** dans **Settings → Hotkeys**. Elles parcourent les onglets dans l’ordre, reviennent au début une fois à la fin et ignorent les vues retirées des onglets. Aucun raccourci n’est défini par défaut. Le bouton **Définir les raccourcis** dans les paramètres de ce plugin ouvre cette page en n’affichant que ces commandes.
+
+Pour déplacer la cellule sélectionnée d’un tableau avec d’autres touches, attribuez des raccourcis à **Déplacer la cellule vers le haut**, **Déplacer la cellule vers le bas**, **Déplacer la cellule vers la gauche** et **Déplacer la cellule vers la droite**. Elles font la même chose que les flèches, ne fonctionnent que dans les vues tableau et ne font rien pendant que vous modifiez le texte d’une cellule.
 
 ### Réglages du plugin
 

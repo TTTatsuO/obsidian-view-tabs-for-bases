@@ -16,6 +16,7 @@ See every view of an Obsidian [base](https://help.obsidian.md/bases) at a glance
 - **Scrolls when crowded**: when the tabs don't fit, they scroll sideways (the mouse wheel works too) and fade at the edges. The built-in toolbar buttons keep their size.
 - **Tabs below the toolbar**: optionally put the tabs on a row of their own under the toolbar, where they can wrap onto more lines.
 - **Keyboard switching**: commands to switch to the next or previous tab, which you can bind to any hotkeys.
+- **Cell moves on any keys**: commands to move the selected cell of a table up, down, left or right, so you can give the arrow keys' job to other hotkeys.
 
 ## Installation
 
@@ -41,6 +42,8 @@ You can also open **Configure view** from the view menu and use the **Tab settin
 To bring back a removed tab, open that view's **Configure view** from the view menu and turn **Show in tabs** back on.
 
 To switch views from the keyboard, assign hotkeys to **Switch to next view** and **Switch to previous view** in **Settings → Hotkeys**. They move through the tabs in order, wrap around at the ends, and skip views removed from the tabs. No hotkeys are set by default. The **Set hotkeys** button in this plugin's settings opens that page showing only these commands.
+
+To move the selected cell of a table with other keys, assign hotkeys to **Move cell up**, **Move cell down**, **Move cell left** and **Move cell right**. They do what the arrow keys do, work only in table views, and do nothing while you are editing a cell's text.
 
 ### Plugin settings
 

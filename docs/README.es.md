@@ -16,6 +16,7 @@ Ve de un vistazo todas las vistas de una [base](https://help.obsidian.md/bases) 
 - **Se desplaza cuando no cabe**: si las pestañas no caben, se desplazan en horizontal (también con la rueda del ratón) y se desvanecen en los bordes. Los botones integrados de la barra de herramientas mantienen su tamaño.
 - **Pestañas bajo la barra de herramientas**: si quieres, las pestañas pueden ir en una fila propia bajo la barra de herramientas, donde pueden pasar a varias líneas.
 - **Cambio con el teclado**: comandos para cambiar a la pestaña siguiente o anterior, que puedes asignar a cualquier atajo.
+- **Mover celdas con cualquier tecla**: comandos para mover la celda seleccionada de una tabla arriba, abajo, a la izquierda o a la derecha, para dar la función de las flechas a otros atajos.
 
 ## Instalación
 
@@ -41,6 +42,8 @@ También puedes abrir **Configure view** (los ajustes de la vista) desde el men�
 Para recuperar una pestaña quitada, abre **Configure view** de esa vista desde el menú de vistas y vuelve a activar **Mostrar en pestañas**.
 
 Para cambiar de vista con el teclado, asigna atajos a **Cambiar a la vista siguiente** y **Cambiar a la vista anterior** en **Settings → Hotkeys**. Recorren las pestañas en orden, vuelven al otro extremo al llegar al final y omiten las vistas quitadas de las pestañas. No hay atajos asignados por defecto. El botón **Configurar atajos** en los ajustes de este complemento abre esa página mostrando solo estos comandos.
+
+Para mover la celda seleccionada de una tabla con otras teclas, asigna atajos a **Mover celda arriba**, **Mover celda abajo**, **Mover celda a la izquierda** y **Mover celda a la derecha**. Hacen lo mismo que las flechas, solo funcionan en vistas de tabla y no hacen nada mientras editas el texto de una celda.
 
 ### Ajustes del plugin
 

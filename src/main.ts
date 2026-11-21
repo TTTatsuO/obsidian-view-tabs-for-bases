@@ -1,6 +1,7 @@
 import { debounce, Plugin, TFile, View } from 'obsidian';
 import { BasesController, getBasesController, isViewMenuOpen, restoreViewStateOnSwitch } from './internals/bases';
 import { ViewTabsForBasesSettingTab, ViewTabsForBasesSettings, DEFAULT_SETTINGS, parseTabPosition } from './settings';
+import { CellDirection, canMoveCell, moveCell } from './internals/table';
 import { ViewConfigSection } from './view-config-section';
 import { cycleView, ViewTabs } from './view-tabs';
 import { text } from './i18n';
@@ -29,6 +30,19 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 			name: t.previousView,
 			checkCallback: (checking) => this.cycleActive(-1, checking),
 		});
+		const moves: [CellDirection, string][] = [
+			['up', t.moveCellUp],
+			['down', t.moveCellDown],
+			['left', t.moveCellLeft],
+			['right', t.moveCellRight],
+		];
+		for (const [direction, name] of moves) {
+			this.addCommand({
+				id: `move-cell-${direction}`,
+				name,
+				checkCallback: (checking) => this.moveActiveCell(direction, checking),
+			});
+		}
 
 		this.app.workspace.onLayoutReady(() => this.sync());
 		this.registerEvent(this.app.workspace.on('layout-change', () => this.requestSync()));
@@ -71,6 +85,17 @@ export default class ViewTabsForBasesPlugin extends Plugin {
 		const controller = getBasesController(this.app.workspace.getActiveViewOfType(View));
 		if (!controller) return false;
 		if (!checking) cycleView(controller, step);
+		return true;
+	}
+
+	/**
+	 * Move the selected cell of the active base's table, so the arrow keys' job can be given to
+	 * other hotkeys. Not available while text is being edited, so those keys still type there.
+	 */
+	private moveActiveCell(direction: CellDirection, checking: boolean): boolean {
+		const controller = getBasesController(this.app.workspace.getActiveViewOfType(View));
+		if (!controller || !canMoveCell(controller)) return false;
+		if (!checking) moveCell(controller, direction);
 		return true;
 	}
 

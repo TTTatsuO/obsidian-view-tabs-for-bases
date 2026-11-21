@@ -16,6 +16,7 @@ Alle Ansichten einer Obsidian-[Base](https://help.obsidian.md/bases) auf einen B
 - **Scrollt bei Platzmangel**: Passen die Tabs nicht hinein, lassen sie sich seitlich scrollen (auch mit dem Mausrad) und blenden an den Rändern aus. Die eingebauten Schaltflächen der Werkzeugleiste behalten ihre Größe.
 - **Tabs unter der Werkzeugleiste**: Die Tabs können auch in einer eigenen Zeile unter der Werkzeugleiste stehen und dort auf mehrere Zeilen umbrechen.
 - **Wechseln per Tastatur**: Befehle zum Wechseln zum nächsten oder vorherigen Tab, die du beliebigen Tastenkürzeln zuweisen kannst.
+- **Zellbewegung auf beliebigen Tasten**: Befehle, die die ausgewählte Zelle einer Tabelle nach oben, unten, links oder rechts bewegen, sodass du die Aufgabe der Pfeiltasten anderen Tastenkürzeln geben kannst.
 
 ## Installation
 
@@ -41,6 +42,8 @@ Du kannst auch über das Ansichtsmenü **Configure view** (die Ansichtseinstellu
 Um einen entfernten Tab zurückzuholen, öffne über das Ansichtsmenü **Configure view** dieser Ansicht und schalte **In Tabs anzeigen** wieder ein.
 
 Um Ansichten per Tastatur zu wechseln, weise unter **Settings → Hotkeys** den Befehlen **Zur nächsten Ansicht wechseln** und **Zur vorherigen Ansicht wechseln** Tastenkürzel zu. Sie gehen die Tabs der Reihe nach durch, springen am Ende wieder an den Anfang und überspringen aus den Tabs entfernte Ansichten. Standardmäßig sind keine Tastenkürzel gesetzt. Die Schaltfläche **Tastenkürzel festlegen** in den Einstellungen dieses Plugins öffnet diese Seite nur mit diesen Befehlen.
+
+Um die ausgewählte Zelle einer Tabelle mit anderen Tasten zu bewegen, weise **Zelle nach oben**, **Zelle nach unten**, **Zelle nach links** und **Zelle nach rechts** Tastenkürzel zu. Sie tun dasselbe wie die Pfeiltasten, funktionieren nur in Tabellenansichten und tun nichts, während du den Text einer Zelle bearbeitest.
 
 ### Plugin-Einstellungen
 
